@@ -38,29 +38,29 @@ const Footer = () => {
 
   return (
     <footer className="bg-neutral-charcoal text-white">
-      {/* Trust Indicators Bar */}
-      <div className="bg-britannia-blue py-6">
+      {/* Clean Trust Indicators Bar */}
+      <div className="bg-neutral-gray text-neutral-charcoal py-6 border-t border-neutral-light">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
-              <Shield className="w-8 h-8 text-accent-gold mb-2" />
-              <div className="text-lg font-semibold">Licensed & Insured</div>
-              <div className="text-sm opacity-90">Fully Compliant</div>
+              <Shield className="w-6 h-6 text-britannia-blue mb-2" />
+              <div className="font-semibold">Licensed & Insured</div>
+              <div className="text-sm text-neutral-slate">Fully Compliant</div>
             </div>
             <div className="flex flex-col items-center">
-              <Award className="w-8 h-8 text-accent-gold mb-2" />
-              <div className="text-lg font-semibold">35+ Years</div>
-              <div className="text-sm opacity-90">Industry Experience</div>
+              <Award className="w-6 h-6 text-britannia-blue mb-2" />
+              <div className="font-semibold">35+ Years</div>
+              <div className="text-sm text-neutral-slate">Industry Experience</div>
             </div>
             <div className="flex flex-col items-center">
-              <Users className="w-8 h-8 text-accent-gold mb-2" />
-              <div className="text-lg font-semibold">10,000+</div>
-              <div className="text-sm opacity-90">Happy Customers</div>
+              <Users className="w-6 h-6 text-britannia-blue mb-2" />
+              <div className="font-semibold">10,000+</div>
+              <div className="text-sm text-neutral-slate">Happy Customers</div>
             </div>
             <div className="flex flex-col items-center">
-              <Star className="w-8 h-8 text-accent-gold mb-2" />
-              <div className="text-lg font-semibold">5-Star</div>
-              <div className="text-sm opacity-90">Average Rating</div>
+              <Star className="w-6 h-6 text-britannia-blue mb-2" />
+              <div className="font-semibold">5-Star</div>
+              <div className="text-sm text-neutral-slate">Average Rating</div>
             </div>
           </div>
         </div>

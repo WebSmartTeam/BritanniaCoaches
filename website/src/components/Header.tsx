@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Menu, X, ChevronDown, Clock } from 'lucide-react';
+import { Phone, MapPin, Menu, X, ChevronDown, Clock, Bus } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,46 +38,48 @@ const Header = () => {
 
   return (
     <>
-      {/* Enhanced Top Bar */}
-      <div className="bg-gradient-to-r from-britannia-blue to-britannia-blue-dark text-white py-3 hidden md:block shadow-sm">
+      {/* Clean Top Bar */}
+      <div className="bg-neutral-gray text-neutral-charcoal py-2 hidden md:block">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center gap-8">
-              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
-                <Clock size={16} className="text-accent-gold" />
-                <span className="font-medium">24/7 Emergency Service Available</span>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <Clock size={14} className="text-britannia-blue" />
+                <span>24/7 Emergency Service Available</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin size={16} className="text-accent-gold" />
+                <MapPin size={14} className="text-britannia-blue" />
                 <span>Serving UK Wide • 35+ Years Experience</span>
               </div>
             </div>
-            <div className="flex items-center gap-6">
-              <a href="mailto:info@britanniacoaches.co.uk" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
-                <Mail size={16} />
-                <span>info@britanniacoaches.co.uk</span>
+            <div className="flex items-center gap-4">
+              <a href="mailto:info@britanniacoaches.co.uk" className="hover:text-britannia-blue transition-colors">
+                info@britanniacoaches.co.uk
               </a>
-              <a href="tel:01462436125" className="flex items-center gap-2 bg-britannia-red hover:bg-britannia-red-dark px-4 py-2 rounded-full font-semibold transition-colors">
-                <Phone size={16} />
-                <span>01462 436125</span>
+              <a href="tel:01462436125" className="font-semibold text-britannia-blue hover:text-britannia-blue-dark transition-colors">
+                01462 436125
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Enhanced Main Header */}
-      <header className="bg-white shadow-xl sticky top-0 z-50 border-b border-neutral-light">
+      {/* Clean Main Header */}
+      <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-neutral-light">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-6">
-            {/* Enhanced Logo */}
-            <div className="flex items-center group">
-              <div className="bg-gradient-to-r from-britannia-blue to-britannia-blue-dark bg-clip-text text-transparent text-3xl md:text-4xl font-display font-bold group-hover:scale-105 transition-transform duration-300">
-                <span className="text-4xl md:text-5xl">🚌</span> Britannia Coaches
-              </div>
-              <div className="ml-4 hidden lg:block">
-                <div className="text-xs text-neutral-slate font-medium">Professional Transportation</div>
-                <div className="text-xs text-accent-gold font-semibold">35+ Years • UK Wide</div>
+          <div className="flex justify-between items-center py-4">
+            {/* Clean Logo */}
+            <div className="flex items-center">
+              <div className="flex items-center gap-3">
+                <div className="bg-britannia-blue text-white p-2 rounded-lg">
+                  <Bus className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-2xl font-display font-bold text-neutral-charcoal">
+                    Britannia Coaches
+                  </div>
+                  <div className="text-xs text-neutral-slate">Professional Transportation</div>
+                </div>
               </div>
             </div>
 
@@ -118,20 +120,20 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Enhanced CTA Buttons */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* Clean CTA Buttons */}
+            <div className="hidden md:flex items-center gap-3">
               <a
                 href="/quote"
-                className="group bg-gradient-to-r from-accent-gold to-amber-500 hover:from-amber-500 hover:to-accent-gold text-britannia-blue px-8 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="border-2 border-britannia-blue text-britannia-blue hover:bg-britannia-blue hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors"
               >
-                <span className="group-hover:animate-pulse">Get Free Quote</span>
+                Get Quote
               </a>
               <a
                 href="tel:01462436125"
-                className="group bg-gradient-to-r from-britannia-red to-red-600 hover:from-red-600 hover:to-britannia-red text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
+                className="bg-britannia-blue hover:bg-britannia-blue-dark text-white px-6 py-2 rounded-lg font-semibold transition-colors flex items-center gap-2"
               >
-                <Phone size={20} className="group-hover:animate-pulse" />
-                <span>Call Now</span>
+                <Phone size={18} />
+                Call Now
               </a>
             </div>
 

@@ -9,19 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'britannia-blue': '#1e3a8a',
+        'britannia-blue': '#1e40af', // Better navy blue
         'britannia-blue-light': '#3b82f6',
-        'britannia-blue-dark': '#1e40af',
+        'britannia-blue-dark': '#1e3a8a',
         'britannia-red': '#dc2626',
         'britannia-red-dark': '#b91c1c',
         'britannia-white': '#ffffff',
-        'britannia-off-white': '#fefef9',
-        'accent-gold': '#d97706',
-        'accent-gold-dark': '#b45309',
+        'britannia-off-white': '#fefefe',
+        'accent-gold': '#f59e0b', // Brighter gold
+        'accent-gold-dark': '#d97706',
         'neutral-charcoal': '#374151',
         'neutral-slate': '#64748b',
         'neutral-silver': '#9ca3af',
         'neutral-light': '#f8fafc',
+        'neutral-gray': '#f3f4f6',
         'success': '#059669',
       },
       fontFamily: {

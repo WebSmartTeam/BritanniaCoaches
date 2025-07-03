@@ -1,0 +1,13 @@
+{
+  "name": "britannia-coaches-tools",
+  "version": "1.0.0",
+  "description": "Development tools for Britannia Coaches project",
+  "private": true,
+  "scripts": {
+    "screenshot": "node scripts/puppeteer-tools.cjs screenshot-site",
+    "analyze": "node scripts/puppeteer-tools.cjs analyze-site"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.15.0"
+  }
+}
