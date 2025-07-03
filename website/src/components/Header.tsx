@@ -38,25 +38,25 @@ const Header = () => {
 
   return (
     <>
-      {/* Clean Top Bar */}
-      <div className="bg-neutral-gray text-neutral-charcoal py-2 hidden md:block">
+      {/* Brand Top Bar */}
+      <div className="bg-britannia-primary text-white py-2 hidden md:block">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
-                <Clock size={14} className="text-britannia-blue" />
+                <Clock size={14} className="text-britannia-red" />
                 <span>24/7 Emergency Service Available</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin size={14} className="text-britannia-blue" />
+                <MapPin size={14} className="text-britannia-red" />
                 <span>Serving UK Wide • 35+ Years Experience</span>
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <a href="mailto:info@britanniacoaches.co.uk" className="hover:text-britannia-blue transition-colors">
+              <a href="mailto:info@britanniacoaches.co.uk" className="hover:text-britannia-red transition-colors opacity-90 hover:opacity-100">
                 info@britanniacoaches.co.uk
               </a>
-              <a href="tel:01462436125" className="font-semibold text-britannia-blue hover:text-britannia-blue-dark transition-colors">
+              <a href="tel:01462436125" className="font-semibold text-white hover:text-britannia-red transition-colors">
                 01462 436125
               </a>
             </div>
@@ -68,17 +68,17 @@ const Header = () => {
       <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-neutral-light">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            {/* Clean Logo */}
+            {/* Brand Logo */}
             <div className="flex items-center">
               <div className="flex items-center gap-3">
-                <div className="bg-britannia-blue text-white p-2 rounded-lg">
+                <div className="bg-britannia-primary text-white p-2 rounded-lg shadow-md">
                   <Bus className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold text-neutral-charcoal">
+                  <div className="text-2xl font-display font-bold text-britannia-text">
                     Britannia Coaches
                   </div>
-                  <div className="text-xs text-neutral-slate">Professional Transportation</div>
+                  <div className="text-xs text-britannia-text/70">Professional Transportation</div>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Header = () => {
                 >
                   <a
                     href={item.href}
-                    className="flex items-center gap-1 text-neutral-charcoal hover:text-britannia-blue font-medium transition-colors py-2"
+                    className="flex items-center gap-1 text-britannia-text hover:text-britannia-primary font-medium transition-colors py-2"
                   >
                     {item.name}
                     {item.dropdown && <ChevronDown size={16} />}
@@ -108,7 +108,7 @@ const Header = () => {
                           <a
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-neutral-charcoal hover:bg-britannia-blue hover:text-white transition-colors"
+                            className="block px-4 py-2 text-britannia-text hover:bg-britannia-primary hover:text-white transition-colors"
                           >
                             {subItem.name}
                           </a>
@@ -120,17 +120,17 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Clean CTA Buttons */}
+            {/* Brand CTA Buttons */}
             <div className="hidden md:flex items-center gap-3">
               <a
                 href="/quote"
-                className="border-2 border-britannia-blue text-britannia-blue hover:bg-britannia-blue hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                className="border-2 border-britannia-primary text-britannia-primary hover:bg-britannia-primary hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors"
               >
                 Get Quote
               </a>
               <a
                 href="tel:01462436125"
-                className="bg-britannia-blue hover:bg-britannia-blue-dark text-white px-6 py-2 rounded-lg font-semibold transition-colors flex items-center gap-2"
+                className="bg-gradient-to-r from-britannia-primary to-britannia-primary-dark hover:from-britannia-red hover:to-britannia-red-dark text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 shadow-md"
               >
                 <Phone size={18} />
                 Call Now
@@ -139,7 +139,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-neutral-charcoal"
+              className="lg:hidden text-britannia-text"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

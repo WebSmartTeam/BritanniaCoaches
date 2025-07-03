@@ -37,30 +37,38 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-neutral-charcoal text-white">
-      {/* Clean Trust Indicators Bar */}
-      <div className="bg-neutral-gray text-neutral-charcoal py-6 border-t border-neutral-light">
+    <footer className="bg-britannia-primary text-white">
+      {/* Brand Trust Indicators Bar */}
+      <div className="bg-britannia-light text-britannia-text py-8 border-t border-britannia-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
-              <Shield className="w-6 h-6 text-britannia-blue mb-2" />
-              <div className="font-semibold">Licensed & Insured</div>
-              <div className="text-sm text-neutral-slate">Fully Compliant</div>
+              <div className="bg-britannia-primary p-3 rounded-full mb-3">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <div className="font-semibold text-britannia-text">Licensed & Insured</div>
+              <div className="text-sm text-britannia-text/70">Fully Compliant</div>
             </div>
             <div className="flex flex-col items-center">
-              <Award className="w-6 h-6 text-britannia-blue mb-2" />
-              <div className="font-semibold">35+ Years</div>
-              <div className="text-sm text-neutral-slate">Industry Experience</div>
+              <div className="bg-britannia-red p-3 rounded-full mb-3">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <div className="font-semibold text-britannia-text">35+ Years</div>
+              <div className="text-sm text-britannia-text/70">Industry Experience</div>
             </div>
             <div className="flex flex-col items-center">
-              <Users className="w-6 h-6 text-britannia-blue mb-2" />
-              <div className="font-semibold">10,000+</div>
-              <div className="text-sm text-neutral-slate">Happy Customers</div>
+              <div className="bg-britannia-primary p-3 rounded-full mb-3">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <div className="font-semibold text-britannia-text">10,000+</div>
+              <div className="text-sm text-britannia-text/70">Happy Customers</div>
             </div>
             <div className="flex flex-col items-center">
-              <Star className="w-6 h-6 text-britannia-blue mb-2" />
-              <div className="font-semibold">5-Star</div>
-              <div className="text-sm text-neutral-slate">Average Rating</div>
+              <div className="bg-britannia-red p-3 rounded-full mb-3">
+                <Star className="w-6 h-6 text-white" />
+              </div>
+              <div className="font-semibold text-britannia-text">5-Star</div>
+              <div className="text-sm text-britannia-text/70">Average Rating</div>
             </div>
           </div>
         </div>
@@ -75,7 +83,7 @@ const Footer = () => {
               <div className="text-2xl font-display font-bold text-white mb-4">
                 🚌 Britannia Coaches
               </div>
-              <p className="text-neutral-silver mb-6 leading-relaxed">
+              <p className="text-white/80 mb-6 leading-relaxed">
                 Professional transportation services across the UK. Reliable, comfortable, and safe travel 
                 for over 35 years. Your trusted partner for all transportation needs.
               </p>
@@ -83,24 +91,24 @@ const Footer = () => {
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-accent-gold" />
-                  <a href="tel:01462436125" className="text-white hover:text-accent-gold transition-colors">
+                  <Phone className="w-5 h-5 text-britannia-red" />
+                  <a href="tel:01462436125" className="text-white hover:text-britannia-red transition-colors">
                     01462 436125
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-accent-gold" />
-                  <a href="mailto:info@britanniacoaches.co.uk" className="text-white hover:text-accent-gold transition-colors">
+                  <Mail className="w-5 h-5 text-britannia-red" />
+                  <a href="mailto:info@britanniacoaches.co.uk" className="text-white hover:text-britannia-red transition-colors">
                     info@britanniacoaches.co.uk
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-accent-gold" />
-                  <span className="text-neutral-silver">Hertfordshire, UK</span>
+                  <MapPin className="w-5 h-5 text-britannia-red" />
+                  <span className="text-white/80">Hertfordshire, UK</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-accent-gold" />
-                  <span className="text-neutral-silver">24/7 Emergency Service</span>
+                  <Clock className="w-5 h-5 text-britannia-red" />
+                  <span className="text-white/80">24/7 Emergency Service</span>
                 </div>
               </div>
 

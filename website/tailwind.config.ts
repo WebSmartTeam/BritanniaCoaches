@@ -9,18 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'britannia-blue': '#1e40af', // Better navy blue
-        'britannia-blue-light': '#3b82f6',
-        'britannia-blue-dark': '#1e3a8a',
-        'britannia-red': '#dc2626',
-        'britannia-red-dark': '#b91c1c',
+        // 🎯 Primary Colour (Main Branding / CTAs)
+        'britannia-primary': '#102263',
+        'britannia-primary-dark': '#0E1A4F', // For gradients
+        
+        // 🎯 Secondary Colour (Accent & Highlights)  
+        'britannia-red': '#E30613',
+        'britannia-red-dark': '#C4050F',
+        
+        // 🎯 Tertiary Colour (Backgrounds & Light Areas)
+        'britannia-light': '#F2F4FB',
+        
+        // 🎯 Fourth/Support Colour (Body Text & Muted Elements)
+        'britannia-text': '#333333',
+        
+        // Additional support colors
         'britannia-white': '#ffffff',
-        'britannia-off-white': '#fefefe',
-        'accent-gold': '#f59e0b', // Brighter gold
-        'accent-gold-dark': '#d97706',
-        'neutral-charcoal': '#374151',
-        'neutral-slate': '#64748b',
-        'neutral-silver': '#9ca3af',
         'neutral-light': '#f8fafc',
         'neutral-gray': '#f3f4f6',
         'success': '#059669',
