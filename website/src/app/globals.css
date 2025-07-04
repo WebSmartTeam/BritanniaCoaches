@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Satoshi:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #1E293B;
+  --background: #FEFDFB;
+  --foreground: #2F3349;
 }
 
 * {
@@ -16,8 +16,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
-  line-height: 1.7;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
   font-feature-settings: 'rlig' 1, 'calt' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,23 +43,23 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply relative bg-gradient-to-r from-britannia-secondary to-red-600 hover:from-red-600 hover:to-britannia-secondary text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-hard;
+    @apply bg-britannia-red hover:bg-britannia-red/90 text-white font-medium py-3 px-8 rounded-lg shadow-elegant hover:shadow-elegant-md transition-all duration-200;
   }
   
   .btn-secondary {
-    @apply relative bg-gradient-to-r from-britannia-primary to-britannia-primary-light hover:from-britannia-primary-light hover:to-britannia-primary text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-britannia-lg;
+    @apply bg-britannia-navy hover:bg-britannia-navy-light text-white font-medium py-3 px-8 rounded-lg shadow-elegant hover:shadow-elegant-md transition-all duration-200;
   }
   
   .btn-outline {
-    @apply relative border-2 border-britannia-primary text-britannia-primary hover:bg-britannia-primary hover:text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm;
+    @apply border border-britannia-navy text-britannia-navy hover:bg-britannia-navy hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-200;
   }
   
-  .btn-glass {
-    @apply relative bg-glass-white backdrop-blur-md border border-white/20 text-britannia-primary hover:bg-white/30 font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105;
+  .btn-luxury {
+    @apply bg-britannia-gold hover:bg-britannia-gold/90 text-britannia-navy font-medium py-3 px-8 rounded-lg shadow-elegant hover:shadow-elegant-md transition-all duration-200;
   }
   
   .section-padding {
-    @apply py-24 px-4 sm:px-6 lg:px-8;
+    @apply py-20 px-4 sm:px-6 lg:px-8;
   }
   
   .container-custom {
@@ -67,55 +67,34 @@ body {
   }
   
   .heading-hero {
-    @apply font-display text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-britannia-primary via-britannia-primary-light to-britannia-primary bg-clip-text text-transparent leading-tight tracking-tight;
+    @apply font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-britannia-navy leading-tight;
   }
   
   .heading-primary {
-    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-britannia-primary leading-tight tracking-tight;
+    @apply font-serif text-4xl md:text-5xl font-semibold text-britannia-navy leading-tight;
   }
   
   .heading-secondary {
-    @apply font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-britannia-primary leading-tight tracking-tight;
+    @apply font-serif text-3xl md:text-4xl font-medium text-britannia-navy leading-tight;
   }
   
   .text-body {
-    @apply text-britannia-text-light text-lg md:text-xl leading-relaxed font-light;
+    @apply text-britannia-slate text-lg leading-relaxed;
   }
   
   .text-feature {
-    @apply text-britannia-text text-base font-medium;
+    @apply text-britannia-charcoal text-base font-medium;
   }
   
-  .card-modern {
-    @apply bg-britannia-surface/80 backdrop-blur-lg border border-white/20 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-500 transform hover:-translate-y-2;
+  .card-elegant {
+    @apply bg-britannia-pearl border border-luxury-platinum rounded-xl shadow-elegant hover:shadow-elegant-lg transition-all duration-300 p-8;
   }
   
-  .card-glass {
-    @apply bg-glass-white backdrop-blur-md border border-white/20 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-500 transform hover:-translate-y-2;
+  .accent-gold {
+    @apply text-britannia-gold;
   }
   
-  .gradient-mesh {
-    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 35%, #0F172A 100%);
-  }
-  
-  .text-gradient {
-    @apply bg-gradient-to-r from-britannia-accent to-yellow-500 bg-clip-text text-transparent;
-  }
-  
-  .floating-element {
-    @apply animate-float;
-  }
-  
-  .fade-up {
-    @apply animate-fade-up;
-  }
-  
-  .pulse-glow {
-    @apply relative;
-  }
-  
-  .pulse-glow::before {
-    content: '';
-    @apply absolute inset-0 rounded-full bg-britannia-accent/20 animate-pulse-soft;
+  .elegant-border {
+    @apply border-luxury-platinum;
   }
 }

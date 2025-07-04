@@ -9,28 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // 🎯 Modern Britannia Coaches Brand Colors
-        'britannia-primary': '#0A1B4D',      // Deep Midnight Blue (sophisticated)
-        'britannia-primary-light': '#1E3A8A', // Lighter blue for gradients
-        'britannia-secondary': '#DC2626',     // Vibrant Red (modern accent)
-        'britannia-accent': '#F59E0B',       // Golden Amber (premium touch)
-        'britannia-neutral': '#F8FAFC',      // Ultra light background
-        'britannia-surface': '#FFFFFF',      // Pure white surfaces
-        'britannia-text': '#1E293B',         // Modern dark slate
-        'britannia-text-light': '#64748B',   // Muted text
+        // 🎯 Elegant Britannia Coaches Brand Colors
+        'britannia-navy': '#1B2951',         // Sophisticated navy (primary)
+        'britannia-navy-light': '#2C3E73',   // Lighter navy for accents
+        'britannia-red': '#C41E3A',          // Classic British red (refined)
+        'britannia-gold': '#D4AF37',         // Elegant gold accent
+        'britannia-charcoal': '#2F3349',     // Premium dark text
+        'britannia-slate': '#64748B',        // Sophisticated muted text
+        'britannia-cream': '#FEFDFB',        // Warm white background
+        'britannia-pearl': '#F9FAFB',        // Pearl white surface
+        'britannia-mist': '#F1F5F9',         // Light mist background
         
-        // Gradient colors
-        'gradient-start': '#0F172A',         // Very dark slate
-        'gradient-end': '#1E3A8A',          // Blue
-        
-        // Glassmorphism colors
-        'glass-white': 'rgba(255, 255, 255, 0.25)',
-        'glass-dark': 'rgba(15, 23, 42, 0.1)',
+        // Luxury neutral palette
+        'luxury-platinum': '#E5E7EB',        // Platinum borders
+        'luxury-silver': '#9CA3AF',          // Silver accents
+        'luxury-pearl': '#F8FAFC',           // Pearl highlights
       },
       fontFamily: {
-        'sans': ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
-        'display': ['Satoshi', 'Inter', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -60,12 +58,12 @@ const config: Config = {
         '4xl': '2.5rem',
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-        'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        'hard': '0 10px 40px -10px rgba(0, 0, 0, 0.2)',
-        'glow': '0 0 50px rgba(59, 130, 246, 0.15)',
-        'britannia': '0 8px 30px -12px rgba(10, 27, 77, 0.25)',
-        'britannia-lg': '0 20px 60px -12px rgba(10, 27, 77, 0.35)',
+        'elegant': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+        'elegant-md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'elegant-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'luxury': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'britannia': '0 4px 15px -3px rgba(27, 41, 81, 0.15)',
+        'britannia-hover': '0 8px 25px -5px rgba(27, 41, 81, 0.25)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -27,96 +27,87 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-britannia-surface/70 backdrop-blur-xl shadow-soft border-b border-white/10' 
+        ? 'bg-britannia-cream/95 backdrop-blur-md shadow-elegant border-b elegant-border' 
         : 'bg-transparent'
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-4 group">
-            <div className="relative">
-              <div className="absolute -inset-2 bg-britannia-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-              <Image
-                src="/images/logos/logo.png"
-                alt="Britannia Coaches"
-                width={60}
-                height={44}
-                className="h-12 w-auto relative z-10 transition-transform duration-300 group-hover:scale-110"
-              />
-            </div>
+          {/* Logo - Clean and Elegant */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            <Image
+              src="/images/logos/logo.png"
+              alt="Britannia Coaches"
+              width={48}
+              height={35}
+              className="h-10 w-auto transition-transform duration-200 group-hover:scale-105"
+            />
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-display font-bold bg-gradient-to-r from-britannia-primary to-britannia-primary-light bg-clip-text text-transparent">
+              <h1 className="text-xl font-serif font-semibold text-britannia-navy">
                 Britannia Coaches
               </h1>
-              <p className="text-xs text-britannia-text-light font-medium">Premium Transportation</p>
+              <p className="text-xs text-britannia-slate">Premium Transportation</p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-2">
+          {/* Desktop Navigation - Clean Links */}
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative px-6 py-3 text-britannia-text hover:text-britannia-primary font-medium transition-all duration-300 group"
+                className="text-britannia-charcoal hover:text-britannia-navy font-medium transition-colors duration-200 relative group"
               >
-                <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-britannia-primary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
-                <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-britannia-accent transition-all duration-300 group-hover:w-8 transform -translate-x-1/2"></div>
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-britannia-gold transition-all duration-200 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
 
-          {/* Contact Info & CTA */}
+          {/* Contact & CTA - Elegant */}
           <div className="hidden xl:flex items-center space-x-6">
             <div className="text-right">
-              <div className="text-sm text-britannia-text-light font-medium">Premium Hotline</div>
+              <div className="text-sm text-britannia-slate">Call us now</div>
               <a
                 href="tel:01462436125"
-                className="text-lg font-bold text-britannia-primary hover:text-britannia-accent transition-colors duration-300"
+                className="text-lg font-semibold text-britannia-navy hover:text-britannia-red transition-colors duration-200"
               >
                 01462 436125
               </a>
             </div>
-            <Link
-              href="/contact"
-              className="btn-primary"
-            >
+            <Link href="/contact" className="btn-primary">
               Get Quote
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button - Clean */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden relative p-3 rounded-2xl bg-britannia-surface/80 backdrop-blur-md border border-white/20 hover:bg-britannia-primary/10 transition-all duration-300"
+            className="lg:hidden p-2 rounded-lg hover:bg-britannia-pearl transition-colors duration-200"
             aria-label="Toggle navigation menu"
           >
-            <div className="relative w-6 h-6">
-              <span className={`absolute left-0 top-1 w-6 h-0.5 bg-britannia-primary transition-all duration-300 ${
+            <div className="w-6 h-6 relative">
+              <span className={`absolute left-0 top-1 w-6 h-0.5 bg-britannia-navy transition-all duration-300 ${
                 isMenuOpen ? 'rotate-45 top-3' : ''
               }`}></span>
-              <span className={`absolute left-0 top-3 w-6 h-0.5 bg-britannia-primary transition-all duration-300 ${
+              <span className={`absolute left-0 top-3 w-6 h-0.5 bg-britannia-navy transition-all duration-300 ${
                 isMenuOpen ? 'opacity-0' : ''
               }`}></span>
-              <span className={`absolute left-0 top-5 w-6 h-0.5 bg-britannia-primary transition-all duration-300 ${
+              <span className={`absolute left-0 top-5 w-6 h-0.5 bg-britannia-navy transition-all duration-300 ${
                 isMenuOpen ? '-rotate-45 top-3' : ''
               }`}></span>
             </div>
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <div className="py-6 border-t border-white/10">
-            <nav className="flex flex-col space-y-2">
+        {/* Mobile Navigation - Clean */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-6 border-t elegant-border">
+            <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-6 py-4 text-britannia-text hover:text-britannia-primary hover:bg-britannia-primary/5 rounded-2xl font-medium transition-all duration-300"
+                  className="px-4 py-3 text-britannia-charcoal hover:text-britannia-navy hover:bg-britannia-pearl rounded-lg font-medium transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -124,12 +115,12 @@ const Header: React.FC = () => {
               ))}
             </nav>
             
-            <div className="px-6 py-6 border-t border-white/10 mt-6">
+            <div className="px-4 py-6 border-t elegant-border mt-6">
               <div className="text-center mb-4">
-                <div className="text-sm text-britannia-text-light font-medium">Premium Hotline</div>
+                <div className="text-sm text-britannia-slate">Call us now</div>
                 <a
                   href="tel:01462436125"
-                  className="text-2xl font-bold text-britannia-primary hover:text-britannia-accent transition-colors duration-300"
+                  className="text-xl font-semibold text-britannia-navy hover:text-britannia-red transition-colors duration-200"
                 >
                   01462 436125
                 </a>
@@ -139,11 +130,11 @@ const Header: React.FC = () => {
                 className="btn-primary w-full text-center block"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Premium Quote
+                Get Quote
               </Link>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </header>
   );
