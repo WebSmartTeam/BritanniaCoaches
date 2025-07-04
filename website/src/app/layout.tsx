@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   description: 'Professional coach transportation services across the UK. Corporate events, school trips, weddings, airport transfers, and day trips. 25+ years experience, modern fleet, professional drivers.',
   keywords: 'coach hire, bus hire, transportation, corporate events, school trips, wedding transport, airport transfers, UK transport, professional drivers',
   authors: [{ name: 'Britannia Coaches' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'Britannia Coaches - Professional Transportation Services',
@@ -23,6 +22,13 @@ export const metadata: Metadata = {
     description: 'Professional coach transportation services across the UK. Modern fleet, professional drivers, 25+ years experience.',
   },
 };
+
+export function generateViewport() {
+  return {
+    width: 'device-width',
+    initialScale: 1,
+  };
+}
 
 export default function RootLayout({
   children,
