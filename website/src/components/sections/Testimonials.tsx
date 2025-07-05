@@ -69,7 +69,7 @@ const Testimonials = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what our satisfied customers have to say about 
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about 
             their experience with Britannia Coaches.
           </p>
         </div>

@@ -39,7 +39,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Get in touch with our team to discuss your transportation needs. We're here to help 
+              Get in touch with our team to discuss your transportation needs. We&apos;re here to help 
               you plan the perfect journey with our professional coach services.
             </p>
           </div>

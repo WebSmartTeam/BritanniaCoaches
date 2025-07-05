@@ -77,7 +77,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               25+ years of excellence in professional coach transportation. 
-              From humble beginnings to becoming one of the UK's most trusted coach operators.
+              From humble beginnings to becoming one of the UK&apos;s most trusted coach operators.
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              From a single coach to a modern fleet, here's how we've grown while maintaining our commitment to excellence.
+              From a single coach to a modern fleet, here&apos;s how we&apos;ve grown while maintaining our commitment to excellence.
             </p>
           </div>
 
