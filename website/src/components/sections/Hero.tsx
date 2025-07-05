@@ -1,174 +1,255 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+'use client'
 
-const Hero: React.FC = () => {
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Users, MapPin, Calendar, Phone, ArrowRight, CheckCircle } from 'lucide-react'
+
+const Hero = () => {
+
+  const stats = [
+    { number: '25+', label: 'Years Experience', icon: Calendar },
+    { number: '50+', label: 'Modern Coaches', icon: Users },
+    { number: '100K+', label: 'Happy Passengers', icon: CheckCircle },
+    { number: 'UK Wide', label: 'Coverage Area', icon: MapPin },
+  ]
+
+  const features = [
+    'Professional & Certified Drivers',
+    'Modern Fleet with Latest Safety Features',
+    'Fully Licensed & Insured',
+    'Flexible Booking Options',
+    'Competitive Pricing',
+    '24/7 Customer Support',
+  ]
+
   return (
-    <section className="relative bg-gray-50 pt-16">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
-          
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/premium/luxury-coach-1.jpg"
+          alt="Britannia Coaches - Professional Transportation"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 hero-overlay" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
-              <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-              <span>Est. 1998 • Premium Transportation</span>
+          <div className="text-white">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              <span>Trusted by 1000+ Customers</span>
             </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+              Professional Coach
+              <span className="block text-secondary-400">Transportation</span>
+              <span className="block text-primary-400">Across the UK</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              25+ years of excellence in providing safe, reliable, and comfortable coach services 
+              for corporate events, school trips, weddings, and more.
+            </p>
 
-            {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Professional Coach
-                <span className="text-primary-600 block">Transportation</span>
-                Services
-              </h1>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Experience comfort, reliability, and safety with Britannia Coaches. 
-                Our modern fleet and professional drivers ensure your journey is 
-                smooth and enjoyable.
-              </p>
-            </div>
-
-            {/* Features */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+            {/* Features List */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-white/90">{feature}</span>
                 </div>
-                <span className="text-gray-700 font-medium">25+ Years Experience</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-gray-700 font-medium">Modern Fleet</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-gray-700 font-medium">Professional Drivers</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-gray-700 font-medium">Fully Insured</span>
-              </div>
+              ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary">
-                Get Free Quote
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                href="/contact"
+                className="btn btn-secondary btn-xl inline-flex items-center gap-2"
+              >
+                <span>Get Free Quote</span>
+                <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href="/fleet" className="btn-outline">
-                View Our Fleet
+              
+              <Link
+                href="tel:01234567890"
+                className="btn btn-outline-primary btn-xl inline-flex items-center gap-2 border-white text-white hover:bg-white hover:text-primary-600"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call Now</span>
               </Link>
             </div>
 
-            {/* Contact Info */}
-            <div className="card">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-gray-600 text-sm mb-1">
-                    Call us for immediate assistance
-                  </p>
-                  <a
-                    href="tel:01462436125"
-                    className="text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors duration-200"
-                  >
-                    01462 436125
-                  </a>
+            {/* Stats */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <stat.icon className="w-8 h-8 text-primary-400" />
+                  </div>
+                  <div className="stats-counter">{stat.number}</div>
+                  <div className="stats-label">{stat.label}</div>
                 </div>
-                <div className="text-right">
-                  <div className="text-green-600 text-sm font-medium">Available 24/7</div>
-                  <div className="text-gray-500 text-sm">Emergency Service</div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Right Images */}
-          <div className="relative">
-            {/* Main Coach Image */}
-            <div className="relative">
-              <Image
-                src="/images/premium/luxury-coach-1.webp"
-                alt="Britannia Coaches Premium Fleet"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-clean-lg w-full h-auto object-cover"
-                priority
-              />
-              
-              {/* Stats Overlay */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-clean">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-gray-900">50+</div>
-                      <div className="text-sm text-gray-600">Premium Coaches</div>
-                    </div>
-                    <div className="border-l border-r border-gray-200">
-                      <div className="text-2xl font-bold text-gray-900">10K+</div>
-                      <div className="text-sm text-gray-600">Happy Customers</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-gray-900">99%</div>
-                      <div className="text-sm text-gray-600">On-Time Record</div>
-                    </div>
+          {/* Right Content - Quote Form */}
+          <div className="lg:flex lg:justify-end">
+            <div className="glass-card p-8 rounded-2xl max-w-md w-full">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-display font-bold text-neutral-900 mb-2">
+                  Get Instant Quote
+                </h3>
+                <p className="text-neutral-600">
+                  Fill out the form below and we&apos;ll get back to you within 1 hour
+                </p>
+              </div>
+
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      Pickup Location
+                    </label>
+                    <input
+                      type="text"
+                      className="input-field"
+                      placeholder="Enter pickup location"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      Destination
+                    </label>
+                    <input
+                      type="text"
+                      className="input-field"
+                      placeholder="Enter destination"
+                    />
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Secondary Images */}
-            <div className="hidden lg:grid grid-cols-2 gap-4 mt-6">
-              <div className="relative group">
-                <Image
-                  src="/images/premium/luxury-coach-2.webp"
-                  alt="Britannia Coaches Interior"
-                  width={250}
-                  height={150}
-                  className="rounded-xl shadow-clean w-full h-24 object-cover group-hover:shadow-clean-lg transition-shadow duration-300"
-                />
-                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 rounded-xl transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Executive Interior
-                  </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      Date
+                    </label>
+                    <input
+                      type="date"
+                      className="input-field"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      Time
+                    </label>
+                    <input
+                      type="time"
+                      className="input-field"
+                    />
+                  </div>
                 </div>
-              </div>
-              
-              <div className="relative group">
-                <Image
-                  src="/images/premium/luxury-coach-3.webp"
-                  alt="Britannia Coaches Comfort"
-                  width={250}
-                  height={150}
-                  className="rounded-xl shadow-clean w-full h-24 object-cover group-hover:shadow-clean-lg transition-shadow duration-300"
-                />
-                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 rounded-xl transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Premium Comfort
-                  </span>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      Passengers
+                    </label>
+                    <select className="input-field">
+                      <option>1-10 passengers</option>
+                      <option>11-20 passengers</option>
+                      <option>21-30 passengers</option>
+                      <option>31-50 passengers</option>
+                      <option>50+ passengers</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      Service Type
+                    </label>
+                    <select className="input-field">
+                      <option>Corporate Event</option>
+                      <option>School Trip</option>
+                      <option>Wedding</option>
+                      <option>Airport Transfer</option>
+                      <option>Day Trip</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
                 </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-2">
+                    Contact Details
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      className="input-field"
+                      placeholder="Your name"
+                    />
+                    <input
+                      type="tel"
+                      className="input-field"
+                      placeholder="Phone number"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    className="input-field"
+                    placeholder="Email address"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    className="input-field min-h-[80px]"
+                    placeholder="Additional requirements (optional)"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn btn-primary btn-lg w-full"
+                >
+                  Get My Quote
+                </button>
+              </form>
+
+              <div className="mt-4 text-center">
+                <p className="text-sm text-neutral-600">
+                  Or call us directly at{' '}
+                  <Link href="tel:01234567890" className="font-medium text-primary-600 hover:text-primary-700">
+                    0123 456 7890
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
 
-export default Hero;
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero
