@@ -90,10 +90,6 @@ body {
     @apply bg-britannia-pearl border border-luxury-platinum rounded-xl shadow-elegant hover:shadow-elegant-lg transition-all duration-300 p-8;
   }
   
-  .accent-gold {
-    @apply text-britannia-gold;
-  }
-  
   .elegant-border {
     @apply border-luxury-platinum;
   }

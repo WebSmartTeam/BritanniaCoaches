@@ -59,7 +59,7 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-britannia-pearl">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="heading-secondary mb-4">
@@ -75,17 +75,17 @@ const WhyChooseUs: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-britannia-gray rounded-lg p-6 hover:shadow-britannia-lg transition-all duration-300 hover:scale-105"
+              className="card-elegant group hover:-translate-y-1"
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-britannia-red rounded-lg flex items-center justify-center text-white group-hover:bg-britannia-primary transition-colors duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-britannia-gold rounded-lg flex items-center justify-center text-britannia-navy group-hover:bg-britannia-navy group-hover:text-white transition-colors duration-300">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-britannia-primary mb-2">
+                  <h3 className="text-xl font-semibold text-britannia-navy mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-britannia-text leading-relaxed">
+                  <p className="text-britannia-slate leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -95,23 +95,23 @@ const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Statistics */}
-        <div className="mt-16 bg-britannia-primary rounded-lg p-8 text-white">
+        <div className="mt-16 bg-britannia-navy rounded-2xl p-12 text-white">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold mb-2">25+</div>
-              <div className="text-britannia-light">Years Experience</div>
+              <div className="text-4xl font-bold mb-2 text-britannia-gold">25+</div>
+              <div className="text-britannia-cream">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">10,000+</div>
-              <div className="text-britannia-light">Happy Customers</div>
+              <div className="text-4xl font-bold mb-2 text-britannia-gold">10,000+</div>
+              <div className="text-britannia-cream">Happy Customers</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-britannia-light">Modern Coaches</div>
+              <div className="text-4xl font-bold mb-2 text-britannia-gold">50+</div>
+              <div className="text-britannia-cream">Modern Coaches</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">99%</div>
-              <div className="text-britannia-light">On-Time Performance</div>
+              <div className="text-4xl font-bold mb-2 text-britannia-gold">99%</div>
+              <div className="text-britannia-cream">On-Time Performance</div>
             </div>
           </div>
         </div>

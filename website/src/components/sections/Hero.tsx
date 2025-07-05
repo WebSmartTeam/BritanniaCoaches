@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             <div className="space-y-6">
               <h1 className="heading-hero">
                 Britannia Coaches
-                <span className="block accent-gold">Luxury Transportation</span>
+                <span className="block text-britannia-gold">Luxury Transportation</span>
               </h1>
               <p className="text-body max-w-xl">
                 Experience unparalleled comfort and reliability with our premium fleet. 
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
                   </p>
                   <a
                     href="tel:01462436125"
-                    className="text-2xl font-semibold text-britannia-navy hover:accent-gold transition-colors duration-200"
+                    className="text-2xl font-semibold text-britannia-navy hover:text-britannia-gold transition-colors duration-200"
                   >
                     01462 436125
                   </a>
@@ -102,16 +102,16 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Image - Clean, Elegant Presentation */}
+          {/* Right Images - Sophisticated Gallery Layout */}
           <div className="relative">
-            {/* Main Coach Image */}
-            <div className="relative">
+            {/* Main Premium Coach Image */}
+            <div className="relative group">
               <Image
                 src="/images/coaches/placeholder_cover-original.jpg"
-                alt="Britannia Coaches Premium Fleet"
-                width={800}
-                height={600}
-                className="rounded-2xl shadow-luxury w-full h-auto object-cover"
+                alt="Britannia Coaches Luxury Fleet"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-luxury w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 priority
               />
               
@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
                       <div className="text-2xl font-semibold text-britannia-navy">50+</div>
                       <div className="text-sm text-britannia-slate">Premium Coaches</div>
                     </div>
-                    <div className="border-l border-r elegant-border">
+                    <div className="border-l border-r border-luxury-platinum">
                       <div className="text-2xl font-semibold text-britannia-navy">10K+</div>
                       <div className="text-sm text-britannia-slate">Happy Customers</div>
                     </div>
@@ -136,19 +136,42 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Secondary Image - Elegant positioning */}
-            <div className="absolute -bottom-12 -left-12 hidden lg:block">
-              <Image
-                src="/images/misc/placeholder_square.jpg"
-                alt="Britannia Coaches Interior"
-                width={200}
-                height={200}
-                className="rounded-xl shadow-elegant-lg border-4 border-britannia-cream"
-              />
+            {/* Premium Fleet Gallery - Elegant Grid */}
+            <div className="hidden lg:grid grid-cols-2 gap-4 mt-6">
+              <div className="relative group">
+                <Image
+                  src="/images/misc/placeholder_square.jpg"
+                  alt="Britannia Coaches Interior Luxury"
+                  width={300}
+                  height={200}
+                  className="rounded-xl shadow-elegant w-full h-32 object-cover transition-all duration-300 group-hover:shadow-elegant-lg"
+                />
+                <div className="absolute inset-0 bg-britannia-navy/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white text-sm font-medium">Executive Interior</span>
+                </div>
+              </div>
+              
+              <div className="relative group">
+                <Image
+                  src="/images/coaches/placeholder_cover-1024x458.jpg"
+                  alt="Britannia Coaches Premium Service"
+                  width={300}
+                  height={200}
+                  className="rounded-xl shadow-elegant w-full h-32 object-cover transition-all duration-300 group-hover:shadow-elegant-lg"
+                />
+                <div className="absolute inset-0 bg-britannia-navy/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white text-sm font-medium">Premium Comfort</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Premium Badge */}
+            <div className="absolute -top-4 -right-4 bg-britannia-gold text-britannia-navy px-4 py-2 rounded-full text-sm font-semibold shadow-elegant">
+              Premium Fleet
             </div>
 
             {/* Elegant decoration */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-britannia-gold/10 rounded-full"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-britannia-gold/5 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>
