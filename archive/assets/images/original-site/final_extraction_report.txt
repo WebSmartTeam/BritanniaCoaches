@@ -1,0 +1,43 @@
+===========================================
+BRITANNIA COACHES IMAGE EXTRACTION REPORT
+===========================================
+Date: Fri Jul  4 16:21:00 IST 2025
+Source: https://www.britanniacoaches.co.uk/
+
+IMAGES SUCCESSFULLY EXTRACTED:
+
+📁 Category: misc
+📄 File: placeholder_square-original.jpg
+📊 Size: 261K
+🔍 Type: JPEG image data, JFIF standard 1.02, resolution (DPI), density 72x72, segment length 16, baseline, precision 8, 500x400, components 3
+
+📁 Category: misc
+📄 File: placeholder_square.jpg
+📊 Size: 261K
+🔍 Type: JPEG image data, JFIF standard 1.02, resolution (DPI), density 72x72, segment length 16, baseline, precision 8, 500x400, components 3
+
+📁 Category: coaches
+📄 File: placeholder_cover-1024x458.jpg
+📊 Size: 99K
+🔍 Type: JPEG image data, JFIF standard 1.01, resolution (DPI), density 96x96, segment length 16, comment
+
+📁 Category: coaches
+📄 File: placeholder_cover-original.jpg
+📊 Size: 697K
+🔍 Type: JPEG image data, Exif standard
+
+📁 Category: logos
+📄 File: logo.png
+📊 Size: 11K
+🔍 Type: PNG image data, 147 x 107, 8-bit/color RGBA, non-interlaced
+
+SUMMARY:
+--------
+📁 logos/: 1 images
+📁 heroes/: 0 images
+📁 coaches/: 2 images
+📁 services/: 0 images
+📁 misc/: 2 images
+📊 Total valid images: 5
+
+All images saved to: /Users/anish/Documents/AiFarm/ANISH-MASTER-001/projects/BritanniaCoaches/archive/assets/images/original-site

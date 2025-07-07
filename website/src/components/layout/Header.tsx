@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react'
+import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,28 +44,24 @@ const Header = () => {
 
   return (
     <>
-      {/* Contact Bar */}
-      <div className="bg-neutral-900 text-white py-2 hidden md:block">
+      {/* DNA INJECTION: MBDiamond Contact Bar Pattern */}
+      <div className="text-white py-2 bg-[#1e293b] border-b border-blue-700/50">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>0123 456 7890</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>info@britanniacoaches.co.uk</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Serving UK Wide</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-white">Premium Coach Transportation Services</span>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="text-neutral-300">25+ Years Experience</span>
-              <span className="text-neutral-300">|</span>
-              <span className="text-neutral-300">Professional Drivers</span>
+            <div className="flex items-center gap-6">
+              <a href="mailto:info@britanniacoaches.co.uk" className="flex items-center gap-2 text-blue-200 hover:text-white transition-colors">
+                <Mail size={14} />
+                info@britanniacoaches.co.uk
+              </a>
+              <div className="flex items-center gap-2">
+                <Phone size={14} />
+                <a href="tel:01234567890" className="font-semibold text-blue-200 hover:text-white transition-colors">
+                  01234 567 890
+                </a>
+              </div>
             </div>
           </div>
         </div>
