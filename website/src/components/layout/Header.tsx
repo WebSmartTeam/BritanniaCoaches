@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 
@@ -55,14 +56,19 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">BC</span>
+              <div className="w-12 h-12 relative">
+                <Image
+                  src="/images/logos/logo.png"
+                  alt="Britannia Coaches"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div>
-                <h1 className="text-2xl font-display font-bold text-neutral-900">
+                <h1 className="text-2xl font-display font-bold text-navy-900">
                   Britannia Coaches
                 </h1>
-                <p className="text-sm text-neutral-600">Professional Transportation</p>
+                <p className="text-sm text-navy-600">Professional Transportation</p>
               </div>
             </Link>
 
@@ -78,7 +84,7 @@ const Header = () => {
                     >
                       <button
                         className={`flex items-center gap-1 ${
-                          isActive(item.href) ? 'nav-link-active' : 'nav-link'
+                          isActive(item.href) ? 'text-navy-800 font-semibold' : 'text-navy-700 hover:text-gold-600 font-medium transition-colors duration-200'
                         }`}
                       >
                         {item.name}
@@ -86,12 +92,12 @@ const Header = () => {
                       </button>
                       
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-clean-lg border border-neutral-200 py-2 animate-fade-in-down">
+                        <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-luxury-lg border border-cream-200 py-2 animate-fade-in-down">
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-4 py-2 text-sm text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 transition-colors duration-200"
+                              className="block px-4 py-2 text-sm text-navy-700 hover:text-gold-600 hover:bg-cream-50 transition-colors duration-200"
                             >
                               {dropdownItem.name}
                             </Link>
@@ -102,7 +108,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className={isActive(item.href) ? 'nav-link-active' : 'nav-link'}
+                      className={isActive(item.href) ? 'text-navy-800 font-semibold' : 'text-navy-700 hover:text-gold-600 font-medium transition-colors duration-200'}
                     >
                       {item.name}
                     </Link>
@@ -120,7 +126,7 @@ const Header = () => {
               </a>
               <Link
                 href="/contact"
-                className="btn btn-primary btn-lg"
+                className="bg-navy-800 hover:bg-navy-900 text-cream-50 px-6 py-3 text-lg font-medium rounded-lg shadow-luxury hover:shadow-luxury-md transition-all duration-200"
               >
                 Get Quote
               </Link>
@@ -128,7 +134,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors duration-200"
+              className="lg:hidden p-2 rounded-lg hover:bg-cream-100 transition-colors duration-200 text-navy-800"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -138,7 +144,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-neutral-200 animate-fade-in-down">
+          <div className="lg:hidden bg-white border-t border-cream-200 animate-fade-in-down">
             <div className="max-w-7xl mx-auto container-padding py-4">
               <div className="flex flex-col gap-4">
                 {navigation.map((item) => (
@@ -146,7 +152,7 @@ const Header = () => {
                     <Link
                       href={item.href}
                       className={`block py-2 ${
-                        isActive(item.href) ? 'nav-link-active' : 'nav-link'
+                        isActive(item.href) ? 'text-navy-800 font-semibold' : 'text-navy-700 hover:text-gold-600 font-medium transition-colors duration-200'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -158,7 +164,7 @@ const Header = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block py-1 text-sm text-neutral-600 hover:text-primary-600 transition-colors duration-200"
+                            className="block py-1 text-sm text-navy-600 hover:text-gold-600 transition-colors duration-200"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -168,10 +174,10 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4 border-t border-neutral-200">
+                <div className="pt-4 border-t border-cream-200">
                   <Link
                     href="/contact"
-                    className="btn btn-primary btn-lg w-full"
+                    className="bg-navy-800 hover:bg-navy-900 text-cream-50 px-6 py-3 text-lg font-medium rounded-lg shadow-luxury hover:shadow-luxury-md transition-all duration-200 w-full inline-flex items-center justify-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Quote
