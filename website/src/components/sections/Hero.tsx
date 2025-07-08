@@ -7,7 +7,7 @@ import { ArrowRight, Phone } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative h-screen flex items-center overflow-hidden -mt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

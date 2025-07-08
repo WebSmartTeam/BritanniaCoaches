@@ -37,7 +37,6 @@ const Header = () => {
     { name: 'Fleet', href: '/fleet' },
     { name: 'Corporate', href: '/corporate' },
     { name: 'Events', href: '/events' },
-    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -46,99 +45,137 @@ const Header = () => {
   return (
     <>
 
-      {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      {/* Floating Glass Header */}
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-luxury-md' 
-          : 'bg-white'
+          ? 'bg-white/20 backdrop-blur-xl shadow-2xl' 
+          : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 relative">
-                <Image
-                  src="/images/logos/logo.png"
-                  alt="Britannia Coaches"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h1 className="text-2xl font-display font-bold text-navy-900">
-                  Britannia Coaches
-                </h1>
-                <p className="text-sm text-navy-600">Professional Transportation</p>
-              </div>
-            </Link>
+        {/* Creative Floating Container */}
+        <div className="mx-4 mt-4">
+          <div className={`max-w-6xl mx-auto transition-all duration-500 ${
+            isScrolled 
+              ? 'bg-white/90 backdrop-blur-xl rounded-2xl shadow-luxury-xl border border-white/30 px-6 py-3' 
+              : 'bg-navy-900/10 backdrop-blur-sm rounded-3xl border border-white/20 px-8 py-4'
+          }`}>
+            <div className="flex justify-between items-center h-16">
+              {/* Floating Logo */}
+              <Link href="/" className="flex items-center gap-3 group">
+                <div className="relative">
+                  <div className={`w-12 h-12 rounded-xl transition-all duration-300 group-hover:scale-110 ${
+                    isScrolled ? 'bg-navy-900 shadow-lg' : 'bg-white/20 backdrop-blur-sm border border-white/30'
+                  } flex items-center justify-center`}>
+                    <div className="w-8 h-8 relative">
+                      <Image
+                        src="/images/logos/logo.png"
+                        alt="Britannia Coaches"
+                        fill
+                        className={`object-contain transition-all duration-300 ${isScrolled ? 'brightness-0 invert' : ''}`}
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-400 rounded-full animate-pulse"></div>
+                </div>
+                <div className="hidden sm:block">
+                  <h1 className={`text-xl font-display font-bold transition-colors duration-300 ${
+                    isScrolled ? 'text-navy-900' : 'text-white'
+                  }`}>
+                    Britannia Coaches
+                  </h1>
+                  <p className={`text-sm font-medium transition-colors duration-300 ${
+                    isScrolled ? 'text-navy-600' : 'text-white/80'
+                  }`}>
+                    Premium Transportation
+                  </p>
+                </div>
+              </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.dropdown ? (
-                    <div 
-                      className="relative"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                    >
-                      <button
-                        className={`flex items-center gap-1 ${
-                          isActive(item.href) ? 'text-navy-800 font-semibold' : 'text-navy-700 hover:text-gold-600 font-medium transition-colors duration-200'
+              {/* Floating Navigation */}
+              <nav className="hidden lg:flex items-center gap-2">
+                {navigation.map((item) => (
+                  <div key={item.name} className="relative">
+                    {item.dropdown ? (
+                      <div 
+                        className="relative"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        <button
+                          className={`flex items-center gap-1 px-4 py-2 rounded-xl transition-all duration-300 ${
+                            isActive(item.href) 
+                              ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100/50' : 'text-gold-300 bg-white/10'}` 
+                              : `font-medium hover:bg-white/10 ${isScrolled ? 'text-navy-700 hover:text-gold-600' : 'text-white/90 hover:text-gold-300'}`
+                          }`}
+                        >
+                          {item.name}
+                          <ChevronDown className="w-4 h-4" />
+                        </button>
+                      
+                        {isServicesOpen && (
+                          <div className="absolute top-full left-0 mt-3 w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gold-200/50 py-3 animate-fade-in-down">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className="block px-5 py-3 text-sm text-navy-700 hover:text-gold-600 hover:bg-gold-50/50 transition-all duration-200 rounded-lg mx-2"
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                    </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={`px-4 py-2 rounded-xl transition-all duration-300 ${
+                          isActive(item.href) 
+                            ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100/50' : 'text-gold-300 bg-white/10'}` 
+                            : `font-medium hover:bg-white/10 ${isScrolled ? 'text-navy-700 hover:text-gold-600' : 'text-white/90 hover:text-gold-300'}`
                         }`}
                       >
                         {item.name}
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      
-                      {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-luxury-lg border border-cream-200 py-2 animate-fade-in-down">
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              className="block px-4 py-2 text-sm text-navy-700 hover:text-gold-600 hover:bg-cream-50 transition-colors duration-200"
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className={isActive(item.href) ? 'text-navy-800 font-semibold' : 'text-navy-700 hover:text-gold-600 font-medium transition-colors duration-200'}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
+                      </Link>
+                    )}
                 </div>
               ))}
             </nav>
 
-            {/* CTA Button with Phone */}
-            <div className="hidden lg:flex items-center gap-4">
-              <a href="tel:01234567890" className="flex items-center gap-2 text-navy-800 hover:text-gold-600 transition-colors duration-300 font-bold">
-                <div className="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></div>
-                <Phone className="w-4 h-4" />
-                0123 456 7890
-              </a>
-              <Link
-                href="/contact"
-                className="bg-navy-800 hover:bg-navy-900 text-cream-50 px-6 py-3 text-lg font-medium rounded-lg shadow-luxury hover:shadow-luxury-md transition-all duration-200"
-              >
-                Get Quote
-              </Link>
-            </div>
+              {/* Floating CTA */}
+              <div className="hidden lg:flex items-center gap-3">
+                <a href="tel:01234567890" className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-300 font-bold ${
+                  isScrolled 
+                    ? 'text-navy-800 hover:text-gold-600 hover:bg-gold-50/30' 
+                    : 'text-white/90 hover:text-gold-300 hover:bg-white/10'
+                }`}>
+                  <div className="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></div>
+                  <Phone className="w-4 h-4" />
+                  <span className="hidden xl:inline">0123 456 7890</span>
+                </a>
+                <Link
+                  href="/contact"
+                  className={`px-6 py-3 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 ${
+                    isScrolled 
+                      ? 'bg-navy-800 hover:bg-navy-900 text-white shadow-lg hover:shadow-xl' 
+                      : 'bg-gold-500 hover:bg-gold-600 text-navy-900 shadow-lg hover:shadow-xl'
+                  }`}
+                >
+                  Get Quote
+                </Link>
+              </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 rounded-lg hover:bg-cream-100 transition-colors duration-200 text-navy-800"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              {/* Mobile Menu Button */}
+              <button
+                className={`lg:hidden p-2 rounded-xl transition-all duration-300 ${
+                  isScrolled 
+                    ? 'text-navy-800 hover:bg-navy-100' 
+                    : 'text-white hover:bg-white/10'
+                }`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
