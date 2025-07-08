@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/premium/luxury-coach-1.webp"
+          src="/images/premium/luxury-coach-3.webp"
           alt="Britannia Coaches - Luxury Transportation"
           fill
           className="object-cover object-center"
