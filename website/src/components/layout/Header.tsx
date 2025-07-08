@@ -44,24 +44,23 @@ const Header = () => {
 
   return (
     <>
-      {/* DNA INJECTION: MBDiamond Contact Bar Pattern */}
-      <div className="text-white py-2 bg-[#1e293b] border-b border-blue-700/50">
+      {/* 🧬 DNA INJECTION: Enterprise Contact Bar - Proven Pattern */}
+      <div className="bg-navy-900 text-cream-100 py-3 hidden md:block border-b border-gold-600/20">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">Premium Coach Transportation Services</span>
+              <div className="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></div>
+              <span className="font-semibold text-cream-50">Premium Coach Transportation Services - 25+ Years Excellence</span>
             </div>
-            <div className="flex items-center gap-6">
-              <a href="mailto:info@britanniacoaches.co.uk" className="flex items-center gap-2 text-blue-200 hover:text-white transition-colors">
-                <Mail size={14} />
+            <div className="flex items-center gap-8">
+              <a href="mailto:info@britanniacoaches.co.uk" className="flex items-center gap-2 text-cream-200 hover:text-gold-400 transition-colors duration-300 font-medium">
+                <Mail className="w-4 h-4" />
                 info@britanniacoaches.co.uk
               </a>
-              <div className="flex items-center gap-2">
-                <Phone size={14} />
-                <a href="tel:01234567890" className="font-semibold text-blue-200 hover:text-white transition-colors">
-                  01234 567 890
-                </a>
-              </div>
+              <a href="tel:01234567890" className="flex items-center gap-2 text-cream-200 hover:text-gold-400 transition-colors duration-300 font-bold">
+                <Phone className="w-4 h-4" />
+                0123 456 7890
+              </a>
             </div>
           </div>
         </div>
