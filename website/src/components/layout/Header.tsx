@@ -46,42 +46,62 @@ const Header = () => {
   return (
     <>
 
-      {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-500 ${
+      {/* Hexagon Header Shape */}
+      <header className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/10 backdrop-blur-xl shadow-luxury-xl border-b border-white/20' 
-          : 'bg-gradient-to-r from-white/95 via-cream-50/90 to-white/95 backdrop-blur-sm'
+          ? 'bg-white/95 backdrop-blur-md shadow-luxury-md' 
+          : 'bg-white'
       }`}>
-        {/* Creative Top Border */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-gold-500 to-navy-800"></div>
+        {/* Hexagon Background Shape */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-full h-32">
+            <svg className="w-full h-full" viewBox="0 0 1200 120" fill="none">
+              <path d="M0 0 L200 0 L250 60 L200 120 L0 120 Z" fill="url(#hexGradient1)" opacity="0.1"/>
+              <path d="M200 0 L400 0 L450 60 L400 120 L200 120 L150 60 Z" fill="url(#hexGradient2)" opacity="0.1"/>
+              <path d="M400 0 L600 0 L650 60 L600 120 L400 120 L350 60 Z" fill="url(#hexGradient3)" opacity="0.1"/>
+              <path d="M600 0 L800 0 L850 60 L800 120 L600 120 L550 60 Z" fill="url(#hexGradient2)" opacity="0.1"/>
+              <path d="M800 0 L1000 0 L1050 60 L1000 120 L800 120 L750 60 Z" fill="url(#hexGradient1)" opacity="0.1"/>
+              <path d="M1000 0 L1200 0 L1200 120 L1000 120 L950 60 Z" fill="url(#hexGradient3)" opacity="0.1"/>
+              <defs>
+                <linearGradient id="hexGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#0f172a"/>
+                  <stop offset="100%" stopColor="#f59e0b"/>
+                </linearGradient>
+                <linearGradient id="hexGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#f59e0b"/>
+                  <stop offset="100%" stopColor="#0f172a"/>
+                </linearGradient>
+                <linearGradient id="hexGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#f2c574"/>
+                  <stop offset="100%" stopColor="#1e293b"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto container-padding">
           <div className="flex justify-between items-center h-20">
-            {/* Logo with Creative Background */}
-            <Link href="/" className="flex items-center gap-4 group">
-              <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-navy-800 via-navy-700 to-gold-600 rounded-2xl shadow-luxury-md group-hover:shadow-luxury-lg transition-all duration-300 group-hover:scale-105 flex items-center justify-center">
-                  <div className="w-10 h-10 relative">
-                    <Image
-                      src="/images/logos/logo.png"
-                      alt="Britannia Coaches"
-                      fill
-                      className="object-contain brightness-0 invert"
-                    />
-                  </div>
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gold-400 rounded-full animate-pulse"></div>
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 relative z-10">
+              <div className="w-12 h-12 relative">
+                <Image
+                  src="/images/logos/logo.png"
+                  alt="Britannia Coaches"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-2xl font-display font-bold text-navy-900 group-hover:text-navy-800 transition-colors duration-300">
+              <div>
+                <h1 className="text-2xl font-display font-bold text-navy-900">
                   Britannia Coaches
                 </h1>
-                <p className="text-sm text-navy-600 font-medium tracking-wide">Premium Transportation</p>
+                <p className="text-sm text-navy-600">Professional Transportation</p>
               </div>
             </Link>
 
-            {/* Creative Navigation */}
-            <nav className="hidden lg:flex items-center gap-2">
-              {navigation.map((item) => (
+            {/* Morphing Menu Navigation */}
+            <nav className="hidden lg:flex items-center gap-6 relative z-10">
+              {navigation.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
                     <div 
@@ -90,29 +110,40 @@ const Header = () => {
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
                       <button
-                        className={`flex items-center gap-1 px-4 py-2 rounded-xl transition-all duration-300 relative overflow-hidden group ${
+                        className={`flex items-center gap-2 px-6 py-3 transition-all duration-500 transform hover:scale-110 ${
                           isActive(item.href) 
-                            ? 'text-navy-800 font-semibold bg-gold-100/50' 
-                            : 'text-navy-700 hover:text-gold-600 font-medium hover:bg-gold-50/30'
+                            ? 'text-navy-800 font-semibold' 
+                            : 'text-navy-700 hover:text-gold-600 font-medium'
                         }`}
+                        style={{
+                          clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)',
+                          background: isActive(item.href) ? 'linear-gradient(45deg, #f59e0b, #fbbf24)' : 'transparent',
+                          color: isActive(item.href) ? 'white' : undefined
+                        }}
                       >
                         <span className="relative z-10">{item.name}</span>
-                        <ChevronDown className="w-4 h-4 relative z-10 group-hover:rotate-180 transition-transform duration-300" />
-                        {/* Hover effect background */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-gold-100/0 via-gold-100/50 to-gold-100/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                        <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
                       </button>
                       
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-3 w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-luxury-xl border border-gold-200/50 py-3 animate-fade-in-down overflow-hidden">
-                          <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-navy-800 via-gold-500 to-navy-800"></div>
-                          {item.dropdown.map((dropdownItem) => (
+                        <div 
+                          className="absolute top-full left-0 mt-4 w-72 bg-white rounded-3xl shadow-2xl border-2 border-gold-200 overflow-hidden"
+                          style={{
+                            clipPath: 'polygon(0 15px, 15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px))',
+                            animation: 'morphIn 0.5s ease-out'
+                          }}
+                        >
+                          {item.dropdown.map((dropdownItem, idx) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="group flex items-center px-5 py-3 text-sm text-navy-700 hover:text-gold-600 hover:bg-gradient-to-r hover:from-gold-50/50 hover:to-cream-50/50 transition-all duration-300 relative overflow-hidden"
+                              className="group flex items-center px-6 py-4 text-sm text-navy-700 hover:text-white hover:bg-gradient-to-r hover:from-navy-800 hover:to-gold-600 transition-all duration-300 transform hover:scale-105"
+                              style={{
+                                animationDelay: `${idx * 100}ms`,
+                                animation: 'slideInLeft 0.3s ease-out forwards'
+                              }}
                             >
                               <span className="relative z-10">{dropdownItem.name}</span>
-                              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold-500 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></div>
                             </Link>
                           ))}
                         </div>
@@ -121,36 +152,39 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`px-4 py-2 rounded-xl transition-all duration-300 relative overflow-hidden group ${
+                      className={`px-6 py-3 transition-all duration-500 transform hover:scale-110 ${
                         isActive(item.href) 
-                          ? 'text-navy-800 font-semibold bg-gold-100/50' 
-                          : 'text-navy-700 hover:text-gold-600 font-medium hover:bg-gold-50/30'
+                          ? 'text-navy-800 font-semibold' 
+                          : 'text-navy-700 hover:text-gold-600 font-medium'
                       }`}
+                      style={{
+                        clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)',
+                        background: isActive(item.href) ? 'linear-gradient(45deg, #f59e0b, #fbbf24)' : 'transparent',
+                        color: isActive(item.href) ? 'white' : undefined
+                      }}
                     >
-                      <span className="relative z-10">{item.name}</span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-gold-100/0 via-gold-100/50 to-gold-100/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                      {item.name}
                     </Link>
                   )}
                 </div>
               ))}
             </nav>
 
-            {/* Creative CTA Section */}
-            <div className="hidden lg:flex items-center gap-6">
-              <a href="tel:01234567890" className="group flex items-center gap-3 px-4 py-2 rounded-xl bg-gradient-to-r from-gold-50/50 to-cream-50/50 border border-gold-200/50 hover:border-gold-300 transition-all duration-300 hover:shadow-luxury-md">
-                <div className="relative">
-                  <div className="w-3 h-3 bg-gold-400 rounded-full animate-pulse"></div>
-                  <div className="absolute inset-0 bg-gold-400 rounded-full animate-ping opacity-30"></div>
-                </div>
-                <Phone className="w-4 h-4 text-navy-700 group-hover:text-gold-600 transition-colors duration-300" />
-                <span className="text-navy-800 font-bold group-hover:text-gold-600 transition-colors duration-300">0123 456 7890</span>
+            {/* CTA with Phone */}
+            <div className="hidden lg:flex items-center gap-4 relative z-10">
+              <a href="tel:01234567890" className="flex items-center gap-2 text-navy-800 hover:text-gold-600 transition-colors duration-300 font-bold">
+                <div className="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></div>
+                <Phone className="w-4 h-4" />
+                0123 456 7890
               </a>
               <Link
                 href="/contact"
-                className="relative overflow-hidden bg-gradient-to-r from-navy-800 to-navy-900 hover:from-navy-700 hover:to-navy-800 text-cream-50 px-8 py-3 text-lg font-semibold rounded-2xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 group"
+                className="bg-navy-800 hover:bg-navy-900 text-cream-50 px-8 py-4 text-lg font-medium shadow-luxury hover:shadow-luxury-md transition-all duration-300 transform hover:scale-105"
+                style={{
+                  clipPath: 'polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%)'
+                }}
               >
-                <span className="relative z-10">Get Quote</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-gold-600/20 via-gold-500/30 to-gold-600/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                Get Quote
               </Link>
             </div>
 

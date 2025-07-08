@@ -72,6 +72,8 @@ const config: Config = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
+        'morph-in': 'morphIn 0.5s ease-out',
+        'slide-in-left': 'slideInLeft 0.3s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -86,6 +88,24 @@ const config: Config = {
           '0%': { transform: 'translateY(-10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        morphIn: {
+          '0%': { 
+            transform: 'scale(0.5) rotateY(-90deg)',
+            opacity: '0',
+          },
+          '50%': {
+            transform: 'scale(1.1) rotateY(0deg)',
+            opacity: '0.8'
+          },
+          '100%': { 
+            transform: 'scale(1) rotateY(0deg)',
+            opacity: '1',
+          }
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }
+        }
       },
     },
   },
