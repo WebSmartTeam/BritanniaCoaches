@@ -101,7 +101,7 @@ const Header = () => {
 
             {/* Morphing Menu Navigation */}
             <nav className="hidden lg:flex items-center gap-6 relative z-10">
-              {navigation.map((item, index) => (
+              {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
                     <div 
