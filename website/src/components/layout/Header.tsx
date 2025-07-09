@@ -55,8 +55,8 @@ const Header = () => {
         <div className="mx-6 mt-2">
           <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
-              ? 'bg-white rounded-xl shadow-luxury-xl border border-ice-grey-200 px-6 py-2' 
-              : 'bg-royal-blue-800 rounded-2xl border border-crimson-red-800/30 px-8 py-3'
+              ? 'bg-royal-blue-800 rounded-xl shadow-luxury-xl border border-crimson-red-800/30 px-6 py-2' 
+              : 'bg-white rounded-2xl border border-ice-grey-200 px-8 py-3'
           }`}>
             <div className="flex justify-between items-center h-14">
               {/* Sleek Logo */}
@@ -74,12 +74,12 @@ const Header = () => {
                 </div>
                 <div className="hidden sm:block">
                   <h1 className={`text-lg font-display font-bold transition-colors duration-300 ${
-                    isScrolled ? 'text-royal-blue-800' : 'text-white'
+                    isScrolled ? 'text-white' : 'text-royal-blue-800'
                   }`}>
                     Britannia Coaches
                   </h1>
                   <p className={`text-xs font-medium transition-colors duration-300 ${
-                    isScrolled ? 'text-slate-ink-900' : 'text-white/80'
+                    isScrolled ? 'text-white/80' : 'text-slate-ink-900'
                   }`}>
                     Premium Transportation
                   </p>
@@ -99,8 +99,8 @@ const Header = () => {
                         <button
                           className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-300 ${
                             isActive(item.href) 
-                              ? `font-semibold ${isScrolled ? 'text-royal-blue-800 bg-crimson-red-100' : 'text-crimson-red-300 bg-royal-blue-900'}` 
-                              : `font-medium ${isScrolled ? 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50' : 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900'}`
+                              ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-royal-blue-900' : 'text-royal-blue-800 bg-crimson-red-100'}` 
+                              : `font-medium ${isScrolled ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' : 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50'}`
                           }`}
                         >
                           {item.name}
@@ -126,8 +126,8 @@ const Header = () => {
                         href={item.href}
                         className={`px-3 py-1.5 rounded-lg transition-all duration-300 ${
                           isActive(item.href) 
-                            ? `font-semibold ${isScrolled ? 'text-royal-blue-800 bg-crimson-red-100' : 'text-crimson-red-300 bg-royal-blue-900'}` 
-                            : `font-medium ${isScrolled ? 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50' : 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900'}`
+                            ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-royal-blue-900' : 'text-royal-blue-800 bg-crimson-red-100'}` 
+                            : `font-medium ${isScrolled ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' : 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50'}`
                         }`}
                       >
                         {item.name}
@@ -141,8 +141,8 @@ const Header = () => {
               <div className="hidden lg:flex items-center gap-3">
                 <a href="tel:01234567890" className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-300 font-bold ${
                   isScrolled 
-                    ? 'text-royal-blue-800 hover:text-crimson-red-800 hover:bg-crimson-red-50' 
-                    : 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900'
+                    ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' 
+                    : 'text-royal-blue-800 hover:text-crimson-red-800 hover:bg-crimson-red-50'
                 }`}>
                   <div className="w-1.5 h-1.5 bg-crimson-red-800 rounded-full animate-pulse"></div>
                   <Phone className="w-3.5 h-3.5" />
@@ -152,8 +152,8 @@ const Header = () => {
                   href="/contact"
                   className={`px-5 py-2 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 ${
                     isScrolled 
-                      ? 'bg-royal-blue-800 hover:bg-sky-indigo-800 text-white shadow-md hover:shadow-lg' 
-                      : 'bg-crimson-red-800 hover:bg-crimson-red-900 text-white shadow-md hover:shadow-lg'
+                      ? 'bg-crimson-red-800 hover:bg-crimson-red-900 text-white shadow-md hover:shadow-lg' 
+                      : 'bg-royal-blue-800 hover:bg-sky-indigo-800 text-white shadow-md hover:shadow-lg'
                   }`}
                 >
                   Get Quote
@@ -164,8 +164,8 @@ const Header = () => {
               <button
                 className={`lg:hidden p-2 rounded-xl transition-all duration-300 ${
                   isScrolled 
-                    ? 'text-navy-800 hover:bg-navy-100' 
-                    : 'text-white hover:bg-white/10'
+                    ? 'text-white hover:bg-royal-blue-900' 
+                    : 'text-royal-blue-800 hover:bg-royal-blue-100'
                 }`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
@@ -177,7 +177,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-cream-200 animate-fade-in-down">
+          <div className="lg:hidden bg-white border-t border-ice-grey-200 animate-fade-in-down">
             <div className="max-w-7xl mx-auto container-padding py-4">
               <div className="flex flex-col gap-4">
                 {navigation.map((item) => (
@@ -185,7 +185,7 @@ const Header = () => {
                     <Link
                       href={item.href}
                       className={`block py-2 ${
-                        isActive(item.href) ? 'text-navy-800 font-semibold' : 'text-navy-700 hover:text-gold-600 font-medium transition-colors duration-200'
+                        isActive(item.href) ? 'text-royal-blue-800 font-semibold' : 'text-slate-ink-900 hover:text-crimson-red-800 font-medium transition-colors duration-200'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -197,7 +197,7 @@ const Header = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block py-1 text-sm text-navy-600 hover:text-gold-600 transition-colors duration-200"
+                            className="block py-1 text-sm text-slate-ink-900 hover:text-crimson-red-800 transition-colors duration-200"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -207,10 +207,10 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4 border-t border-cream-200">
+                <div className="pt-4 border-t border-ice-grey-200">
                   <Link
                     href="/contact"
-                    className="bg-navy-800 hover:bg-navy-900 text-cream-50 px-6 py-3 text-lg font-medium rounded-lg shadow-luxury hover:shadow-luxury-md transition-all duration-200 w-full inline-flex items-center justify-center"
+                    className="bg-royal-blue-800 hover:bg-royal-blue-900 text-white px-6 py-3 text-lg font-medium rounded-lg shadow-luxury hover:shadow-luxury-md transition-all duration-200 w-full inline-flex items-center justify-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Quote
