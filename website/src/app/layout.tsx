@@ -39,7 +39,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#1e3a8a" />
       </head>
       <body className="antialiased">
         <Header />

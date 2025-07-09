@@ -55,8 +55,8 @@ const Header = () => {
         <div className="mx-6 mt-2">
           <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
-              ? 'bg-white rounded-xl shadow-luxury-xl border border-cream-200 px-6 py-2' 
-              : 'bg-navy-900 rounded-2xl border border-gold-400/30 px-8 py-3'
+              ? 'bg-white rounded-xl shadow-luxury-xl border border-ice-grey-200 px-6 py-2' 
+              : 'bg-royal-blue-800 rounded-2xl border border-crimson-red-800/30 px-8 py-3'
           }`}>
             <div className="flex justify-between items-center h-14">
               {/* Sleek Logo */}
@@ -70,16 +70,16 @@ const Header = () => {
                       className="object-contain"
                     />
                   </div>
-                  <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-gold-400 rounded-full animate-pulse"></div>
+                  <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-crimson-red-800 rounded-full animate-pulse"></div>
                 </div>
                 <div className="hidden sm:block">
                   <h1 className={`text-lg font-display font-bold transition-colors duration-300 ${
-                    isScrolled ? 'text-navy-900' : 'text-white'
+                    isScrolled ? 'text-royal-blue-800' : 'text-white'
                   }`}>
                     Britannia Coaches
                   </h1>
                   <p className={`text-xs font-medium transition-colors duration-300 ${
-                    isScrolled ? 'text-navy-600' : 'text-white/80'
+                    isScrolled ? 'text-slate-ink-900' : 'text-white/80'
                   }`}>
                     Premium Transportation
                   </p>
@@ -99,8 +99,8 @@ const Header = () => {
                         <button
                           className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-300 ${
                             isActive(item.href) 
-                              ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100' : 'text-gold-300 bg-navy-800'}` 
-                              : `font-medium ${isScrolled ? 'text-navy-700 hover:text-gold-600 hover:bg-gold-50' : 'text-white hover:text-gold-300 hover:bg-navy-800'}`
+                              ? `font-semibold ${isScrolled ? 'text-royal-blue-800 bg-crimson-red-100' : 'text-crimson-red-300 bg-royal-blue-900'}` 
+                              : `font-medium ${isScrolled ? 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50' : 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900'}`
                           }`}
                         >
                           {item.name}
@@ -108,12 +108,12 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gold-200 py-2 animate-fade-in-down">
+                          <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-ice-grey-200 py-2 animate-fade-in-down">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="block px-4 py-2 text-sm text-navy-700 hover:text-gold-600 hover:bg-gold-50 transition-all duration-200 rounded-lg mx-2"
+                                className="block px-4 py-2 text-sm text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50 transition-all duration-200 rounded-lg mx-2"
                               >
                                 {dropdownItem.name}
                               </Link>
@@ -126,8 +126,8 @@ const Header = () => {
                         href={item.href}
                         className={`px-3 py-1.5 rounded-lg transition-all duration-300 ${
                           isActive(item.href) 
-                            ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100' : 'text-gold-300 bg-navy-800'}` 
-                            : `font-medium ${isScrolled ? 'text-navy-700 hover:text-gold-600 hover:bg-gold-50' : 'text-white hover:text-gold-300 hover:bg-navy-800'}`
+                            ? `font-semibold ${isScrolled ? 'text-royal-blue-800 bg-crimson-red-100' : 'text-crimson-red-300 bg-royal-blue-900'}` 
+                            : `font-medium ${isScrolled ? 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50' : 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900'}`
                         }`}
                       >
                         {item.name}
@@ -141,10 +141,10 @@ const Header = () => {
               <div className="hidden lg:flex items-center gap-3">
                 <a href="tel:01234567890" className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-300 font-bold ${
                   isScrolled 
-                    ? 'text-navy-800 hover:text-gold-600 hover:bg-gold-50' 
-                    : 'text-white hover:text-gold-300 hover:bg-navy-800'
+                    ? 'text-royal-blue-800 hover:text-crimson-red-800 hover:bg-crimson-red-50' 
+                    : 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900'
                 }`}>
-                  <div className="w-1.5 h-1.5 bg-gold-400 rounded-full animate-pulse"></div>
+                  <div className="w-1.5 h-1.5 bg-crimson-red-800 rounded-full animate-pulse"></div>
                   <Phone className="w-3.5 h-3.5" />
                   <span className="hidden xl:inline text-sm">0123 456 7890</span>
                 </a>
@@ -152,8 +152,8 @@ const Header = () => {
                   href="/contact"
                   className={`px-5 py-2 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 ${
                     isScrolled 
-                      ? 'bg-navy-800 hover:bg-navy-900 text-white shadow-md hover:shadow-lg' 
-                      : 'bg-gold-500 hover:bg-gold-600 text-navy-900 shadow-md hover:shadow-lg'
+                      ? 'bg-royal-blue-800 hover:bg-sky-indigo-800 text-white shadow-md hover:shadow-lg' 
+                      : 'bg-crimson-red-800 hover:bg-crimson-red-900 text-white shadow-md hover:shadow-lg'
                   }`}
                 >
                   Get Quote

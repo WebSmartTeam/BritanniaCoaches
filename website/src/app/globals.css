@@ -10,12 +10,12 @@
   }
   
   body {
-    @apply bg-cream-50 text-navy-900 font-sans antialiased;
+    @apply bg-ice-grey-50 text-slate-ink-900 font-sans antialiased;
     font-feature-settings: 'cv11', 'ss01';
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-navy-900;
+    @apply font-display text-royal-blue-800;
   }
   
   h1 {
@@ -43,7 +43,7 @@
   }
   
   p {
-    @apply text-base md:text-lg leading-relaxed text-neutral-700;
+    @apply text-base md:text-lg leading-relaxed text-slate-ink-900;
   }
   
   a {
@@ -81,31 +81,31 @@
   }
   
   .btn-primary {
-    @apply bg-navy-800 hover:bg-navy-900 text-cream-50 shadow-luxury hover:shadow-luxury-md focus:ring-navy-500;
+    @apply bg-royal-blue-800 hover:bg-royal-blue-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-royal-blue-500;
   }
   
   .btn-secondary {
-    @apply bg-gold-600 hover:bg-gold-700 text-navy-900 shadow-luxury hover:shadow-luxury-md focus:ring-gold-500;
+    @apply bg-crimson-red-800 hover:bg-crimson-red-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-crimson-red-500;
   }
   
   .btn-accent {
-    @apply bg-cream-600 hover:bg-cream-700 text-navy-900 shadow-luxury hover:shadow-luxury-md focus:ring-cream-500;
+    @apply bg-sky-indigo-800 hover:bg-sky-indigo-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-sky-indigo-500;
   }
   
   .btn-outline-primary {
-    @apply border-2 border-navy-800 text-navy-800 hover:bg-navy-800 hover:text-cream-50 focus:ring-navy-500;
+    @apply border-2 border-royal-blue-800 text-royal-blue-800 hover:bg-royal-blue-800 hover:text-white focus:ring-royal-blue-500;
   }
   
   .btn-outline-secondary {
-    @apply border-2 border-gold-600 text-gold-600 hover:bg-gold-600 hover:text-navy-900 focus:ring-gold-500;
+    @apply border-2 border-crimson-red-800 text-crimson-red-800 hover:bg-crimson-red-800 hover:text-white focus:ring-crimson-red-500;
   }
   
   .btn-ghost {
-    @apply text-navy-700 hover:bg-cream-100 focus:ring-gold-300;
+    @apply text-slate-ink-900 hover:bg-ice-grey-100 focus:ring-royal-blue-300;
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-luxury border border-cream-200 overflow-hidden;
+    @apply bg-white rounded-xl shadow-luxury border border-ice-grey-200 overflow-hidden;
   }
   
   .card-hover {
@@ -129,7 +129,7 @@
   }
   
   .gradient-hero {
-    background: linear-gradient(135deg, #0f172a 0%, #f59e0b 50%, #d97706 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #d72638 50%, #3759c1 100%);
   }
   
   .gradient-accent {
@@ -137,7 +137,7 @@
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, #0f172a 0%, #f59e0b 50%, #d97706 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #d72638 50%, #3759c1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -148,15 +148,15 @@
   }
   
   .service-icon {
-    @apply w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 text-navy-600;
+    @apply w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 text-royal-blue-600;
   }
   
   .nav-link {
-    @apply text-navy-700 hover:text-gold-600 font-medium transition-colors duration-300;
+    @apply text-slate-ink-900 hover:text-crimson-red-800 font-medium transition-colors duration-300;
   }
   
   .nav-link-active {
-    @apply text-navy-800 font-semibold;
+    @apply text-royal-blue-800 font-semibold;
   }
   
   .hero-overlay {

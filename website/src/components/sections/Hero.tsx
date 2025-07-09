@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6">
             <Link
               href="/contact"
-              className="bg-gold-600 hover:bg-gold-700 text-navy-900 px-8 py-4 text-xl font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+              className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-xl font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
             >
               <span>Get Instant Quote</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
@@ -68,7 +68,7 @@ const Hero = () => {
             
             <Link
               href="/services"
-              className="bg-navy-800/20 backdrop-blur-sm hover:bg-navy-800/30 text-cream-50 border-2 border-cream-50/30 hover:border-gold-400 px-8 py-4 text-xl font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
+              className="bg-royal-blue-800/20 backdrop-blur-sm hover:bg-royal-blue-800/30 text-white border-2 border-white/30 hover:border-crimson-red-800 px-8 py-4 text-xl font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
             >
               <span>View Services</span>
             </Link>
