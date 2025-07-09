@@ -25,31 +25,31 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
         <div className="max-w-4xl hero-content">
           {/* 🧬 DNA INJECTION: Enhanced Trust Badge - Proven Conversion Pattern */}
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-8 text-white border border-crimson-red-800/30">
-            <div className="w-3 h-3 bg-crimson-red-800 rounded-full animate-pulse"></div>
+          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-8 text-white border border-sky-indigo-800/30">
+            <div className="w-3 h-3 bg-sky-indigo-800 rounded-full animate-pulse"></div>
             <span>Trusted by 1000+ Customers • 25+ Years Excellence • Professional Certified</span>
           </div>
           
           {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
             Britain&apos;s Premier
-            <span className="block text-crimson-red-800">Coach Transportation</span>
+            <span className="block text-sky-indigo-800">Coach Transportation</span>
           </h1>
           
           {/* 🧬 DNA INJECTION: Value Proposition - Conversion Optimized */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-            <span className="font-semibold text-crimson-red-800">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
+            <span className="font-semibold text-sky-indigo-800">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
             <span className="font-semibold text-white">Professional drivers, modern fleet, unmatched reliability.</span>
           </p>
 
           {/* 🧬 DNA INJECTION: Instant Contact Strip - High Converting Pattern */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-crimson-red-800/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-sky-indigo-800/20">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               <div className="text-white text-center lg:text-left">
                 <p className="text-lg font-semibold">Need immediate assistance?</p>
                 <p className="text-white/80">Call now for instant quote & booking</p>
               </div>
-              <a href="tel:01234567890" className="flex items-center gap-3 bg-crimson-red-800 hover:bg-crimson-red-900 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-luxury-lg hover:shadow-luxury-xl transform hover:scale-105">
+              <a href="tel:01234567890" className="flex items-center gap-3 bg-sky-indigo-800 hover:bg-royal-blue-900 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-luxury-lg hover:shadow-luxury-xl transform hover:scale-105">
                 <Phone className="w-6 h-6" />
                 <span className="text-xl">0123 456 7890</span>
               </a>
