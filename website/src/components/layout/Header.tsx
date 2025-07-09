@@ -45,32 +45,32 @@ const Header = () => {
   return (
     <>
 
-      {/* Floating Glass Header */}
+      {/* Solid Floating Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/20 backdrop-blur-xl shadow-2xl' 
-          : 'bg-transparent'
+          ? 'shadow-2xl' 
+          : ''
       }`}>
         {/* Creative Floating Container */}
         <div className="mx-4 mt-4">
-          <div className={`max-w-6xl mx-auto transition-all duration-500 ${
+          <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
-              ? 'bg-white/90 backdrop-blur-xl rounded-2xl shadow-luxury-xl border border-white/30 px-6 py-3' 
-              : 'bg-navy-900/10 backdrop-blur-sm rounded-3xl border border-white/20 px-8 py-4'
+              ? 'bg-white rounded-2xl shadow-luxury-xl border border-cream-200 px-6 py-3' 
+              : 'bg-navy-900 rounded-3xl border border-gold-400/30 px-8 py-4'
           }`}>
             <div className="flex justify-between items-center h-16">
               {/* Floating Logo */}
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="relative">
                   <div className={`w-12 h-12 rounded-xl transition-all duration-300 group-hover:scale-110 ${
-                    isScrolled ? 'bg-navy-900 shadow-lg' : 'bg-white/20 backdrop-blur-sm border border-white/30'
+                    isScrolled ? 'bg-navy-900 shadow-lg' : 'bg-gold-500 shadow-lg'
                   } flex items-center justify-center`}>
                     <div className="w-8 h-8 relative">
                       <Image
                         src="/images/logos/logo.png"
                         alt="Britannia Coaches"
                         fill
-                        className={`object-contain transition-all duration-300 ${isScrolled ? 'brightness-0 invert' : ''}`}
+                        className={`object-contain transition-all duration-300 ${isScrolled ? 'brightness-0 invert' : 'brightness-0'}`}
                       />
                     </div>
                   </div>
@@ -103,8 +103,8 @@ const Header = () => {
                         <button
                           className={`flex items-center gap-1 px-4 py-2 rounded-xl transition-all duration-300 ${
                             isActive(item.href) 
-                              ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100/50' : 'text-gold-300 bg-white/10'}` 
-                              : `font-medium hover:bg-white/10 ${isScrolled ? 'text-navy-700 hover:text-gold-600' : 'text-white/90 hover:text-gold-300'}`
+                              ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100' : 'text-gold-300 bg-navy-800'}` 
+                              : `font-medium ${isScrolled ? 'text-navy-700 hover:text-gold-600 hover:bg-gold-50' : 'text-white hover:text-gold-300 hover:bg-navy-800'}`
                           }`}
                         >
                           {item.name}
@@ -112,12 +112,12 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="absolute top-full left-0 mt-3 w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gold-200/50 py-3 animate-fade-in-down">
+                          <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-2xl shadow-2xl border border-gold-200 py-3 animate-fade-in-down">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="block px-5 py-3 text-sm text-navy-700 hover:text-gold-600 hover:bg-gold-50/50 transition-all duration-200 rounded-lg mx-2"
+                                className="block px-5 py-3 text-sm text-navy-700 hover:text-gold-600 hover:bg-gold-50 transition-all duration-200 rounded-lg mx-2"
                               >
                                 {dropdownItem.name}
                               </Link>
@@ -130,8 +130,8 @@ const Header = () => {
                         href={item.href}
                         className={`px-4 py-2 rounded-xl transition-all duration-300 ${
                           isActive(item.href) 
-                            ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100/50' : 'text-gold-300 bg-white/10'}` 
-                            : `font-medium hover:bg-white/10 ${isScrolled ? 'text-navy-700 hover:text-gold-600' : 'text-white/90 hover:text-gold-300'}`
+                            ? `font-semibold ${isScrolled ? 'text-navy-800 bg-gold-100' : 'text-gold-300 bg-navy-800'}` 
+                            : `font-medium ${isScrolled ? 'text-navy-700 hover:text-gold-600 hover:bg-gold-50' : 'text-white hover:text-gold-300 hover:bg-navy-800'}`
                         }`}
                       >
                         {item.name}
@@ -145,8 +145,8 @@ const Header = () => {
               <div className="hidden lg:flex items-center gap-3">
                 <a href="tel:01234567890" className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-300 font-bold ${
                   isScrolled 
-                    ? 'text-navy-800 hover:text-gold-600 hover:bg-gold-50/30' 
-                    : 'text-white/90 hover:text-gold-300 hover:bg-white/10'
+                    ? 'text-navy-800 hover:text-gold-600 hover:bg-gold-50' 
+                    : 'text-white hover:text-gold-300 hover:bg-navy-800'
                 }`}>
                   <div className="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></div>
                   <Phone className="w-4 h-4" />
