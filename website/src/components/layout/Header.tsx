@@ -52,10 +52,14 @@ const Header = () => {
           : ''
       }`}>
         {/* Sleek Floating Container */}
-        <div className="mx-6 mt-2">
+        <div className={`transition-all duration-500 ${
+          isScrolled 
+            ? 'mx-0 mt-0' 
+            : 'mx-6 mt-2'
+        }`}>
           <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
-              ? 'bg-royal-blue-800 rounded-xl shadow-luxury-xl border border-crimson-red-800/30 px-6 py-2' 
+              ? 'bg-royal-blue-800 rounded-none shadow-luxury-xl px-6 py-2' 
               : 'bg-white rounded-2xl border border-ice-grey-200 px-8 py-3'
           }`}>
             <div className="flex justify-between items-center h-14">
