@@ -46,20 +46,12 @@ const Header = () => {
     <>
 
       {/* Solid Floating Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'shadow-2xl' 
-          : ''
-      }`}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
         {/* Sleek Floating Container */}
-        <div className={`transition-all duration-500 ${
-          isScrolled 
-            ? 'mx-0 mt-0' 
-            : 'mx-6 mt-2'
-        }`}>
+        <div className="mx-6 mt-2">
           <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
-              ? 'bg-royal-blue-800 rounded-none shadow-luxury-xl px-6 py-2' 
+              ? 'bg-royal-blue-800 rounded-xl shadow-luxury-xl px-6 py-2' 
               : 'bg-white rounded-2xl border border-ice-grey-200 px-8 py-3'
           }`}>
             <div className="flex justify-between items-center h-14">
