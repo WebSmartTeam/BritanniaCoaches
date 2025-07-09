@@ -54,11 +54,11 @@ const Header = () => {
               ? 'bg-royal-blue-800 rounded-xl shadow-luxury-xl px-6 py-2' 
               : 'bg-white rounded-2xl border border-ice-grey-200 px-8 py-3'
           }`}>
-            <div className="flex justify-between items-center h-14">
+            <div className="flex justify-between items-center h-20">
               {/* Sleek Logo */}
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="relative">
-                  <div className="w-10 h-10 relative group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 relative group-hover:scale-110 transition-transform duration-300">
                     <Image
                       src="/images/logos/logo.png"
                       alt="Britannia Coaches"
