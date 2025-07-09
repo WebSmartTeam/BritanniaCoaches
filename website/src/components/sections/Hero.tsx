@@ -25,31 +25,31 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
         <div className="max-w-4xl hero-content">
           {/* 🧬 DNA INJECTION: Enhanced Trust Badge - Proven Conversion Pattern */}
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-8 text-cream-100 border border-gold-400/30">
-            <div className="w-3 h-3 bg-gold-400 rounded-full animate-pulse"></div>
+          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-8 text-white border border-crimson-red-800/30">
+            <div className="w-3 h-3 bg-crimson-red-800 rounded-full animate-pulse"></div>
             <span>Trusted by 1000+ Customers • 25+ Years Excellence • Professional Certified</span>
           </div>
           
           {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-cream-50 mb-6 leading-tight text-shadow-lg">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
             Britain&apos;s Premier
-            <span className="block text-gold-400">Coach Transportation</span>
+            <span className="block text-crimson-red-800">Coach Transportation</span>
           </h1>
           
           {/* 🧬 DNA INJECTION: Value Proposition - Conversion Optimized */}
-          <p className="text-xl md:text-2xl text-cream-100/90 mb-8 leading-relaxed max-w-3xl">
-            <span className="font-semibold text-gold-400">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
-            <span className="font-semibold text-cream-50">Professional drivers, modern fleet, unmatched reliability.</span>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+            <span className="font-semibold text-crimson-red-800">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
+            <span className="font-semibold text-white">Professional drivers, modern fleet, unmatched reliability.</span>
           </p>
 
           {/* 🧬 DNA INJECTION: Instant Contact Strip - High Converting Pattern */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gold-400/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-crimson-red-800/20">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-              <div className="text-cream-100 text-center lg:text-left">
+              <div className="text-white text-center lg:text-left">
                 <p className="text-lg font-semibold">Need immediate assistance?</p>
-                <p className="text-cream-200">Call now for instant quote & booking</p>
+                <p className="text-white/80">Call now for instant quote & booking</p>
               </div>
-              <a href="tel:01234567890" className="flex items-center gap-3 bg-gold-600 hover:bg-gold-700 text-navy-900 font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-luxury-lg hover:shadow-luxury-xl transform hover:scale-105">
+              <a href="tel:01234567890" className="flex items-center gap-3 bg-crimson-red-800 hover:bg-crimson-red-900 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-luxury-lg hover:shadow-luxury-xl transform hover:scale-105">
                 <Phone className="w-6 h-6" />
                 <span className="text-xl">0123 456 7890</span>
               </a>
@@ -79,8 +79,8 @@ const Hero = () => {
       {/* Elegant Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-cream-100/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-cream-100/60 rounded-full mt-2 animate-pulse" />
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
       </div>
