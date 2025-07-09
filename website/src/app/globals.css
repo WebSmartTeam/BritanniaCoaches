@@ -113,7 +113,7 @@
   }
   
   .input-field {
-    @apply w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 placeholder-neutral-400 bg-white;
+    @apply w-full px-4 py-3 border border-ice-grey-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 placeholder-ice-grey-400 bg-white;
   }
   
   .input-error {
@@ -168,11 +168,11 @@
   }
   
   .testimonial-card {
-    @apply bg-white rounded-xl p-6 shadow-luxury border border-neutral-200 relative;
+    @apply bg-white rounded-xl p-6 shadow-luxury border border-ice-grey-200 relative;
   }
   
   .testimonial-quote {
-    @apply text-4xl text-gold-600 opacity-20 absolute top-4 left-4;
+    @apply text-4xl text-crimson-red-600 opacity-20 absolute top-4 left-4;
   }
   
   .stats-counter {
