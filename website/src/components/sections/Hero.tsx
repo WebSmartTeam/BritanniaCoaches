@@ -9,7 +9,7 @@ const Hero = () => {
   const [isQuickToolOpen, setIsQuickToolOpen] = useState(false)
 
   return (
-    <section className="relative h-screen flex items-center overflow-hidden -mt-20">
+    <section className="relative h-[70vh] flex items-center overflow-hidden -mt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -27,38 +27,39 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
         <div className="max-w-4xl hero-content">
           
-          {/* Sleek Headlines */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-tight tracking-tight">
+          {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
             Britain&apos;s Premier
             <span className="block text-white">Coach Transportation</span>
           </h1>
           
-          {/* Refined Value Proposition */}
-          <p className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed max-w-2xl font-light">
-            Professional drivers, premium fleet, unmatched reliability for your journey.
+          {/* 🧬 DNA INJECTION: Value Proposition - Conversion Optimized */}
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+            <span className="font-semibold text-white">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
+            <span className="font-semibold text-white">Professional drivers, modern fleet, unmatched reliability.</span>
           </p>
 
 
-          {/* Sleek CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          {/* 🧬 DNA INJECTION: Primary CTA Pattern - Proven Conversion */}
+          <div className="flex flex-col sm:flex-row gap-6">
             <Link
               href="/fleet"
-              className="bg-white text-slate-ink-900 hover:bg-white/90 px-8 py-4 text-lg font-medium rounded-2xl shadow-2xl hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+              className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-xl font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
             >
               <span>View Our Fleet</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
             
             <Link
               href="/services"
-              className="bg-transparent hover:bg-white/10 text-white border-2 border-white/40 hover:border-white/60 px-8 py-4 text-lg font-medium rounded-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 backdrop-blur-sm"
+              className="bg-royal-blue-800/20 backdrop-blur-sm hover:bg-royal-blue-800/30 text-white border-2 border-white/30 hover:border-crimson-red-800 px-8 py-4 text-xl font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
             >
               <span>View Services</span>
             </Link>
           </div>
 
           {/* Quick Tools Widget */}
-          <div>
+          <div className="mt-8">
             <button
               onClick={() => setIsQuickToolOpen(!isQuickToolOpen)}
               className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white/80 hover:text-white border border-white/20 hover:border-white/40 px-6 py-3 rounded-2xl transition-all duration-300 inline-flex items-center gap-3 text-sm font-light"
@@ -121,7 +122,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
 
     </section>
   )
