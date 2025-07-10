@@ -1,30 +1,40 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, Wifi, Coffee, Monitor, Shield, Wind, Volume2, Zap } from 'lucide-react'
+import { Users, Wifi, Coffee, Monitor, Shield, Wind, Volume2, Zap, Play, ArrowRight } from 'lucide-react'
 
 const Fleet = () => {
+  const [activeFleet, setActiveFleet] = useState(0)
+
   const fleetTypes = [
     {
       type: 'Luxury Executive',
       capacity: '16-25 passengers',
-      image: '/images/premium/luxury-coach-2.jpg',
+      image: '/images/premium/luxury-coach-2.webp',
       features: ['Premium Leather Seats', 'WiFi & USB Charging', 'Climate Control', 'Entertainment System'],
       ideal: 'Corporate events, VIP transport, executive travel',
+      price: 'From £120/hour',
+      highlight: 'Most Popular',
     },
     {
       type: 'Standard Coach',
       capacity: '35-49 passengers',
-      image: '/images/premium/luxury-coach-3.jpg',
+      image: '/images/premium/luxury-coach-3.webp',
       features: ['Comfortable Seating', 'Air Conditioning', 'Luggage Storage', 'PA System'],
       ideal: 'School trips, group travel, day trips',
+      price: 'From £95/hour',
+      highlight: 'Best Value',
     },
     {
       type: 'Mini Coach',
       capacity: '8-16 passengers',
-      image: '/images/premium/luxury-coach-4.jpg',
+      image: '/images/premium/luxury-coach-4.webp',
       features: ['Compact Design', 'Easy Boarding', 'Flexible Seating', 'Personal Service'],
       ideal: 'Small groups, airport transfers, local trips',
+      price: 'From £85/hour',
+      highlight: 'Flexible',
     },
   ]
 
@@ -79,78 +89,128 @@ const Fleet = () => {
   ]
 
   return (
-    <section className="section-padding bg-neutral-50">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section className="section-padding bg-slate-ink-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-royal-blue-800 to-crimson-red-800" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
             Our Modern Fleet
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Experience comfort and reliability with our modern fleet of coaches. Each vehicle is maintained 
-            to the highest standards and equipped with the latest amenities for your comfort and safety.
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            Experience comfort and reliability with our modern fleet of coaches. Interactive coach selector 
+            to help you choose the perfect vehicle for your journey.
           </p>
         </div>
 
-        {/* Fleet Types */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {fleetTypes.map((fleet, index) => (
-            <div key={index} className="card card-hover overflow-hidden">
-              <div className="relative h-64">
-                <Image
-                  src={fleet.image}
-                  alt={fleet.type}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {fleet.capacity}
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-2xl font-display font-bold text-neutral-900 mb-3">
-                  {fleet.type}
-                </h3>
-                
-                <p className="text-neutral-600 mb-4">
-                  {fleet.ideal}
-                </p>
+        {/* Interactive Fleet Selector */}
+        <div className="mb-16">
+          {/* Fleet Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {fleetTypes.map((fleet, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveFleet(index)}
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  activeFleet === index
+                    ? 'bg-crimson-red-800 text-white shadow-luxury'
+                    : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                {fleet.type}
+              </button>
+            ))}
+          </div>
 
-                <div className="space-y-2">
-                  {fleet.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-2 text-sm text-neutral-600">
-                      <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
+          {/* Active Fleet Display */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image Side */}
+            <div className="relative">
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={fleetTypes[activeFleet].image}
+                  alt={fleetTypes[activeFleet].type}
+                  fill
+                  className="object-cover transition-opacity duration-500"
+                />
+                <div className="absolute top-4 left-4 bg-crimson-red-800 text-white px-4 py-2 rounded-full font-medium">
+                  {fleetTypes[activeFleet].highlight}
+                </div>
+                <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full">
+                  <Play className="w-4 h-4 inline mr-2" />
+                  Virtual Tour
                 </div>
               </div>
             </div>
-          ))}
+
+            {/* Details Side */}
+            <div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h3 className="text-3xl font-display font-bold text-white mb-4">
+                  {fleetTypes[activeFleet].type}
+                </h3>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white/10 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-crimson-red-800">{fleetTypes[activeFleet].capacity}</div>
+                    <div className="text-sm text-white/70">Passenger Capacity</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-crimson-red-800">{fleetTypes[activeFleet].price}</div>
+                    <div className="text-sm text-white/70">Starting Price</div>
+                  </div>
+                </div>
+
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  {fleetTypes[activeFleet].ideal}
+                </p>
+
+                <div className="space-y-3 mb-8">
+                  {fleetTypes[activeFleet].features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-crimson-red-800 rounded-full" />
+                      <span className="text-white/90">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="/contact"
+                  className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+                >
+                  <span>Book This Coach</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Amenities */}
+        {/* Premium Amenities Grid */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
               Premium Amenities
             </h3>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Every coach in our fleet comes equipped with modern amenities to ensure your journey is comfortable and enjoyable.
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
+              Every coach comes equipped with modern amenities for your comfort and convenience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {amenities.map((amenity, index) => (
-              <div key={index} className="card p-6 text-center">
-                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <amenity.icon className="w-6 h-6 text-primary-600" />
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <amenity.icon className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold text-neutral-900 mb-2">
+                <h4 className="text-lg font-semibold text-white mb-2">
                   {amenity.title}
                 </h4>
-                <p className="text-neutral-600 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   {amenity.description}
                 </p>
               </div>
@@ -158,8 +218,8 @@ const Fleet = () => {
           </div>
         </div>
 
-        {/* Fleet Stats */}
-        <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-white mb-16">
+        {/* Fleet Excellence Stats */}
+        <div className="bg-gradient-to-r from-crimson-red-800 to-royal-blue-800 rounded-3xl p-8 md:p-12 text-white">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">
               Fleet Excellence
@@ -180,32 +240,6 @@ const Fleet = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-clean-lg">
-            <h3 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
-              Ready to Experience Our Fleet?
-            </h3>
-            <p className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
-              Book your transportation today and experience the comfort and reliability of our modern fleet.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="btn btn-primary btn-lg"
-              >
-                Book Now
-              </Link>
-              <Link
-                href="/fleet"
-                className="btn btn-outline-primary btn-lg"
-              >
-                View Full Fleet
-              </Link>
-            </div>
           </div>
         </div>
       </div>

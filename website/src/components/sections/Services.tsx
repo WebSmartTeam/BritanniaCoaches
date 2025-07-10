@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Building2, GraduationCap, Heart, Plane, MapPin, Navigation, ArrowRight } from 'lucide-react'
 
 const Services = () => {
@@ -7,62 +8,68 @@ const Services = () => {
     {
       icon: Building2,
       title: 'Corporate Transport',
-      description: 'Professional transportation for business events, conferences, and corporate meetings. Reliable service with professional drivers.',
-      features: ['Executive Coaches', 'Professional Drivers', 'Flexible Scheduling', 'Corporate Accounts'],
+      description: 'Professional transportation for business events, conferences, and corporate meetings.',
+      features: ['Executive Coaches', 'Professional Drivers', 'Flexible Scheduling'],
       href: '/services/corporate',
-      color: 'bg-primary-50 text-primary-600',
+      image: '/images/premium/luxury-coach-1.webp',
+      gradient: 'from-royal-blue-800/90 to-royal-blue-900/90',
     },
     {
       icon: GraduationCap,
       title: 'School Trips',
-      description: 'Safe and secure transportation for educational trips, school outings, and student travel with enhanced safety measures.',
-      features: ['Safety Certified', 'DBS Checked Drivers', 'Educational Discounts', 'Risk Assessments'],
+      description: 'Safe and secure transportation for educational trips and student travel.',
+      features: ['Safety Certified', 'DBS Checked Drivers', 'Educational Discounts'],
       href: '/services/school-trips',
-      color: 'bg-green-50 text-green-600',
+      image: '/images/premium/luxury-coach-2.webp',
+      gradient: 'from-emerald-600/90 to-emerald-700/90',
     },
     {
       icon: Heart,
       title: 'Wedding Transport',
-      description: 'Elegant transportation for your special day. From bridal parties to guest shuttles, we make your wedding memorable.',
-      features: ['Luxury Coaches', 'Decorative Options', 'Flexible Timings', 'Guest Coordination'],
+      description: 'Elegant transportation for your special day and guest shuttles.',
+      features: ['Luxury Coaches', 'Decorative Options', 'Flexible Timings'],
       href: '/services/wedding',
-      color: 'bg-pink-50 text-pink-600',
+      image: '/images/premium/luxury-coach-3.webp',
+      gradient: 'from-rose-600/90 to-rose-700/90',
     },
     {
       icon: Plane,
       title: 'Airport Transfers',
-      description: 'Reliable airport transfers for groups. Flight monitoring, meet & greet service, and comfortable travel to all major airports.',
-      features: ['Flight Monitoring', 'Meet & Greet', 'Luggage Handling', 'All UK Airports'],
+      description: 'Reliable airport transfers with flight monitoring and meet & greet service.',
+      features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports'],
       href: '/services/airport',
-      color: 'bg-blue-50 text-blue-600',
+      image: '/images/premium/luxury-coach-4.webp',
+      gradient: 'from-sky-indigo-800/90 to-royal-blue-900/90',
     },
     {
       icon: MapPin,
       title: 'Day Trips',
-      description: 'Organize memorable day trips to popular destinations. Perfect for family groups, friends, and organized tours.',
-      features: ['Popular Destinations', 'Flexible Itineraries', 'Group Discounts', 'Local Guides'],
+      description: 'Memorable day trips to popular destinations with flexible itineraries.',
+      features: ['Popular Destinations', 'Group Discounts', 'Local Guides'],
       href: '/services/day-trips',
-      color: 'bg-orange-50 text-orange-600',
+      image: '/images/premium/luxury-coach-5.webp',
+      gradient: 'from-amber-600/90 to-orange-600/90',
     },
     {
       icon: Navigation,
       title: 'Long Distance',
-      description: 'Comfortable long-distance travel across the UK and Europe. Modern coaches with amenities for extended journeys.',
-      features: ['Modern Amenities', 'Rest Stops', 'Entertainment', 'European Travel'],
+      description: 'Comfortable long-distance travel across the UK and Europe.',
+      features: ['Modern Amenities', 'Rest Stops', 'European Travel'],
       href: '/services/long-distance',
-      color: 'bg-purple-50 text-purple-600',
+      image: '/images/premium/luxury-coach-1.webp',
+      gradient: 'from-purple-600/90 to-purple-700/90',
     },
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gradient-to-br from-ice-grey-50 to-white">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
             Our Transportation Services
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
             Professional coach services tailored to your needs. From corporate events to family day trips, 
             we provide safe, reliable, and comfortable transportation solutions across the UK.
           </p>
@@ -71,72 +78,118 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="card card-hover p-8 group cursor-pointer"
-            >
-              <Link href={service.href} className="block">
-                <div className="flex flex-col h-full">
+            <Link key={index} href={service.href} className="group block">
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-luxury hover:shadow-luxury-xl transition-all duration-500 transform hover:scale-105">
+                {/* Background Image */}
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient}`} />
+                
+                {/* Content */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
                   {/* Icon */}
-                  <div className={`w-16 h-16 rounded-xl ${service.color} flex items-center justify-center mb-6`}>
-                    <service.icon className="w-8 h-8" />
+                  <div className="flex justify-between items-start">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
+                  {/* Bottom Content */}
+                  <div>
+                    <h3 className="text-2xl font-display font-bold mb-3 group-hover:text-white transition-colors duration-200">
                       {service.title}
                     </h3>
                     
-                    <p className="text-neutral-600 leading-relaxed mb-6">
+                    <p className="text-white/90 leading-relaxed mb-4 text-sm">
                       {service.description}
                     </p>
 
                     {/* Features */}
-                    <ul className="space-y-2 mb-6">
+                    <div className="flex flex-wrap gap-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-neutral-500">
-                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
-                          <span>{feature}</span>
-                        </li>
+                        <span 
+                          key={featureIndex} 
+                          className="px-2 py-1 bg-white/20 backdrop-blur-sm rounded-md text-xs font-medium"
+                        >
+                          {feature}
+                        </span>
                       ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex items-center gap-2 text-primary-600 font-medium group-hover:text-primary-700 transition-colors duration-200">
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    </div>
                   </div>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-white">
-            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              We offer flexible transportation solutions tailored to your specific requirements. 
-              Get in touch to discuss your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="btn btn-secondary btn-lg"
-              >
-                Get Custom Quote
-              </Link>
-              <Link
-                href="tel:01234567890"
-                className="btn btn-outline-primary btn-lg border-white text-white hover:bg-white hover:text-primary-600"
-              >
-                Call 0123 456 7890
-              </Link>
+        {/* Interactive CTA Section */}
+        <div className="mt-20">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image
+                src="/images/premium/luxury-coach-3.webp"
+                alt="Custom Transportation Solutions"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-royal-blue-900/95 to-crimson-red-800/95" />
+            </div>
+            
+            {/* Content */}
+            <div className="relative p-8 md:p-16 text-center text-white">
+              <h3 className="text-3xl md:text-5xl font-display font-bold mb-6">
+                Need a Custom Solution?
+              </h3>
+              <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+                We specialize in creating bespoke transportation solutions. Whether it&apos;s a unique route, 
+                special event, or specific requirements, our team will craft the perfect solution for you.
+              </p>
+              
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-xl font-bold">24/7</span>
+                  </div>
+                  <p className="text-sm text-white/80">Available Support</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-xl font-bold">UK</span>
+                  </div>
+                  <p className="text-sm text-white/80">Nationwide Coverage</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-xl font-bold">+25</span>
+                  </div>
+                  <p className="text-sm text-white/80">Years Experience</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="bg-white text-royal-blue-800 hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+                >
+                  <span>Get Custom Quote</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+                <Link
+                  href="tel:01234567890"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-royal-blue-800 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Call 0123 456 7890
+                </Link>
+              </div>
             </div>
           </div>
         </div>
