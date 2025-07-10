@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -42,19 +42,6 @@ const Hero = () => {
             <span className="font-semibold text-white">Professional drivers, modern fleet, unmatched reliability.</span>
           </p>
 
-          {/* 🧬 DNA INJECTION: Instant Contact Strip - High Converting Pattern */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-              <div className="text-white text-center lg:text-left">
-                <p className="text-lg font-semibold">Need immediate assistance?</p>
-                <p className="text-white/80">Call now for instant quote & booking</p>
-              </div>
-              <a href="tel:01234567890" className="flex items-center gap-3 bg-white hover:bg-white/90 text-royal-blue-800 font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-luxury-lg hover:shadow-luxury-xl transform hover:scale-105">
-                <Phone className="w-6 h-6" />
-                <span className="text-xl">0123 456 7890</span>
-              </a>
-            </div>
-          </div>
 
           {/* 🧬 DNA INJECTION: Primary CTA Pattern - Proven Conversion */}
           <div className="flex flex-col sm:flex-row gap-6">
