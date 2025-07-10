@@ -46,10 +46,10 @@ const Hero = () => {
           {/* 🧬 DNA INJECTION: Primary CTA Pattern - Proven Conversion */}
           <div className="flex flex-col sm:flex-row gap-6">
             <Link
-              href="/contact"
+              href="/fleet"
               className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-xl font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
             >
-              <span>Get Instant Quote</span>
+              <span>View Our Fleet</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
             
