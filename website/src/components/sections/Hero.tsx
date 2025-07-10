@@ -107,7 +107,7 @@ const Hero = () => {
                 </div>
                 <div className="flex justify-between items-center mt-6">
                   <div className="text-white/80 text-sm">
-                    Estimated distance: <span className="text-white font-semibold">~45 miles</span>
+                    <span className="text-white font-medium">Popular routes:</span> London, Birmingham, Manchester
                   </div>
                   <Link
                     href="/contact"
