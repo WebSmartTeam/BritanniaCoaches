@@ -11,7 +11,7 @@ const Services = () => {
       description: 'Professional transportation for business events, conferences, and corporate meetings.',
       features: ['Executive Coaches', 'Professional Drivers', 'Flexible Scheduling'],
       href: '/services/corporate',
-      image: '/images/premium/luxury-coach-1.webp',
+      image: '/images/services/corporate/main.webp',
       gradient: 'from-royal-blue-800/90 to-royal-blue-900/90',
     },
     {
@@ -20,7 +20,7 @@ const Services = () => {
       description: 'Safe and secure transportation for educational trips and student travel.',
       features: ['Safety Certified', 'DBS Checked Drivers', 'Educational Discounts'],
       href: '/services/school-trips',
-      image: '/images/premium/luxury-coach-2.webp',
+      image: '/images/services/school-trips/main.webp',
       gradient: 'from-emerald-600/90 to-emerald-700/90',
     },
     {
@@ -29,7 +29,7 @@ const Services = () => {
       description: 'Elegant transportation for your special day and guest shuttles.',
       features: ['Luxury Coaches', 'Decorative Options', 'Flexible Timings'],
       href: '/services/wedding',
-      image: '/images/premium/luxury-coach-3.webp',
+      image: '/images/services/wedding/main.webp',
       gradient: 'from-rose-600/90 to-rose-700/90',
     },
     {
@@ -38,7 +38,7 @@ const Services = () => {
       description: 'Reliable airport transfers with flight monitoring and meet & greet service.',
       features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports'],
       href: '/services/airport',
-      image: '/images/premium/luxury-coach-4.webp',
+      image: '/images/services/airport/main.webp',
       gradient: 'from-sky-indigo-800/90 to-royal-blue-900/90',
     },
     {
@@ -47,7 +47,7 @@ const Services = () => {
       description: 'Memorable day trips to popular destinations with flexible itineraries.',
       features: ['Popular Destinations', 'Group Discounts', 'Local Guides'],
       href: '/services/day-trips',
-      image: '/images/premium/luxury-coach-5.webp',
+      image: '/images/services/day-trips/main.webp',
       gradient: 'from-amber-600/90 to-orange-600/90',
     },
     {
@@ -56,7 +56,7 @@ const Services = () => {
       description: 'Comfortable long-distance travel across the UK and Europe.',
       features: ['Modern Amenities', 'Rest Stops', 'European Travel'],
       href: '/services/long-distance',
-      image: '/images/premium/luxury-coach-1.webp',
+      image: '/images/services/long-distance/main.webp',
       gradient: 'from-purple-600/90 to-purple-700/90',
     },
   ]
