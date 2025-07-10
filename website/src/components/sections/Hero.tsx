@@ -33,7 +33,7 @@ const Hero = () => {
           {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
             Britain&apos;s Premier
-            <span className="block text-sky-indigo-800">Coach Transportation</span>
+            <span className="block text-white">Coach Transportation</span>
           </h1>
           
           {/* 🧬 DNA INJECTION: Value Proposition - Conversion Optimized */}
@@ -76,14 +76,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Elegant Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
-      </div>
     </section>
   )
 }
