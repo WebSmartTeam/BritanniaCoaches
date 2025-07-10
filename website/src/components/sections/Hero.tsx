@@ -24,8 +24,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto container-padding w-full text-center">
-        <div className="max-w-4xl hero-content mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
+        <div className="max-w-4xl hero-content">
           
           {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
@@ -41,7 +41,7 @@ const Hero = () => {
 
 
           {/* 🧬 DNA INJECTION: Primary CTA Pattern - Proven Conversion */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6">
             <Link
               href="/fleet"
               className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-xl font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
@@ -59,7 +59,7 @@ const Hero = () => {
           </div>
 
           {/* Quick Tools Widget */}
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8">
             <button
               onClick={() => setIsQuickToolOpen(!isQuickToolOpen)}
               className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white/80 hover:text-white border border-white/20 hover:border-white/40 px-6 py-3 rounded-2xl transition-all duration-300 inline-flex items-center gap-3 text-sm font-light"
