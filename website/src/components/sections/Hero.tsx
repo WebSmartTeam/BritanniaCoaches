@@ -9,7 +9,7 @@ const Hero = () => {
   const [isQuickToolOpen, setIsQuickToolOpen] = useState(false)
 
   return (
-    <section className={`relative flex items-end overflow-hidden -mt-20 transition-all duration-300 ${isQuickToolOpen ? 'h-screen' : 'h-[70vh]'}`}>
+    <section className={`relative flex items-end overflow-hidden -mt-20 transition-all duration-300 ${isQuickToolOpen ? 'h-screen' : 'h-[80vh]'}`}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
