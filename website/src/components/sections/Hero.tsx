@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Users, Star, Calendar } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -59,6 +59,37 @@ const Hero = () => {
             >
               <span>View Services</span>
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Stats Widget */}
+      <div className="absolute bottom-8 right-8 z-10 hidden lg:block">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl">
+          <div className="flex items-center gap-6">
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-2">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white">1000+</div>
+              <div className="text-xs text-white/80">Happy Clients</div>
+            </div>
+            <div className="w-px h-16 bg-white/20"></div>
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-2">
+                <Star className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white">4.9</div>
+              <div className="text-xs text-white/80">Rating</div>
+            </div>
+            <div className="w-px h-16 bg-white/20"></div>
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-2">
+                <Calendar className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-white">25+</div>
+              <div className="text-xs text-white/80">Years</div>
+            </div>
           </div>
         </div>
       </div>
