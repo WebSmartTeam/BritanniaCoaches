@@ -3,13 +3,13 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Calculator, MapPin, Clock, X } from 'lucide-react'
+import { ArrowRight, Calculator, MapPin, Clock } from 'lucide-react'
 
 const Hero = () => {
   const [isQuickToolOpen, setIsQuickToolOpen] = useState(false)
 
   return (
-    <section className="relative h-[70vh] flex items-end overflow-hidden -mt-20">
+    <section className={`relative flex items-end overflow-hidden -mt-20 transition-all duration-300 ${isQuickToolOpen ? 'h-screen' : 'h-[70vh]'}`}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -70,16 +70,8 @@ const Hero = () => {
             </button>
 
             {isQuickToolOpen && (
-              <div className="fixed bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/20 p-6 shadow-2xl z-50 animate-fade-in-up">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-white font-semibold text-lg">Estimate Your Trip</h3>
-                  <button
-                    onClick={() => setIsQuickToolOpen(false)}
-                    className="text-white/60 hover:text-white transition-colors duration-200"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
+              <div className="mt-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl animate-fade-in-down">
+                <h3 className="text-white font-semibold text-lg mb-4">Estimate Your Trip</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
                     <label className="block text-white/80 text-sm mb-2">From</label>
