@@ -9,7 +9,7 @@ const Hero = () => {
   const [isQuickToolOpen, setIsQuickToolOpen] = useState(false)
 
   return (
-    <section className="relative h-[70vh] flex items-center overflow-hidden -mt-20">
+    <section className="relative h-[70vh] flex items-end overflow-hidden -mt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
+      <div className="relative z-10 max-w-7xl mx-auto container-padding w-full pb-8">
         <div className="max-w-4xl hero-content">
           
           {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
