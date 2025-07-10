@@ -75,12 +75,12 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Full Width Services Grid */}
-        <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {/* Services Grid with Proper Spacing */}
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} href={service.href} className="group block">
-                <div className="relative h-96 overflow-hidden">
+                <div className="relative h-96 overflow-hidden rounded-lg border border-ice-grey-200 shadow-lg hover:shadow-xl transition-all duration-300">
                   {/* Background Image */}
                   <Image
                     src={service.image}
