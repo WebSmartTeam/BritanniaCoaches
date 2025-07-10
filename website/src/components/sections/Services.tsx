@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Building2, GraduationCap, Heart, Plane, MapPin, Navigation, ArrowRight } from 'lucide-react'
 
 const Services = () => {
@@ -61,7 +62,7 @@ const Services = () => {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-ice-grey-50 to-white">
+    <section className="py-20 bg-ice-grey-50">
       <div className="w-full">
         {/* Header */}
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
@@ -74,45 +75,50 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid with Proper Spacing */}
+        {/* Services Grid - Clean White Cards */}
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} href={service.href} className="group block">
-                <div className="relative h-80 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-ink-900 to-slate-ink-800 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                  {/* Decorative Elements */}
-                  <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-crimson-red-800/20 to-royal-blue-800/20 rounded-full blur-xl" />
-                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-lg" />
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  {/* Image */}
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   
                   {/* Content */}
-                  <div className="relative p-8 h-full flex flex-col justify-between text-white">
-                    <div className="w-14 h-14 bg-gradient-to-br from-crimson-red-800 to-royal-blue-800 rounded-xl flex items-center justify-center shadow-lg">
-                      <service.icon className="w-7 h-7 text-white" />
+                  <div className="p-6">
+                    {/* Category Label */}
+                    <div className="text-xs font-medium text-slate-ink-900/60 uppercase tracking-wide mb-2">
+                      {service.title.split(' ')[0]}
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-slate-ink-900 mb-3">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-slate-ink-900/70 leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+
+                    {/* Features */}
+                    <div className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-crimson-red-800 rounded-full" />
+                          <span className="text-sm text-slate-ink-900/70">{feature}</span>
+                        </div>
+                      ))}
                     </div>
 
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3">
-                        {service.title}
-                      </h3>
-                      
-                      <p className="text-white/90 leading-relaxed mb-4">
-                        {service.description}
-                      </p>
-
-                      {/* Features */}
-                      <div className="space-y-2 mb-6">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-crimson-red-400 rounded-full" />
-                            <span className="text-sm text-white/80">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all duration-300">
-                        <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
+                    <div className="flex items-center gap-2 text-crimson-red-800 font-medium group-hover:gap-3 transition-all duration-300">
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
                 </div>
