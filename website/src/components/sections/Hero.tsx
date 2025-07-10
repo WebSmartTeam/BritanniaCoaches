@@ -1,11 +1,13 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Users, Star, Calendar } from 'lucide-react'
+import { ArrowRight, Users, Star, Calendar, Calculator, MapPin, Clock } from 'lucide-react'
 
 const Hero = () => {
+  const [isQuickToolOpen, setIsQuickToolOpen] = useState(false)
+
   return (
     <section className="relative h-screen flex items-center overflow-hidden -mt-20">
       {/* Background Image */}
@@ -24,11 +26,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
         <div className="max-w-4xl hero-content">
-          {/* 🧬 DNA INJECTION: Enhanced Trust Badge - Proven Conversion Pattern */}
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-8 text-white border border-white/30">
-            <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-            <span>Trusted by 1000+ Customers • 25+ Years Excellence • Professional Certified</span>
-          </div>
           
           {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
@@ -59,6 +56,69 @@ const Hero = () => {
             >
               <span>View Services</span>
             </Link>
+          </div>
+
+          {/* Quick Tools Widget */}
+          <div className="mt-8">
+            <button
+              onClick={() => setIsQuickToolOpen(!isQuickToolOpen)}
+              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-6 py-3 rounded-xl transition-all duration-300 inline-flex items-center gap-3 text-sm font-medium"
+            >
+              <Calculator className="w-5 h-5" />
+              <span>Quick Trip Calculator</span>
+              <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${isQuickToolOpen ? 'rotate-90' : ''}`} />
+            </button>
+
+            {isQuickToolOpen && (
+              <div className="mt-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl animate-fade-in-down">
+                <h3 className="text-white font-semibold text-lg mb-4">Estimate Your Trip</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div>
+                    <label className="block text-white/80 text-sm mb-2">From</label>
+                    <div className="relative">
+                      <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+                      <input
+                        type="text"
+                        placeholder="Pickup location"
+                        className="w-full bg-white/20 border border-white/30 rounded-lg px-10 py-3 text-white placeholder-white/60 focus:border-white/60 focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-white/80 text-sm mb-2">To</label>
+                    <div className="relative">
+                      <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+                      <input
+                        type="text"
+                        placeholder="Destination"
+                        className="w-full bg-white/20 border border-white/30 rounded-lg px-10 py-3 text-white placeholder-white/60 focus:border-white/60 focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-white/80 text-sm mb-2">Date</label>
+                    <div className="relative">
+                      <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+                      <input
+                        type="date"
+                        className="w-full bg-white/20 border border-white/30 rounded-lg px-10 py-3 text-white focus:border-white/60 focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center mt-6">
+                  <div className="text-white/80 text-sm">
+                    Estimated distance: <span className="text-white font-semibold">~45 miles</span>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 py-2 rounded-lg transition-all duration-300 text-sm font-medium"
+                  >
+                    Get Exact Quote
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
