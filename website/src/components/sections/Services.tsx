@@ -80,7 +80,7 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} href={service.href} className="group block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
                   {/* Image */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
@@ -92,7 +92,7 @@ const Services = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     {/* Category Label */}
                     <div className="text-xs font-medium text-slate-ink-900/60 uppercase tracking-wide mb-2">
                       {service.title.split(' ')[0]}
@@ -102,21 +102,11 @@ const Services = () => {
                       {service.title}
                     </h3>
                     
-                    <p className="text-slate-ink-900/70 leading-relaxed mb-4">
+                    <p className="text-slate-ink-900/70 leading-relaxed mb-6 flex-1">
                       {service.description}
                     </p>
 
-                    {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 bg-crimson-red-800 rounded-full" />
-                          <span className="text-sm text-slate-ink-900/70">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center gap-2 text-crimson-red-800 font-medium group-hover:gap-3 transition-all duration-300">
+                    <div className="flex items-center gap-2 text-crimson-red-800 font-medium group-hover:gap-3 transition-all duration-300 mt-auto">
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </div>
