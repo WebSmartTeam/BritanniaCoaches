@@ -11,7 +11,7 @@ const Services = () => {
       description: 'Professional transportation for business events, conferences, and corporate meetings.',
       features: ['Executive Coaches', 'Professional Drivers', 'Flexible Scheduling'],
       href: '/services/corporate',
-      image: '/images/services/corporate/main.webp',
+      image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
       gradient: 'from-royal-blue-800/90 to-royal-blue-900/90',
     },
     {
@@ -20,7 +20,7 @@ const Services = () => {
       description: 'Safe and secure transportation for educational trips and student travel.',
       features: ['Safety Certified', 'DBS Checked Drivers', 'Educational Discounts'],
       href: '/services/school-trips',
-      image: '/images/services/school-trips/main.webp',
+      image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
       gradient: 'from-emerald-600/90 to-emerald-700/90',
     },
     {
@@ -29,7 +29,7 @@ const Services = () => {
       description: 'Elegant transportation for your special day and guest shuttles.',
       features: ['Luxury Coaches', 'Decorative Options', 'Flexible Timings'],
       href: '/services/wedding',
-      image: '/images/services/wedding/main.webp',
+      image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp',
       gradient: 'from-rose-600/90 to-rose-700/90',
     },
     {
@@ -38,7 +38,7 @@ const Services = () => {
       description: 'Reliable airport transfers with flight monitoring and meet & greet service.',
       features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports'],
       href: '/services/airport',
-      image: '/images/services/airport/main.webp',
+      image: '/images/services/airport/assets_task_01jztp22ebe4jrxcxjh8je438b_1752168577_img_0.webp',
       gradient: 'from-sky-indigo-800/90 to-royal-blue-900/90',
     },
     {
@@ -47,7 +47,7 @@ const Services = () => {
       description: 'Memorable day trips to popular destinations with flexible itineraries.',
       features: ['Popular Destinations', 'Group Discounts', 'Local Guides'],
       href: '/services/day-trips',
-      image: '/images/services/day-trips/main.webp',
+      image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp',
       gradient: 'from-amber-600/90 to-orange-600/90',
     },
     {
@@ -56,7 +56,7 @@ const Services = () => {
       description: 'Comfortable long-distance travel across the UK and Europe.',
       features: ['Modern Amenities', 'Rest Stops', 'European Travel'],
       href: '/services/long-distance',
-      image: '/images/services/long-distance/main.webp',
+      image: '/images/services/long-distance/assets_task_01jztpdvw0fm8vhd1675pncbax_1752168967_img_0.webp',
       gradient: 'from-purple-600/90 to-purple-700/90',
     },
   ]
