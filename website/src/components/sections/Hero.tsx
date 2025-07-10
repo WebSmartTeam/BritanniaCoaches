@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Users, Star, Calendar, Calculator, MapPin, Clock } from 'lucide-react'
+import { ArrowRight, Calculator, MapPin, Clock } from 'lucide-react'
 
 const Hero = () => {
   const [isQuickToolOpen, setIsQuickToolOpen] = useState(false)
@@ -27,44 +27,43 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto container-padding w-full">
         <div className="max-w-4xl hero-content">
           
-          {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
+          {/* Sleek Headlines */}
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-tight tracking-tight">
             Britain&apos;s Premier
             <span className="block text-white">Coach Transportation</span>
           </h1>
           
-          {/* 🧬 DNA INJECTION: Value Proposition - Conversion Optimized */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-            <span className="font-semibold text-white">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
-            <span className="font-semibold text-white">Professional drivers, modern fleet, unmatched reliability.</span>
+          {/* Refined Value Proposition */}
+          <p className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed max-w-2xl font-light">
+            Professional drivers, premium fleet, unmatched reliability for your journey.
           </p>
 
 
-          {/* 🧬 DNA INJECTION: Primary CTA Pattern - Proven Conversion */}
-          <div className="flex flex-col sm:flex-row gap-6">
+          {/* Sleek CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
               href="/fleet"
-              className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-xl font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+              className="bg-white text-slate-ink-900 hover:bg-white/90 px-8 py-4 text-lg font-medium rounded-2xl shadow-2xl hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
             >
               <span>View Our Fleet</span>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
             
             <Link
               href="/services"
-              className="bg-royal-blue-800/20 backdrop-blur-sm hover:bg-royal-blue-800/30 text-white border-2 border-white/30 hover:border-crimson-red-800 px-8 py-4 text-xl font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
+              className="bg-transparent hover:bg-white/10 text-white border-2 border-white/40 hover:border-white/60 px-8 py-4 text-lg font-medium rounded-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 backdrop-blur-sm"
             >
               <span>View Services</span>
             </Link>
           </div>
 
           {/* Quick Tools Widget */}
-          <div className="mt-8">
+          <div>
             <button
               onClick={() => setIsQuickToolOpen(!isQuickToolOpen)}
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-6 py-3 rounded-xl transition-all duration-300 inline-flex items-center gap-3 text-sm font-medium"
+              className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white/80 hover:text-white border border-white/20 hover:border-white/40 px-6 py-3 rounded-2xl transition-all duration-300 inline-flex items-center gap-3 text-sm font-light"
             >
-              <Calculator className="w-5 h-5" />
+              <Calculator className="w-4 h-4" />
               <span>Quick Trip Calculator</span>
               <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${isQuickToolOpen ? 'rotate-90' : ''}`} />
             </button>
@@ -123,36 +122,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating Stats Widget */}
-      <div className="absolute bottom-8 right-8 z-10 hidden lg:block">
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl">
-          <div className="flex items-center gap-6">
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-2">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white">1000+</div>
-              <div className="text-xs text-white/80">Happy Clients</div>
-            </div>
-            <div className="w-px h-16 bg-white/20"></div>
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-2">
-                <Star className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white">4.9</div>
-              <div className="text-xs text-white/80">Rating</div>
-            </div>
-            <div className="w-px h-16 bg-white/20"></div>
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-2">
-                <Calendar className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white">25+</div>
-              <div className="text-xs text-white/80">Years</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </section>
   )
