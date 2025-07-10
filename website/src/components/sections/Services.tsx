@@ -62,7 +62,7 @@ const Services = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-ice-grey-50 to-white">
       <div className="w-full">
         {/* Header */}
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
@@ -80,45 +80,40 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} href={service.href} className="group block">
-                <div className="relative h-96 overflow-hidden rounded-lg border border-ice-grey-200 shadow-lg hover:shadow-xl transition-all duration-300">
-                  {/* Background Image */}
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  
-                  {/* Clean Overlay */}
-                  <div className="absolute inset-0 bg-slate-ink-900/60" />
+                <div className="relative h-80 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-ink-900 to-slate-ink-800 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-crimson-red-800/20 to-royal-blue-800/20 rounded-full blur-xl" />
+                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-lg" />
                   
                   {/* Content */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
-                      <service.icon className="w-6 h-6 text-slate-ink-900" />
+                  <div className="relative p-8 h-full flex flex-col justify-between text-white">
+                    <div className="w-14 h-14 bg-gradient-to-br from-crimson-red-800 to-royal-blue-800 rounded-xl flex items-center justify-center shadow-lg">
+                      <service.icon className="w-7 h-7 text-white" />
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-3">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-white/90 leading-relaxed mb-4">
-                      {service.description}
-                    </p>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-white/90 leading-relaxed mb-4">
+                        {service.description}
+                      </p>
 
-                    {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 bg-white rounded-full" />
-                          <span className="text-sm text-white/80">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
+                      {/* Features */}
+                      <div className="space-y-2 mb-6">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-crimson-red-400 rounded-full" />
+                            <span className="text-sm text-white/80">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
 
-                    <div className="flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all duration-300">
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <div className="flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all duration-300">
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
                     </div>
                   </div>
                 </div>
