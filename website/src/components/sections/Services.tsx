@@ -68,7 +68,7 @@ const Services = () => {
   ]
 
   return (
-    <section className="py-20 bg-ice-grey-50">
+    <section className="py-20 bg-gradient-to-br from-ice-grey-50 via-white to-ice-grey-100">
       <div className="w-full">
         {/* Header */}
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
@@ -123,30 +123,54 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Clean CTA Section */}
-        <div className="bg-slate-ink-900 mt-20">
-          <div className="max-w-7xl mx-auto px-6 py-16 text-center text-white">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              We offer flexible transportation solutions tailored to your specific requirements.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 font-semibold transition-colors duration-300 inline-flex items-center gap-3 group"
-              >
-                <span>Get Custom Quote</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              <Link
-                href="tel:01234567890"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-ink-900 px-8 py-4 font-semibold transition-all duration-300"
-              >
-                Call 0123 456 7890
-              </Link>
+        {/* Premium CTA Section */}
+        <div className="relative mt-20 overflow-hidden">
+          {/* Background with gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-royal-blue-900 via-slate-ink-900 to-royal-blue-900" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+          
+          <div className="relative max-w-7xl mx-auto px-6 py-24">
+            <div className="text-center text-white max-w-4xl mx-auto">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
+                <div className="w-2 h-2 bg-crimson-red-400 rounded-full animate-pulse" />
+                <span className="text-sm font-medium">Custom Transportation Solutions</span>
+              </div>
+              
+              <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
+                Ready for Your Next Journey?
+              </h3>
+              <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+                From intimate groups to large events, we create bespoke transportation experiences 
+                that exceed expectations. Let's plan something extraordinary together.
+              </p>
+              
+              {/* Enhanced CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Link
+                  href="/contact"
+                  className="bg-crimson-red-800 hover:bg-crimson-red-700 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-luxury-lg hover:shadow-luxury-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+                >
+                  <span>Get Custom Quote</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+                
+                <div className="flex items-center gap-4">
+                  <div className="hidden sm:block w-px h-12 bg-white/20" />
+                  <Link
+                    href="tel:01234567890"
+                    className="group flex items-center gap-3 text-white hover:text-white/80 transition-colors duration-300"
+                  >
+                    <div className="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center group-hover:border-white/50 transition-colors duration-300">
+                      <span className="text-lg font-bold">📞</span>
+                    </div>
+                    <div className="text-left">
+                      <div className="text-sm text-white/60">Call us directly</div>
+                      <div className="font-semibold">0123 456 7890</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
