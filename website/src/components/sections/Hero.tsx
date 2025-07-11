@@ -35,8 +35,8 @@ const Hero = () => {
             
             {/* 🧬 DNA INJECTION: Value Proposition - Conversion Optimized */}
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-              <span className="font-semibold text-white">25+ years</span> of excellence serving corporate events, school trips, weddings & more. 
-              <span className="font-semibold text-white">Professional drivers, modern fleet, unmatched reliability.</span>
+              <span className="font-semibold text-white">Smart, clean, and comfortable coaches</span> for clubs, societies, and groups. 
+              <span className="font-semibold text-white">Professional service, modern fleet, punctual and reliable.</span>
             </p>
 
             {/* 🧬 DNA INJECTION: Primary CTA Pattern - Proven Conversion */}

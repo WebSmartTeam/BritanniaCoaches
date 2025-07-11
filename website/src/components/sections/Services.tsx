@@ -7,31 +7,31 @@ const Services = () => {
   const services = [
     {
       icon: Building2,
-      title: 'Corporate Transport',
-      category: 'BUSINESS',
-      description: 'Professional transportation for business events, conferences, and corporate meetings.',
-      features: ['Executive Coaches', 'Professional Drivers', 'Flexible Scheduling'],
-      href: '/services/corporate',
+      title: 'Group Coach Hire',
+      category: 'GROUPS',
+      description: 'Smart, clean, and comfortable coaches for clubs, societies, and groups of 10 or more.',
+      features: ['Air Conditioning', 'Onboard Restrooms', 'Entertainment Systems'],
+      href: '/services/group-hire',
       image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
       gradient: 'from-royal-blue-800/90 to-royal-blue-900/90',
     },
     {
-      icon: GraduationCap,
-      title: 'School Trips',
-      category: 'EDUCATION',
-      description: 'Safe and secure transportation for educational trips and student travel.',
-      features: ['Safety Certified', 'DBS Checked Drivers', 'Educational Discounts'],
-      href: '/services/school-trips',
+      icon: MapPin,
+      title: 'Day Trips',
+      category: 'LEISURE',
+      description: 'Comfortable and reliable transportation for day trips and group excursions.',
+      features: ['Flexible Pickup', 'Comfortable Seating', 'Punctual Service'],
+      href: '/services/day-trips',
       image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
       gradient: 'from-emerald-600/90 to-emerald-700/90',
     },
     {
       icon: Heart,
-      title: 'Wedding Transport',
-      category: 'SPECIAL EVENTS',
-      description: 'Elegant transportation for your special day and guest shuttles.',
-      features: ['Luxury Coaches', 'Decorative Options', 'Flexible Timings'],
-      href: '/services/wedding',
+      title: 'Special Events',
+      category: 'OCCASIONS',
+      description: 'Professional transportation for weddings, celebrations, and special occasions.',
+      features: ['Free Ticket Offer', 'Group Discounts', 'Reliable Service'],
+      href: '/services/special-events',
       image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp',
       gradient: 'from-rose-600/90 to-rose-700/90',
     },
@@ -75,8 +75,8 @@ const Services = () => {
             Our Transportation Services
           </h2>
           <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-            Professional coach services tailored to your needs. From corporate events to family day trips, 
-            we provide safe, reliable, and comfortable transportation solutions across the UK.
+            Smart, clean, and comfortable coaches for clubs, societies, and groups. 
+            Professional service with modern amenities including air conditioning, restrooms, and entertainment systems.
           </p>
         </div>
 
@@ -140,11 +140,11 @@ const Services = () => {
               </div>
               
               <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight text-white">
-                Ready for Your Next Journey?
+                Special Group Offer
               </h3>
               <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-                From intimate groups to large events, we create bespoke transportation experiences 
-                that exceed expectations. Let&apos;s plan something extraordinary together.
+                Book for 15+ people and get one free coach ticket! 
+                Professional, punctual, and comfortable transportation for your group.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

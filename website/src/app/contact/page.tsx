@@ -18,7 +18,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Location',
-      details: ['Birmingham, UK', 'Serving UK Wide'],
+      details: ['North End, Bury Mead Road', 'Hitchin, Hertfordshire SG5 1RT'],
       link: '#',
     },
     {
