@@ -142,7 +142,7 @@ const Header = () => {
                 }`}>
                   <div className="w-1.5 h-1.5 bg-crimson-red-800 rounded-full animate-pulse"></div>
                   <Phone className="w-3.5 h-3.5" />
-                  <span className="hidden xl:inline text-sm">0123 456 7890</span>
+                  <span className="hidden xl:inline text-sm">01462 436125</span>
                 </a>
                 <Link
                   href="/contact"

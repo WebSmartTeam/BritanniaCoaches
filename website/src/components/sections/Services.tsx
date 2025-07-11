@@ -159,7 +159,7 @@ const Services = () => {
                 <div className="flex items-center gap-4">
                   <div className="hidden sm:block w-px h-12 bg-white/20" />
                   <Link
-                    href="tel:01234567890"
+                    href="tel:01462436125"
                     className="group flex items-center gap-3 text-white hover:text-white/80 transition-colors duration-300"
                   >
                     <div className="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center group-hover:border-white/50 transition-colors duration-300">
@@ -167,7 +167,7 @@ const Services = () => {
                     </div>
                     <div className="text-left">
                       <div className="text-sm text-white/60">Call us directly</div>
-                      <div className="font-semibold">0123 456 7890</div>
+                      <div className="font-semibold">01462 436125</div>
                     </div>
                   </Link>
                 </div>

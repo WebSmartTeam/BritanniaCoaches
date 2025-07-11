@@ -6,14 +6,14 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['0123 456 7890', '24/7 Emergency Line'],
-      link: 'tel:01234567890',
+      details: ['01462 436125', '24/7 Emergency Line'],
+      link: 'tel:01462436125',
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@britanniacoaches.co.uk', 'quotes@britanniacoaches.co.uk'],
-      link: 'mailto:info@britanniacoaches.co.uk',
+      details: ['enquiries@britanniacoaches.co.uk', 'quotes@britanniacoaches.co.uk'],
+      link: 'mailto:enquiries@britanniacoaches.co.uk',
     },
     {
       icon: MapPin,
