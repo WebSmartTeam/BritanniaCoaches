@@ -70,44 +70,14 @@ const Services = () => {
   return (
     <div className="py-12 bg-[rgb(220,231,245)]">
       <div className="w-full">
-        <div className="max-w-7xl mx-auto px-6 mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Main Heading */}
-            <div>
-              <div className="inline-flex items-center gap-2 bg-slate-ink-900/5 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2 mb-6">
-                <div className="w-2 h-2 bg-crimson-red-800 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-slate-ink-900/80 uppercase tracking-wide">Premium Fleet</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
-                Our Transportation
-                <span className="block text-crimson-red-800">Services</span>
-              </h2>
-            </div>
-            
-            {/* Right Column - Description */}
-            <div className="lg:pl-8">
-              <p className="text-xl text-slate-ink-900/70 leading-relaxed mb-6">
-                Smart, clean, and comfortable coaches for clubs, societies, and groups. 
-                Professional service with modern amenities including air conditioning, restrooms, and entertainment systems.
-              </p>
-              
-              {/* Feature highlights */}
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-ink-900">Air Conditioning</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-ink-900">Onboard Restrooms</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-ink-900">Entertainment Systems</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto px-6 mb-20 text-center">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-tight">
+            <span className="text-slate-ink-900">Our Transportation</span>
+            <span className="block text-transparent bg-gradient-to-r from-crimson-red-800 to-royal-blue-800 bg-clip-text">Services</span>
+          </h2>
+          <p className="text-xl text-slate-ink-900/60 max-w-2xl mx-auto leading-relaxed">
+            Smart, clean, and comfortable coaches for clubs, societies, and groups
+          </p>
         </div>
 
         <div className="w-full px-6">
