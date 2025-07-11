@@ -76,7 +76,7 @@ const Services = () => {
               Our Transportation Services
             </h2>
             <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
-              Smart, clean, and comfortable coaches for clubs, societies, and groups
+              Premium transportation that delivers results. Period.
             </p>
           </div>
         </div>
