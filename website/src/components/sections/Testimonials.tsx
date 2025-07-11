@@ -1,5 +1,5 @@
 import React from 'react'
-import { Star, Quote } from 'lucide-react'
+import { Star } from 'lucide-react'
 
 const Testimonials = () => {
   const testimonials = [
@@ -51,18 +51,15 @@ const Testimonials = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div key={index} className={`bg-gradient-to-br ${testimonial.color} p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center relative">
-                  <div className="w-10 h-10 bg-slate-ink-900 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <Star className="w-5 h-5 text-white fill-current" />
                   </div>
-                  <div className={`w-10 h-10 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center absolute left-6 border-2 border-white -z-10`}>
+                  <div className="w-10 h-10 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center absolute left-6 border-2 border-white/50">
                     <span className="text-white font-bold text-sm">{testimonial.avatar}</span>
                   </div>
-                </div>
-                <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center">
-                  <Quote className="w-5 h-5 text-slate-ink-900" />
                 </div>
               </div>
               
@@ -72,14 +69,14 @@ const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="text-slate-ink-900/70 text-sm leading-relaxed mb-5 italic">
-                &ldquo;{testimonial.text}&rdquo;
+              <p className="text-white/90 text-sm leading-relaxed mb-5 italic">
+                {testimonial.text}
               </p>
               
-              <div className="border-t border-slate-200 pt-4">
-                <div className="font-bold text-slate-ink-900 text-sm">{testimonial.name}</div>
-                <div className="text-slate-500 text-xs">{testimonial.role}</div>
-                <div className="text-slate-400 text-xs">{testimonial.company}</div>
+              <div className="border-t border-white/20 pt-4">
+                <div className="font-bold text-white text-sm">{testimonial.name}</div>
+                <div className="text-white/80 text-xs">{testimonial.role}</div>
+                <div className="text-white/70 text-xs">{testimonial.company}</div>
               </div>
             </div>
           ))}
