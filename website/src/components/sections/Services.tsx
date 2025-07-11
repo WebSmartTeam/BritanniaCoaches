@@ -76,7 +76,7 @@ const Services = () => {
               Our Transportation Services
             </h2>
             <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
-              Premium transportation that delivers results. Period.
+              We get your group where they need to be. On time. Every time.
             </p>
           </div>
         </div>
