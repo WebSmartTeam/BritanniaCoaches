@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto container-padding w-full pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           {/* Left Column - Main Content */}
-          <div className="max-w-4xl hero-content">
+          <div className="max-w-4xl hero-content mt-16">
             
             {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">

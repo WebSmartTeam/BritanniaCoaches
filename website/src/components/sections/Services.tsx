@@ -116,6 +116,17 @@ const Services = () => {
               </Link>
             ))}
           </div>
+          
+          {/* View More Services Button */}
+          <div className="text-center mt-12">
+            <Link
+              href="/services"
+              className="bg-slate-ink-900 hover:bg-slate-ink-800 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+            >
+              <span>View More Services</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+          </div>
         </div>
 
         <div className="relative mt-20 overflow-hidden">
