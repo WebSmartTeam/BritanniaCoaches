@@ -35,21 +35,24 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-ice-grey-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header with Left Bar */}
-        <div className="flex items-start gap-6 mb-16">
-          <div className="w-1 h-24 bg-gradient-to-b from-crimson-red-800 to-royal-blue-800 rounded-full mt-2 flex-shrink-0"></div>
-          <div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
-              Client Testimonials
-            </h2>
-            <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
-              Hear what our satisfied customers have to say about their experience with Britannia Coaches
-            </p>
+        {/* Header with Left Bar - Full Width */}
+        <div className="w-full px-6 mb-16">
+          <div className="flex items-start gap-6">
+            <div className="w-1 h-24 bg-crimson-red-800 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
+                Client Testimonials
+              </h2>
+              <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
+                Hear what our satisfied customers have to say about their experience with Britannia Coaches
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Testimonial Cards - Full Width */}
+        <div className="w-full px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center justify-between mb-5">
