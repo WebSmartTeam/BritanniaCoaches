@@ -70,14 +70,44 @@ const Services = () => {
   return (
     <div className="py-12 bg-[rgb(220,231,245)]">
       <div className="w-full">
-        <div className="max-w-7xl mx-auto px-6 text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
-            Our Transportation Services
-          </h2>
-          <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-            Smart, clean, and comfortable coaches for clubs, societies, and groups. 
-            Professional service with modern amenities including air conditioning, restrooms, and entertainment systems.
-          </p>
+        <div className="max-w-7xl mx-auto px-6 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Main Heading */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-slate-ink-900/5 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2 mb-6">
+                <div className="w-2 h-2 bg-crimson-red-800 rounded-full animate-pulse" />
+                <span className="text-sm font-medium text-slate-ink-900/80 uppercase tracking-wide">Premium Fleet</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
+                Our Transportation
+                <span className="block text-crimson-red-800">Services</span>
+              </h2>
+            </div>
+            
+            {/* Right Column - Description */}
+            <div className="lg:pl-8">
+              <p className="text-xl text-slate-ink-900/70 leading-relaxed mb-6">
+                Smart, clean, and comfortable coaches for clubs, societies, and groups. 
+                Professional service with modern amenities including air conditioning, restrooms, and entertainment systems.
+              </p>
+              
+              {/* Feature highlights */}
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full" />
+                  <span className="text-sm font-medium text-slate-ink-900">Air Conditioning</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                  <span className="text-sm font-medium text-slate-ink-900">Onboard Restrooms</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-ink-900/10 rounded-full px-4 py-2">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                  <span className="text-sm font-medium text-slate-ink-900">Entertainment Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="w-full px-6">
