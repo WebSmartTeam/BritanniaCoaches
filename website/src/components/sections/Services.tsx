@@ -137,15 +137,15 @@ const Services = () => {
             <div className="text-center text-white max-w-4xl mx-auto">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
                 <div className="w-2 h-2 bg-crimson-red-400 rounded-full animate-pulse" />
-                <span className="text-sm font-medium">Custom Transportation Solutions</span>
+                <span className="text-sm font-medium">Group Travel Benefits</span>
               </div>
               
               <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight text-white">
-                Special Group Offer
+                Group Travel Offer
               </h3>
               <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Book for 15+ people and get one free coach ticket! 
-                Professional, punctual, and comfortable transportation for your group.
+                Groups of 15+ on day trips get free coach travel for one person! 
+                Professional service for clubs, societies, and group travel.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

@@ -1,37 +1,37 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, Wifi, Coffee, Monitor, Shield, Wind, Volume2, Zap } from 'lucide-react'
+import { Users, Monitor, Shield, Wind } from 'lucide-react'
 
 const Fleet = () => {
 
   const fleetTypes = [
     {
-      type: 'Luxury Executive',
-      capacity: '16-25 passengers',
+      type: 'Group Coach',
+      capacity: 'Groups of 10+',
       image: '/images/premium/luxury-coach-2.webp',
-      features: ['Premium Leather Seats', 'WiFi & USB Charging', 'Climate Control', 'Entertainment System'],
-      ideal: 'Corporate events, VIP transport, executive travel',
-      price: 'From £120/hour',
-      highlight: 'Most Popular',
+      features: ['Comfortable Seating', 'Air Conditioning', 'Entertainment System', 'Onboard Restroom'],
+      ideal: 'Clubs, societies, group travel',
+      price: 'Contact for Quote',
+      highlight: 'Popular',
     },
     {
-      type: 'Standard Coach',
-      capacity: '35-49 passengers',
+      type: 'Day Trip Coach',
+      capacity: 'Groups of 15+',
       image: '/images/premium/luxury-coach-3.webp',
-      features: ['Comfortable Seating', 'Air Conditioning', 'Luggage Storage', 'PA System'],
-      ideal: 'School trips, group travel, day trips',
-      price: 'From £95/hour',
-      highlight: 'Best Value',
+      features: ['Climate Control', 'Comfortable Seating', 'Entertainment', 'WC Facilities'],
+      ideal: 'Day trips, excursions, sightseeing',
+      price: 'Contact for Quote',
+      highlight: 'Special Offer',
     },
     {
-      type: 'Mini Coach',
-      capacity: '8-16 passengers',
+      type: 'Society Coach',
+      capacity: 'Custom Groups',
       image: '/images/premium/luxury-coach-4.webp',
-      features: ['Compact Design', 'Easy Boarding', 'Flexible Seating', 'Personal Service'],
-      ideal: 'Small groups, airport transfers, local trips',
-      price: 'From £85/hour',
-      highlight: 'Flexible',
+      features: ['Reliable Service', 'Professional Drivers', 'Clean Coaches', 'Punctual'],
+      ideal: 'Clubs, societies, regular bookings',
+      price: 'Contact for Quote',
+      highlight: 'Reliable',
     },
   ]
 
@@ -39,42 +39,22 @@ const Fleet = () => {
     {
       icon: Users,
       title: 'Comfortable Seating',
-      description: 'Ergonomic seats with ample legroom and reclining options',
-    },
-    {
-      icon: Wifi,
-      title: 'Free WiFi',
-      description: 'Stay connected with high-speed internet throughout your journey',
-    },
-    {
-      icon: Zap,
-      title: 'USB Charging',
-      description: 'Individual charging ports for all your devices',
+      description: 'Well-maintained seats for a comfortable journey',
     },
     {
       icon: Wind,
-      title: 'Climate Control',
-      description: 'Advanced air conditioning for optimal comfort',
+      title: 'Air Conditioning',
+      description: 'Climate control for passenger comfort',
     },
     {
       icon: Monitor,
-      title: 'Entertainment',
-      description: 'Audio/visual systems for presentations and entertainment',
-    },
-    {
-      icon: Coffee,
-      title: 'Refreshments',
-      description: 'Optional catering and refreshment services',
+      title: 'Entertainment Systems',
+      description: 'Onboard entertainment for longer journeys',
     },
     {
       icon: Shield,
-      title: 'Safety Features',
-      description: 'Latest safety technology and regular maintenance',
-    },
-    {
-      icon: Volume2,
-      title: 'PA System',
-      description: 'Professional sound system for announcements and music',
+      title: 'Onboard Restrooms',
+      description: 'WC facilities available on our coaches',
     },
   ]
 
@@ -161,10 +141,10 @@ const Fleet = () => {
           <div className="mb-12">
             <div className="border-l-4 border-crimson-red-800 pl-8">
               <h3 className="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight text-slate-ink-900">
-                Premium Amenities
+                Coach Amenities
               </h3>
               <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
-                Every coach comes equipped with modern amenities for your comfort.
+                Our coaches come equipped with essential amenities for comfortable travel.
               </p>
             </div>
           </div>
