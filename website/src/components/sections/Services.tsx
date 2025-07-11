@@ -71,19 +71,13 @@ const Services = () => {
     <div className="py-12 bg-[rgb(220,231,245)]">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-6 mb-20">
-          <div className="flex items-start gap-6">
-            {/* Left Bar */}
-            <div className="w-1 h-24 bg-gradient-to-b from-crimson-red-800 to-royal-blue-800 rounded-full mt-2 flex-shrink-0"></div>
-            
-            {/* Content */}
-            <div>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
-                Our Transportation Services
-              </h2>
-              <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
-                Smart, clean, and comfortable coaches for clubs, societies, and groups
-              </p>
-            </div>
+          <div className="border-l-4 border-crimson-red-800 pl-8">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
+              Our Transportation Services
+            </h2>
+            <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
+              Smart, clean, and comfortable coaches for clubs, societies, and groups
+            </p>
           </div>
         </div>
 
