@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { Star } from 'lucide-react'
 
@@ -10,7 +12,7 @@ const Testimonials = () => {
       rating: 5,
       text: "Britannia Coaches provided exceptional service for our corporate retreat. The coaches were immaculate and the drivers were professional throughout the journey.",
       avatar: "SJ",
-      color: "from-blue-500 to-blue-600"
+      color: "from-slate-600 to-slate-700"
     },
     {
       name: "Michael Chen",
@@ -19,7 +21,7 @@ const Testimonials = () => {
       rating: 5,
       text: "We've used Britannia Coaches for multiple school trips. Their safety standards are excellent and the children always arrive happy and comfortable.",
       avatar: "MC",
-      color: "from-emerald-500 to-emerald-600"
+      color: "from-slate-700 to-slate-800"
     },
     {
       name: "Emma Williams",
@@ -28,7 +30,34 @@ const Testimonials = () => {
       rating: 5,
       text: "The service was flawless for our wedding party transportation. Punctual, professional, and the coaches were spotless. Highly recommend!",
       avatar: "EW",
-      color: "from-rose-500 to-rose-600"
+      color: "from-slate-800 to-slate-900"
+    },
+    {
+      name: "David Thompson",
+      role: "Operations Manager",
+      company: "Thompson Industries",
+      rating: 5,
+      text: "Reliable, professional service that never disappoints. Their fleet management and scheduling is impeccable for our corporate needs.",
+      avatar: "DT",
+      color: "from-slate-600 to-slate-700"
+    },
+    {
+      name: "Rebecca Foster",
+      role: "Travel Coordinator",
+      company: "Global Events Group",
+      rating: 5,
+      text: "Outstanding service quality and attention to detail. Britannia Coaches consistently exceeds our expectations for executive transport.",
+      avatar: "RF",
+      color: "from-slate-700 to-slate-800"
+    },
+    {
+      name: "James Mitchell",
+      role: "Sports Director",
+      company: "Elite Sports Academy",
+      rating: 5,
+      text: "Safety, comfort, and reliability - exactly what we need for our student athletes. Their drivers are professional and courteous.",
+      avatar: "JM",
+      color: "from-slate-800 to-slate-900"
     }
   ]
 
@@ -47,11 +76,11 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonial Cards - Full Width */}
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className={`bg-gradient-to-br ${testimonial.color} p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+        {/* Testimonial Cards - Scrolling Animation */}
+        <div className="relative overflow-hidden">
+          <div className="animate-scroll-left flex gap-8 w-max">
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <div key={index} className={`bg-gradient-to-br ${testimonial.color} p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-80 flex-shrink-0`}>
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center relative">
                   <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
@@ -83,6 +112,23 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-scroll-left {
+          animation: scroll-left 30s linear infinite;
+        }
+        .animate-scroll-left:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   )
 }
