@@ -53,8 +53,8 @@ const Fleet = () => {
     },
     {
       icon: Shield,
-      title: 'Onboard Restrooms',
-      description: 'WC facilities available on our coaches',
+      title: 'WC Facilities',
+      description: 'Onboard WC available on our coaches',
     },
   ]
 
