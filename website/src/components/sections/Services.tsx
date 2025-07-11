@@ -8,6 +8,7 @@ const Services = () => {
     {
       icon: Building2,
       title: 'Corporate Transport',
+      category: 'BUSINESS',
       description: 'Professional transportation for business events, conferences, and corporate meetings.',
       features: ['Executive Coaches', 'Professional Drivers', 'Flexible Scheduling'],
       href: '/services/corporate',
@@ -17,6 +18,7 @@ const Services = () => {
     {
       icon: GraduationCap,
       title: 'School Trips',
+      category: 'EDUCATION',
       description: 'Safe and secure transportation for educational trips and student travel.',
       features: ['Safety Certified', 'DBS Checked Drivers', 'Educational Discounts'],
       href: '/services/school-trips',
@@ -26,6 +28,7 @@ const Services = () => {
     {
       icon: Heart,
       title: 'Wedding Transport',
+      category: 'SPECIAL EVENTS',
       description: 'Elegant transportation for your special day and guest shuttles.',
       features: ['Luxury Coaches', 'Decorative Options', 'Flexible Timings'],
       href: '/services/wedding',
@@ -35,6 +38,7 @@ const Services = () => {
     {
       icon: Plane,
       title: 'Airport Transfers',
+      category: 'TRAVEL',
       description: 'Reliable airport transfers with flight monitoring and meet & greet service.',
       features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports'],
       href: '/services/airport',
@@ -44,6 +48,7 @@ const Services = () => {
     {
       icon: MapPin,
       title: 'Day Trips',
+      category: 'LEISURE',
       description: 'Memorable day trips to popular destinations with flexible itineraries.',
       features: ['Popular Destinations', 'Group Discounts', 'Local Guides'],
       href: '/services/day-trips',
@@ -53,6 +58,7 @@ const Services = () => {
     {
       icon: Navigation,
       title: 'Long Distance',
+      category: 'TOURING',
       description: 'Comfortable long-distance travel across the UK and Europe.',
       features: ['Modern Amenities', 'Rest Stops', 'European Travel'],
       href: '/services/long-distance',
@@ -95,7 +101,7 @@ const Services = () => {
                   <div className="p-6 flex-1 flex flex-col">
                     {/* Category Label */}
                     <div className="text-xs font-medium text-slate-ink-900/60 uppercase tracking-wide mb-2">
-                      {service.title.split(' ')[0]}
+                      {service.category}
                     </div>
                     
                     <h3 className="text-xl font-bold text-slate-ink-900 mb-3">
