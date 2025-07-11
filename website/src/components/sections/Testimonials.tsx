@@ -73,7 +73,7 @@ const Testimonials = () => {
               </div>
               
               <p className="text-slate-ink-900/70 text-sm leading-relaxed mb-5 italic">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
               
               <div className="border-t border-slate-200 pt-4">
