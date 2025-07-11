@@ -7,7 +7,7 @@ import { ArrowRight, Calculator, MapPin, Clock } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className="relative flex items-end overflow-hidden -mt-20 h-[90vh]">
+    <section className="relative flex items-end overflow-hidden -mt-20 h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
