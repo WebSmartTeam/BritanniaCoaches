@@ -68,9 +68,8 @@ const Services = () => {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-ice-grey-50 via-white to-ice-grey-100">
+    <div className="py-20 bg-gradient-to-br from-ice-grey-50 via-white to-ice-grey-100">
       <div className="w-full">
-        {/* Header */}
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
             Our Transportation Services
@@ -81,13 +80,11 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid - Clean White Cards */}
         <div className="w-full px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} href={service.href} className="group block">
                 <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
-                  {/* Image */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={service.image}
@@ -97,9 +94,7 @@ const Services = () => {
                     />
                   </div>
                   
-                  {/* Content */}
                   <div className="p-6 flex-1 flex flex-col">
-                    {/* Category Label */}
                     <div className="text-xs font-medium text-slate-ink-900/60 uppercase tracking-wide mb-2">
                       {service.category}
                     </div>
@@ -123,15 +118,11 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Premium CTA Section */}
         <div className="relative mt-20 overflow-hidden">
-          {/* Background with gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-royal-blue-900 via-slate-ink-900 to-royal-blue-900" />
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
           
           <div className="relative max-w-7xl mx-auto px-6 py-24">
             <div className="text-center text-white max-w-4xl mx-auto">
-              {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
                 <div className="w-2 h-2 bg-crimson-red-400 rounded-full animate-pulse" />
                 <span className="text-sm font-medium">Custom Transportation Solutions</span>
@@ -142,10 +133,9 @@ const Services = () => {
               </h3>
               <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
                 From intimate groups to large events, we create bespoke transportation experiences 
-                that exceed expectations. Let's plan something extraordinary together.
+                that exceed expectations. Let&apos;s plan something extraordinary together.
               </p>
               
-              {/* Enhanced CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Link
                   href="/contact"
@@ -175,7 +165,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
