@@ -81,7 +81,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="w-full px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.slice(0, 3).map((service, index) => (
               <Link key={index} href={service.href} className="group block">

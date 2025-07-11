@@ -36,7 +36,7 @@ const Testimonials = () => {
     <section className="py-20 bg-gradient-to-br from-ice-grey-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header with Left Bar - Full Width */}
-        <div className="w-full px-6 mb-16">
+        <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="border-l-4 border-crimson-red-800 pl-8">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
               Client Testimonials
@@ -48,7 +48,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards - Full Width */}
-        <div className="w-full px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
