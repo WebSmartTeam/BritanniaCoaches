@@ -29,7 +29,7 @@ const Hero = () => {
             
             {/* 🧬 DNA INJECTION: Authority Headlines - Enterprise Pattern */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
-              Britain&apos;s <span className="text-white/70">Premier</span>
+              Britain&apos;s <span className="text-crimson-red-400">Premier</span>
               <span className="block text-white">Coach Transportation</span>
             </h1>
             
