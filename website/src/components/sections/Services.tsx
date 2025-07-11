@@ -68,7 +68,7 @@ const Services = () => {
   ]
 
   return (
-    <div className="py-20 bg-gradient-to-br from-ice-grey-50 via-white to-ice-grey-100">
+    <div className="py-12 bg-[rgb(220,231,245)]">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
@@ -81,8 +81,8 @@ const Services = () => {
         </div>
 
         <div className="w-full px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.slice(0, 3).map((service, index) => (
               <Link key={index} href={service.href} className="group block">
                 <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden">
