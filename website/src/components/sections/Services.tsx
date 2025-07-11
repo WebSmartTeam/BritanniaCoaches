@@ -119,7 +119,7 @@ const Services = () => {
         </div>
 
         <div className="relative mt-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-royal-blue-900 via-slate-ink-900 to-royal-blue-900" />
+          <div className="absolute inset-0 bg-slate-ink-900" />
           
           <div className="relative max-w-7xl mx-auto px-6 py-24">
             <div className="text-center text-white max-w-4xl mx-auto">
@@ -128,7 +128,7 @@ const Services = () => {
                 <span className="text-sm font-medium">Custom Transportation Solutions</span>
               </div>
               
-              <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
+              <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight text-white">
                 Ready for Your Next Journey?
               </h3>
               <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
