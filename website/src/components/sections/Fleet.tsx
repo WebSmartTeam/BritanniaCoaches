@@ -89,13 +89,15 @@ const Fleet = () => {
     <section className="py-20 bg-ice-grey-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
-            Our Modern Fleet
-          </h2>
-          <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-            Experience comfort and reliability with our modern fleet of coaches. Choose the perfect vehicle for your journey.
-          </p>
+        <div className="mb-12">
+          <div className="border-l-4 border-crimson-red-800 pl-8">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
+              Our Modern Fleet
+            </h2>
+            <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
+              Experience comfort and reliability with our modern fleet of coaches.
+            </p>
+          </div>
         </div>
 
         {/* Clean Fleet Grid */}
@@ -156,13 +158,15 @@ const Fleet = () => {
 
         {/* Clean Amenities Grid */}
         <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-slate-ink-900 mb-4">
-              Standard Amenities
-            </h3>
-            <p className="text-lg text-slate-ink-900/70 max-w-2xl mx-auto">
-              Every coach comes equipped with modern amenities for your comfort.
-            </p>
+          <div className="mb-12">
+            <div className="border-l-4 border-crimson-red-800 pl-8">
+              <h3 className="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight text-slate-ink-900">
+                Premium Amenities
+              </h3>
+              <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
+                Every coach comes equipped with modern amenities for your comfort.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -184,13 +188,15 @@ const Fleet = () => {
 
         {/* Fleet Stats */}
         <div className="bg-slate-ink-900 rounded-lg p-8 md:p-12 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">
-              Fleet Excellence
-            </h3>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Our commitment to quality and safety
-            </p>
+          <div className="mb-8">
+            <div className="border-l-4 border-crimson-red-800 pl-8">
+              <h3 className="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight text-white">
+                Fleet Excellence
+              </h3>
+              <p className="text-xl text-white/80 max-w-2xl leading-relaxed">
+                Our commitment to quality and safety
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
