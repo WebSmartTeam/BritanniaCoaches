@@ -31,11 +31,15 @@ const Amenities = () => {
         <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-12">
-          <div className="border-l-4 border-crimson-red-800 pl-8">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-3 bg-crimson-red-800/10 backdrop-blur-sm border border-crimson-red-800/20 rounded-full px-6 py-3 mb-6">
+              <div className="w-2 h-2 bg-crimson-red-800 rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold text-crimson-red-800 uppercase tracking-wide">Premium Features</span>
+            </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
               Coach Amenities
             </h2>
-            <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
+            <p className="text-xl text-slate-ink-900/60 max-w-3xl mx-auto leading-relaxed">
               Our coaches come equipped with essential amenities for comfortable travel.
             </p>
           </div>
