@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, ChevronUp, Star, Shield, Award, CheckCircle } from 'lucide-react'
@@ -8,6 +8,7 @@ import { Phone, Mail, MapPin, ChevronUp, Star, Shield, Award, CheckCircle } from
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   const [openSection, setOpenSection] = useState<string | null>(null)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   const footerLinks = {
     services: [
@@ -66,6 +67,14 @@ const Footer = () => {
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section)
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <footer className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-900 to-slate-800 text-white overflow-hidden">
@@ -257,13 +266,15 @@ const Footer = () => {
       </div>
 
       {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-crimson-red-600 hover:bg-crimson-red-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40"
-        aria-label="Scroll to top"
-      >
-        <ChevronUp className="w-6 h-6 text-white" />
-      </button>
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-crimson-red-600 hover:bg-crimson-red-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40 animate-fade-in"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="w-6 h-6 text-white" />
+        </button>
+      )}
     </footer>
   )
 }
