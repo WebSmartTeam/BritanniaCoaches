@@ -122,10 +122,10 @@ const Services = () => {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center gap-3 bg-crimson-red-800 hover:bg-crimson-red-900 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-crimson-red-800 hover:bg-crimson-red-900 text-white font-bold px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="uppercase tracking-wide">We Don&apos;t Do Average. We Do Excellence.</span>
+              <span className="text-xs uppercase tracking-wide">We Don&apos;t Do Average. We Do Excellence.</span>
               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             </Link>
           </div>

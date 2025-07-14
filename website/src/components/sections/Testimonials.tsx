@@ -113,9 +113,9 @@ const Testimonials = () => {
         </div>
         
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-3 bg-crimson-red-800 text-white font-bold px-8 py-4 rounded-full shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white font-bold px-4 py-2 rounded-full shadow-lg">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            <span className="uppercase tracking-wide">Real Results. Real People. Real Success.</span>
+            <span className="text-xs uppercase tracking-wide">Real Results. Real People. Real Success.</span>
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
           </div>
         </div>
