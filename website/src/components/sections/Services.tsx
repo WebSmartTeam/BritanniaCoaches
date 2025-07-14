@@ -1,9 +1,12 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Building2, Heart, Plane, MapPin, Navigation, ArrowRight } from 'lucide-react'
+import { Building2, Heart, Plane, MapPin, Navigation, ArrowRight, X } from 'lucide-react'
 
 const Services = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
   const services = [
     {
       icon: Building2,
@@ -91,18 +94,26 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.slice(0, 3).map((service, index) => (
-              <Link key={index} href={service.href} className="group block">
+              <div key={index} className="group">
                 <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
-                  <div className="relative h-64 overflow-hidden">
+                  <div 
+                    className="relative h-64 overflow-hidden cursor-pointer"
+                    onClick={() => setSelectedImage(service.image)}
+                  >
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                      <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">
+                        Click to view image
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="p-6 flex-1 flex flex-col">
+                  <Link href={service.href} className="p-6 flex-1 flex flex-col group-content">
                     <div className="text-xs font-medium text-slate-ink-900/60 uppercase tracking-wide mb-2">
                       {service.category}
                     </div>
@@ -115,13 +126,13 @@ const Services = () => {
                       {service.description}
                     </p>
 
-                    <div className="flex items-center gap-2 text-crimson-red-800 font-medium group-hover:gap-3 transition-all duration-300 mt-auto">
+                    <div className="flex items-center gap-2 text-crimson-red-800 font-medium group-content-hover:gap-3 transition-all duration-300 mt-auto">
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </div>
-                  </div>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
           
@@ -184,6 +195,29 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Lightbox Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+          <div className="relative max-w-4xl max-h-[90vh] w-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-200 z-10"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <div className="relative w-full h-[80vh]">
+              <Image
+                src={selectedImage}
+                alt="Service Image"
+                fill
+                className="object-contain rounded-lg"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
