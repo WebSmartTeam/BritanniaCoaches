@@ -210,8 +210,8 @@ const Header = () => {
                                       <div className="text-crimson-red-800 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                         Learn More →
                                       </div>
-                                      <div className="text-sm font-semibold text-slate-700">
-                                        From £50
+                                      <div className="text-sm font-semibold text-crimson-red-800">
+                                        Get Quote
                                       </div>
                                     </div>
                                   </Link>
