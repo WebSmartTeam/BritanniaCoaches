@@ -71,21 +71,13 @@ const Services = () => {
     <section className="py-12 bg-[rgb(220,231,245)]">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-6 mb-12">
-          <div className="relative">
-            <div className="absolute -top-4 -right-4 transform rotate-12">
-              <div className="flex items-center gap-2 bg-crimson-red-800 rounded-full px-4 py-2 shadow-lg">
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <span className="text-xs font-bold text-white uppercase tracking-wide">Transportation Excellence</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
-                Our Transportation Services
-              </h2>
-              <p className="text-xl text-slate-ink-900/60 max-w-3xl mx-auto leading-relaxed">
-                We get your group where they need to be. On time. Every time.
-              </p>
-            </div>
+          <div className="text-center">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-slate-ink-900">
+              Our Transportation Services
+            </h2>
+            <p className="text-xl text-slate-ink-900/60 max-w-3xl mx-auto leading-relaxed">
+              We get your group where they need to be. On time. Every time.
+            </p>
           </div>
         </div>
 
@@ -130,10 +122,11 @@ const Services = () => {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="bg-slate-ink-900 hover:bg-slate-ink-800 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 group"
+              className="inline-flex items-center gap-3 bg-crimson-red-800 hover:bg-crimson-red-900 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              <span>View More Services</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="uppercase tracking-wide">We Don&apos;t Do Average. We Do Excellence.</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             </Link>
           </div>
         </div>
