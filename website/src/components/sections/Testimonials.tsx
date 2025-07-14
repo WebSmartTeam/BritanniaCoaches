@@ -63,7 +63,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-20 bg-[rgb(240,245,250)]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full">
         {/* Header with Left Bar - Full Width */}
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="border-l-4 border-crimson-red-800 pl-8">

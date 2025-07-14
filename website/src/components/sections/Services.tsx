@@ -68,7 +68,7 @@ const Services = () => {
   ]
 
   return (
-    <div className="py-12 bg-[rgb(220,231,245)]">
+    <section className="py-12 bg-[rgb(220,231,245)]">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <div className="border-l-4 border-crimson-red-800 pl-8">
@@ -177,7 +177,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

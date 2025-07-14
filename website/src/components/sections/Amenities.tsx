@@ -27,7 +27,8 @@ const Amenities = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight text-slate-ink-900">
@@ -53,6 +54,7 @@ const Amenities = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   )
