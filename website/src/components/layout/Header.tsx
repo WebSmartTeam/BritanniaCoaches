@@ -134,49 +134,62 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="fixed left-1/2 transform -translate-x-1/2 w-[1000px] max-w-[calc(100vw-3rem)] bg-white rounded-xl shadow-2xl border border-ice-grey-200 p-6 animate-fade-in-down z-50" style={{ top: '80px' }}>
-                            <div className="mb-4">
-                              <h3 className="text-lg font-display font-bold text-slate-ink-900 mb-1">Our Services</h3>
-                              <p className="text-slate-ink-900/60 text-xs">Professional transportation solutions for every need</p>
+                          <div className="fixed inset-x-0 mx-auto w-[1000px] max-w-[calc(100vw-3rem)] bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8 z-50" style={{ top: '80px' }}>
+                            {/* Header Section */}
+                            <div className="text-center mb-8">
+                              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-crimson-red-800 to-crimson-red-900 text-white px-4 py-2 rounded-full mb-3">
+                                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                                <span className="text-sm font-semibold">Our Services</span>
+                                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                              </div>
+                              <p className="text-slate-ink-900/60 text-sm">Professional transportation solutions for every need</p>
                             </div>
                             
-                            <div className="grid grid-cols-6 gap-4">
+                            {/* Services Grid */}
+                            <div className="grid grid-cols-3 gap-6 mb-8">
                               {item.megaMenu.map((service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
-                                  className="group block bg-gradient-to-br from-slate-50 to-white p-3 rounded-lg border border-ice-grey-100 hover:border-crimson-red-200 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+                                  className="group block bg-gradient-to-br from-white to-slate-50 p-5 rounded-xl border border-slate-200 hover:border-crimson-red-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                                 >
-                                  <div className="relative h-16 mb-3 overflow-hidden rounded-md">
+                                  <div className="relative h-20 mb-4 overflow-hidden rounded-lg">
                                     <Image
                                       src={service.image}
                                       alt={service.name}
                                       fill
-                                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                                   </div>
                                   
-                                  <div className="space-y-1">
-                                    <h4 className="font-medium text-sm text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200 leading-tight">
+                                  <div className="space-y-2">
+                                    <h4 className="font-bold text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200 leading-tight">
                                       {service.name}
                                     </h4>
-                                    <p className="text-xs text-slate-ink-900/60 leading-relaxed line-clamp-2">
+                                    <p className="text-sm text-slate-ink-900/70 leading-relaxed">
                                       {service.description}
                                     </p>
+                                  </div>
+                                  
+                                  <div className="mt-4 flex items-center gap-2 text-crimson-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    <span className="text-sm font-medium">Explore Service</span>
+                                    <div className="w-4 h-0.5 bg-crimson-red-800 rounded-full"></div>
                                   </div>
                                 </Link>
                               ))}
                             </div>
                             
-                            <div className="mt-4 pt-4 border-t border-ice-grey-200">
+                            {/* Bottom CTA */}
+                            <div className="bg-gradient-to-r from-slate-50 to-white rounded-xl p-6 border border-slate-200">
                               <div className="flex items-center justify-between">
                                 <div>
-                                  <p className="text-sm font-medium text-slate-ink-900">Need a custom solution?</p>
-                                  <p className="text-xs text-slate-ink-900/60">Get a personalized quote for your requirements</p>
+                                  <h5 className="font-bold text-slate-ink-900 mb-1">Need a Custom Solution?</h5>
+                                  <p className="text-sm text-slate-ink-900/60">Get a personalized quote tailored to your specific requirements</p>
                                 </div>
                                 <Link
                                   href="/contact"
-                                  className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-md"
+                                  className="bg-gradient-to-r from-crimson-red-800 to-crimson-red-900 hover:from-crimson-red-900 hover:to-crimson-red-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
                                 >
                                   Get Quote
                                 </Link>
