@@ -7,7 +7,6 @@ export default function FleetPage() {
   const coaches = [
     {
       name: 'Executive Coach',
-      capacity: '49-53 Passengers',
       image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
       features: ['Air Conditioning', 'Reclining Seats', 'Onboard WC', 'PA System', 'Storage Space'],
       description: 'Our premium executive coaches are perfect for corporate travel, offering maximum comfort and professional amenities.',
@@ -15,7 +14,6 @@ export default function FleetPage() {
     },
     {
       name: 'Standard Coach',
-      capacity: '49-53 Passengers',
       image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
       features: ['Air Conditioning', 'Comfortable Seating', 'PA System', 'Large Windows', 'Storage Space'],
       description: 'Reliable and comfortable coaches ideal for school trips, day excursions, and group travel.',
@@ -23,7 +21,6 @@ export default function FleetPage() {
     },
     {
       name: 'Luxury Coach',
-      capacity: '49-53 Passengers',
       image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp',
       features: ['Luxury Seating', 'Entertainment System', 'Onboard WC', 'Air Conditioning', 'Premium Interior'],
       description: 'Our luxury coaches provide the ultimate travel experience for special occasions and VIP transportation.',
@@ -31,7 +28,6 @@ export default function FleetPage() {
     },
     {
       name: 'Mini Coach',
-      capacity: '16-29 Passengers',
       image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp',
       features: ['Air Conditioning', 'Comfortable Seating', 'Easy Access', 'Luggage Space'],
       description: 'Perfect for smaller groups, our mini coaches offer flexibility and comfort for intimate journeys.',
@@ -104,11 +100,6 @@ export default function FleetPage() {
       <section className="py-20 bg-[rgb(220,231,245)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Fleet Features</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
               Why Choose Our Fleet
             </h2>
@@ -142,11 +133,6 @@ export default function FleetPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Vehicle Types</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
               Our Coaches
             </h2>
@@ -167,16 +153,10 @@ export default function FleetPage() {
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
-                      <div className="font-semibold text-slate-ink-900">{coach.capacity}</div>
-                    </div>
                   </div>
                 </div>
                 
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-3 py-1 rounded-full mb-6">
-                    <span className="text-xs font-semibold uppercase tracking-wide">{coach.capacity}</span>
-                  </div>
                   <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
                     {coach.name}
                   </h3>
@@ -227,11 +207,6 @@ export default function FleetPage() {
       <section className="py-20 bg-slate-ink-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Standard Features</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
               Standard Amenities
             </h2>
@@ -255,11 +230,6 @@ export default function FleetPage() {
       <section className="py-20 bg-[rgb(220,231,245)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Book Now</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
               Ready to Travel?
             </h2>
