@@ -157,15 +157,21 @@ const Header = () => {
                             {/* Services Grid */}
                             <div className="p-6">
                               <div className="grid grid-cols-3 gap-6">
-                                {item.megaMenu.slice(0, 3).map((service) => (
+                                {item.megaMenu.slice(0, 3).map((service, index) => (
                                   <Link
                                     key={service.name}
                                     href={service.href}
                                     className="group relative bg-gradient-to-br from-slate-50 to-white p-5 rounded-xl border border-slate-200 hover:border-crimson-red-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                                   >
                                     {/* Service Badge */}
-                                    <div className="absolute -top-2 -right-2 bg-crimson-red-800 text-white text-xs px-2 py-1 rounded-full font-medium">
-                                      Popular
+                                    <div className={`absolute -top-2 -right-2 text-white text-xs px-2 py-1 rounded-full font-medium ${
+                                      index === 0 ? 'bg-crimson-red-800' : 
+                                      index === 1 ? 'bg-blue-600' : 
+                                      'bg-green-600'
+                                    }`}>
+                                      {index === 0 ? 'Popular' : 
+                                       index === 1 ? 'Premium' : 
+                                       'Reliable'}
                                     </div>
                                     
                                     <div className="relative h-24 mb-4 overflow-hidden rounded-lg">
@@ -265,16 +271,16 @@ const Header = () => {
                                 </div>
                                 <div className="flex items-center gap-3">
                                   <Link
-                                    href="/contact"
+                                    href="/services"
                                     className="bg-white text-crimson-red-800 px-6 py-2 rounded-lg font-semibold text-sm hover:bg-slate-50 transition-all duration-200 hover:scale-105"
                                   >
-                                    Get Quote
+                                    View All Services
                                   </Link>
                                   <Link
-                                    href="tel:01462436125"
+                                    href="/fleet"
                                     className="border-2 border-white/30 text-white px-4 py-2 rounded-lg font-medium text-sm hover:border-white/50 transition-all duration-200"
                                   >
-                                    Call Now
+                                    Our Fleet
                                   </Link>
                                 </div>
                               </div>
