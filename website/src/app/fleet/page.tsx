@@ -1,152 +1,136 @@
 import React from 'react'
 import Image from 'next/image'
-import { Users, Wifi, Monitor, Wind, Shield, Coffee, Zap, Volume2, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Users, Shield, Wifi, MapPin, Clock, Star, Award, CheckCircle } from 'lucide-react'
 
 export default function FleetPage() {
-  const fleetCategories = [
+  const coaches = [
     {
-      category: 'Executive Coaches',
-      capacity: '16-25 passengers',
-      description: 'Premium coaches designed for corporate travel and VIP transport.',
-      image: '/images/premium/luxury-coach-1.jpg',
-      features: [
-        'Premium leather seating',
-        'Individual climate control',
-        'WiFi and USB charging points',
-        'Entertainment systems',
-        'Refreshment facilities',
-        'Professional uniformed driver',
-      ],
-      amenities: [
-        { icon: Users, name: 'Premium Seating' },
-        { icon: Wifi, name: 'High-Speed WiFi' },
-        { icon: Monitor, name: 'Entertainment' },
-        { icon: Coffee, name: 'Refreshments' },
-      ],
-      idealFor: ['Corporate events', 'VIP transport', 'Executive meetings', 'Airport transfers'],
+      name: 'Executive Coach',
+      capacity: '49-53 Passengers',
+      image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
+      features: ['Air Conditioning', 'Reclining Seats', 'Onboard WC', 'PA System', 'Storage Space'],
+      description: 'Our premium executive coaches are perfect for corporate travel, offering maximum comfort and professional amenities.',
+      suitable: ['Corporate Events', 'Airport Transfers', 'Long Distance Travel']
     },
     {
-      category: 'Standard Coaches',
-      capacity: '35-49 passengers',
-      description: 'Comfortable and reliable coaches perfect for group travel and day trips.',
-      image: '/images/premium/luxury-coach-2.jpg',
-      features: [
-        'Comfortable reclining seats',
-        'Air conditioning system',
-        'PA system for announcements',
-        'Large luggage compartment',
-        'Emergency exits and safety equipment',
-        'Professional driver service',
-      ],
-      amenities: [
-        { icon: Users, name: 'Comfortable Seating' },
-        { icon: Wind, name: 'Air Conditioning' },
-        { icon: Volume2, name: 'PA System' },
-        { icon: Shield, name: 'Safety Features' },
-      ],
-      idealFor: ['School trips', 'Group outings', 'Sports teams', 'Day trips'],
+      name: 'Standard Coach',
+      capacity: '49-53 Passengers',
+      image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
+      features: ['Air Conditioning', 'Comfortable Seating', 'PA System', 'Large Windows', 'Storage Space'],
+      description: 'Reliable and comfortable coaches ideal for school trips, day excursions, and group travel.',
+      suitable: ['School Trips', 'Day Trips', 'Group Excursions']
     },
     {
-      category: 'Mini Coaches',
-      capacity: '8-16 passengers',
-      description: 'Compact coaches ideal for smaller groups and local transportation.',
-      image: '/images/premium/luxury-coach-3.jpg',
-      features: [
-        'Flexible seating arrangements',
-        'Easy boarding access',
-        'Climate control',
-        'USB charging points',
-        'Compact luggage space',
-        'Personal driver service',
-      ],
-      amenities: [
-        { icon: Users, name: 'Flexible Seating' },
-        { icon: Zap, name: 'USB Charging' },
-        { icon: Wind, name: 'Climate Control' },
-        { icon: CheckCircle, name: 'Easy Access' },
-      ],
-      idealFor: ['Small groups', 'Airport transfers', 'Local trips', 'Wedding parties'],
+      name: 'Luxury Coach',
+      capacity: '49-53 Passengers',
+      image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp',
+      features: ['Luxury Seating', 'Entertainment System', 'Onboard WC', 'Air Conditioning', 'Premium Interior'],
+      description: 'Our luxury coaches provide the ultimate travel experience for special occasions and VIP transportation.',
+      suitable: ['Weddings', 'Special Events', 'VIP Transport']
     },
+    {
+      name: 'Mini Coach',
+      capacity: '16-29 Passengers',
+      image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp',
+      features: ['Air Conditioning', 'Comfortable Seating', 'Easy Access', 'Luggage Space'],
+      description: 'Perfect for smaller groups, our mini coaches offer flexibility and comfort for intimate journeys.',
+      suitable: ['Small Groups', 'Local Transport', 'Shuttle Services']
+    }
   ]
 
-  const allAmenities = [
-    {
-      icon: Users,
-      title: 'Comfortable Seating',
-      description: 'Ergonomically designed seats with ample legroom and reclining options for maximum comfort.',
-    },
-    {
-      icon: Wifi,
-      title: 'High-Speed WiFi',
-      description: 'Stay connected throughout your journey with complimentary high-speed internet access.',
-    },
-    {
-      icon: Zap,
-      title: 'USB Charging',
-      description: 'Individual charging ports at every seat to keep your devices powered throughout the trip.',
-    },
-    {
-      icon: Wind,
-      title: 'Climate Control',
-      description: 'Advanced air conditioning and heating systems maintain optimal temperature in all weather.',
-    },
-    {
-      icon: Monitor,
-      title: 'Entertainment Systems',
-      description: 'Audio/visual equipment for presentations, movies, or music during your journey.',
-    },
-    {
-      icon: Coffee,
-      title: 'Refreshment Services',
-      description: 'Optional catering and refreshment services can be arranged for longer journeys.',
-    },
+  const features = [
     {
       icon: Shield,
-      title: 'Safety Features',
-      description: 'Latest safety technology including GPS tracking, emergency equipment, and safety belts.',
+      title: 'Safety First',
+      description: 'All our coaches meet the highest safety standards with regular inspections and maintenance.',
+      stats: '100% Safety Record'
     },
     {
-      icon: Volume2,
-      title: 'PA System',
-      description: 'Professional sound system for clear announcements and background music.',
+      icon: Users,
+      title: 'Professional Drivers',
+      description: 'Experienced, DBS-checked drivers with excellent local knowledge and customer service skills.',
+      stats: '35+ Years Experience'
     },
+    {
+      icon: Award,
+      title: 'Modern Fleet',
+      description: 'Well-maintained modern coaches with the latest amenities and comfort features.',
+      stats: '50+ Vehicles'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Fully Licensed',
+      description: 'Fully licensed and insured with all necessary certifications for peace of mind.',
+      stats: 'Licensed & Insured'
+    }
   ]
 
-  const fleetStats = [
-    { number: '50+', label: 'Total Coaches' },
-    { number: '5', label: 'Years Average Age' },
-    { number: '100%', label: 'Safety Certified' },
-    { number: '24/7', label: 'Maintenance' },
+  const amenities = [
+    'Air Conditioning',
+    'Reclining Seats',
+    'Onboard WC Facilities',
+    'PA Sound System',
+    'Ample Storage Space',
+    'Large Windows',
+    'Professional Driver',
+    'GPS Tracking'
   ]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto container-padding">
+      <section className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 text-white py-20 md:py-28">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
-              Our Modern Fleet
+            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold">Our Fleet</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+              Modern Coach Fleet
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Experience comfort, safety, and reliability with our diverse fleet of modern coaches. 
-              Each vehicle is maintained to the highest standards and equipped with premium amenities.
+            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+              Discover our range of modern, well-maintained coaches designed for comfort, 
+              safety, and reliability. From intimate groups to large parties, we have the perfect vehicle for your journey.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Fleet Stats */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            {fleetStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
-                  {stat.number}
+      {/* Fleet Overview */}
+      <section className="py-20 bg-[rgb(220,231,245)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold">Fleet Features</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
+              Why Choose Our Fleet
+            </h2>
+            <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
+              Every coach in our fleet is maintained to the highest standards, ensuring your journey is safe, comfortable, and enjoyable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-lg text-neutral-600 font-medium">
-                  {stat.label}
+                <h3 className="text-xl font-bold text-slate-ink-900 mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-ink-900/70 leading-relaxed mb-4">
+                  {feature.description}
+                </p>
+                <div className="text-sm font-semibold text-crimson-red-800 bg-crimson-red-50 px-3 py-1 rounded-full inline-block">
+                  {feature.stats}
                 </div>
               </div>
             ))}
@@ -154,82 +138,84 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* Fleet Categories */}
-      <section className="section-padding bg-neutral-50">
-        <div className="max-w-7xl mx-auto container-padding">
+      {/* Coach Types */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
-              Fleet Categories
+            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold">Vehicle Types</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
+              Our Coaches
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Choose from our range of coaches designed to meet different group sizes and travel requirements.
+            <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
+              From executive coaches to mini coaches, we have the right vehicle for every occasion and group size.
             </p>
           </div>
 
           <div className="space-y-16">
-            {fleetCategories.map((fleet, index) => (
+            {coaches.map((coach, index) => (
               <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden">
+                  <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                      src={fleet.image}
-                      alt={fleet.category}
+                      src={coach.image}
+                      alt={coach.name}
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute top-4 left-4 bg-primary-600 text-white px-4 py-2 rounded-full font-medium">
-                      {fleet.capacity}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
+                      <div className="font-semibold text-slate-ink-900">{coach.capacity}</div>
                     </div>
                   </div>
                 </div>
-
+                
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <h3 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
-                    {fleet.category}
-                  </h3>
-                  <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                    {fleet.description}
-                  </p>
-
-                  {/* Amenities Icons */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                    {fleet.amenities.map((amenity, amenityIndex) => (
-                      <div key={amenityIndex} className="text-center">
-                        <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-2">
-                          <amenity.icon className="w-6 h-6 text-primary-600" />
-                        </div>
-                        <p className="text-sm text-neutral-600">{amenity.name}</p>
-                      </div>
-                    ))}
+                  <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-3 py-1 rounded-full mb-6">
+                    <span className="text-xs font-semibold uppercase tracking-wide">{coach.capacity}</span>
                   </div>
-
+                  <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
+                    {coach.name}
+                  </h3>
+                  <p className="text-lg text-slate-ink-900/80 leading-relaxed mb-8">
+                    {coach.description}
+                  </p>
+                  
                   {/* Features */}
                   <div className="mb-8">
-                    <h4 className="text-xl font-semibold text-neutral-900 mb-4">Features Include:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {fleet.features.map((feature, featureIndex) => (
+                    <h4 className="text-xl font-bold text-slate-ink-900 mb-4">Key Features</h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      {coach.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                          <span className="text-neutral-600">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-green-600" />
+                          <span className="text-slate-ink-900/80">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
-
-                  {/* Ideal For */}
+                  
+                  {/* Suitable For */}
                   <div className="mb-8">
-                    <h4 className="text-xl font-semibold text-neutral-900 mb-4">Ideal For:</h4>
+                    <h4 className="text-xl font-bold text-slate-ink-900 mb-4">Perfect For</h4>
                     <div className="flex flex-wrap gap-2">
-                      {fleet.idealFor.map((use, useIndex) => (
-                        <span
-                          key={useIndex}
-                          className="bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium"
-                        >
+                      {coach.suitable.map((use, useIndex) => (
+                        <span key={useIndex} className="bg-crimson-red-100 text-crimson-red-800 px-3 py-1 rounded-full text-sm font-medium">
                           {use}
                         </span>
                       ))}
                     </div>
                   </div>
+                  
+                  <Link
+                    href="/contact"
+                    className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
+                  >
+                    Get Quote for This Coach
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -237,144 +223,66 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* All Amenities */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+      {/* Standard Amenities */}
+      <section className="py-20 bg-slate-ink-900">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
-              Premium Amenities
+            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold">Standard Features</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+              Standard Amenities
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Every coach in our fleet comes equipped with modern amenities designed to make your journey comfortable and enjoyable.
+            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Every coach in our fleet comes with these standard features to ensure your comfort and safety.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {allAmenities.map((amenity, index) => (
-              <div key={index} className="card p-6 text-center">
-                <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <amenity.icon className="w-8 h-8 text-primary-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                  {amenity.title}
-                </h3>
-                <p className="text-neutral-600 text-sm leading-relaxed">
-                  {amenity.description}
-                </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {amenities.map((amenity, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center">
+                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                <div className="text-white font-medium">{amenity}</div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Safety & Maintenance */}
-      <section className="section-padding bg-neutral-50">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
-              Safety & Maintenance
-            </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Your safety is our priority. Our comprehensive maintenance program ensures every coach meets the highest safety standards.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-3">
-                Regular Inspections
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                All coaches undergo daily pre-trip inspections and comprehensive weekly safety checks 
-                to ensure optimal performance and safety.
-              </p>
-            </div>
-
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-3">
-                Certified Maintenance
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                Our maintenance team consists of certified technicians who follow strict manufacturer 
-                guidelines and industry best practices.
-              </p>
-            </div>
-
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Monitor className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-3">
-                GPS Tracking
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                Every coach is equipped with GPS tracking systems for real-time monitoring 
-                and enhanced security throughout your journey.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Environmental Commitment */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
-              Environmental Commitment
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              We&apos;re committed to reducing our environmental impact while maintaining the highest service standards.
-            </p>
-          </div>
-
-          <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-white">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold mb-2">Euro 6</div>
-                <div className="text-white/90">Low Emission Engines</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">30%</div>
-                <div className="text-white/90">Fuel Efficiency Improvement</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">100%</div>
-                <div className="text-white/90">Eco-Friendly Cleaning</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-neutral-50">
-        <div className="max-w-7xl mx-auto container-padding text-center">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
-            Experience Our Fleet
-          </h2>
-          <p className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
-            Ready to travel with us? Book your journey today and experience the comfort and reliability of our modern fleet.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="btn btn-primary btn-xl"
-            >
-              Get Your Quote
-            </a>
-            <a
-              href="tel:01462436125"
-              className="btn btn-outline-primary btn-xl"
-            >
-              Call 01462 436125
-            </a>
+      <section className="py-20 bg-[rgb(220,231,245)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold">Book Now</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
+              Ready to Travel?
+            </h2>
+            <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed mb-12">
+              Contact us today to discuss your requirements and get a personalized quote for your journey.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link
+                href="/contact"
+                className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
+              >
+                <span>Get Your Quote</span>
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              </Link>
+              
+              <Link
+                href="tel:01462436125"
+                className="border-2 border-crimson-red-800 text-crimson-red-800 hover:bg-crimson-red-800 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center gap-3"
+              >
+                <span>Call: 01462 436125</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
