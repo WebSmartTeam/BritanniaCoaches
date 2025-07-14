@@ -134,7 +134,7 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1000px] bg-white rounded-xl shadow-2xl border border-ice-grey-200 p-6 animate-fade-in-down z-50">
+                          <div className="fixed left-1/2 transform -translate-x-1/2 w-[1000px] max-w-[calc(100vw-3rem)] bg-white rounded-xl shadow-2xl border border-ice-grey-200 p-6 animate-fade-in-down z-50" style={{ top: '80px' }}>
                             <div className="mb-4">
                               <h3 className="text-lg font-display font-bold text-slate-ink-900 mb-1">Our Services</h3>
                               <p className="text-slate-ink-900/60 text-xs">Professional transportation solutions for every need</p>
