@@ -65,8 +65,6 @@ const Header = () => {
       ]
     },
     { name: 'Fleet', href: '/fleet' },
-    { name: 'Corporate', href: '/corporate' },
-    { name: 'Events', href: '/events' },
     { name: 'Contact', href: '/contact' },
   ]
 
