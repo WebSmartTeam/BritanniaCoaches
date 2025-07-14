@@ -29,15 +29,13 @@ const Amenities = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-12">
-          <div className="border-l-4 border-crimson-red-800 pl-8">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight text-slate-ink-900">
-              Coach Amenities
-            </h2>
-            <p className="text-xl text-slate-ink-900/60 max-w-2xl leading-relaxed">
-              Our coaches come equipped with essential amenities for comfortable travel.
-            </p>
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight text-slate-ink-900">
+            Coach Amenities
+          </h2>
+          <p className="text-xl text-slate-ink-900/60 max-w-2xl mx-auto leading-relaxed">
+            Our coaches come equipped with essential amenities for comfortable travel.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
