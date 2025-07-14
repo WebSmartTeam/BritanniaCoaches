@@ -25,13 +25,43 @@ const Header = () => {
     { 
       name: 'Services', 
       href: '/services',
-      dropdown: [
-        { name: 'Corporate Transport', href: '/services/corporate' },
-        { name: 'School Trips', href: '/services/school-trips' },
-        { name: 'Wedding Transport', href: '/services/wedding' },
-        { name: 'Airport Transfers', href: '/services/airport' },
-        { name: 'Day Trips', href: '/services/day-trips' },
-        { name: 'Long Distance', href: '/services/long-distance' },
+      megaMenu: [
+        { 
+          name: 'Corporate Transport', 
+          href: '/services/corporate',
+          description: 'Professional business transportation solutions',
+          image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp'
+        },
+        { 
+          name: 'School Trips', 
+          href: '/services/school-trips',
+          description: 'Safe and reliable educational travel',
+          image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp'
+        },
+        { 
+          name: 'Wedding Transport', 
+          href: '/services/wedding',
+          description: 'Elegant transportation for special occasions',
+          image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp'
+        },
+        { 
+          name: 'Airport Transfers', 
+          href: '/services/airport',
+          description: 'Reliable transfers to all UK airports',
+          image: '/images/services/airport/assets_task_01jztp22ebe4jrxcxjh8je438b_1752168577_img_0.webp'
+        },
+        { 
+          name: 'Day Trips', 
+          href: '/services/day-trips',
+          description: 'Comfortable day excursions and tours',
+          image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp'
+        },
+        { 
+          name: 'Long Distance', 
+          href: '/services/long-distance',
+          description: 'Extended travel across UK and Europe',
+          image: '/images/services/long-distance/assets_task_01jztpdvw0fm8vhd1675pncbax_1752168967_img_0.webp'
+        },
       ]
     },
     { name: 'Fleet', href: '/fleet' },
@@ -86,7 +116,7 @@ const Header = () => {
               <nav className="hidden lg:flex items-center gap-2">
                 {navigation.map((item) => (
                   <div key={item.name} className="relative">
-                    {item.dropdown ? (
+                    {item.megaMenu ? (
                       <div 
                         className="relative"
                         onMouseEnter={() => setIsServicesOpen(true)}
@@ -104,19 +134,63 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-ice-grey-200 py-2 animate-fade-in-down">
-                            {item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
-                                className="block px-4 py-2 text-sm text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50 transition-all duration-200 rounded-lg mx-2"
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            ))}
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-white rounded-2xl shadow-2xl border border-ice-grey-200 p-8 animate-fade-in-down z-50">
+                            <div className="mb-6">
+                              <h3 className="text-xl font-display font-bold text-slate-ink-900 mb-2">Our Services</h3>
+                              <p className="text-slate-ink-900/60 text-sm">Professional transportation solutions for every need</p>
+                            </div>
+                            
+                            <div className="grid grid-cols-3 gap-6">
+                              {item.megaMenu.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  href={service.href}
+                                  className="group block bg-gradient-to-br from-slate-50 to-white p-4 rounded-xl border border-ice-grey-100 hover:border-crimson-red-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                                >
+                                  <div className="relative h-32 mb-4 overflow-hidden rounded-lg">
+                                    <Image
+                                      src={service.image}
+                                      alt={service.name}
+                                      fill
+                                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                                  </div>
+                                  
+                                  <div className="space-y-2">
+                                    <h4 className="font-semibold text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200">
+                                      {service.name}
+                                    </h4>
+                                    <p className="text-xs text-slate-ink-900/60 leading-relaxed">
+                                      {service.description}
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="mt-3 flex items-center gap-2 text-crimson-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    <span className="text-xs font-medium">Learn More</span>
+                                    <div className="w-1 h-1 bg-crimson-red-800 rounded-full"></div>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                            
+                            <div className="mt-8 pt-6 border-t border-ice-grey-200">
+                              <div className="flex items-center justify-between">
+                                <div>
+                                  <p className="text-sm font-medium text-slate-ink-900">Need a custom solution?</p>
+                                  <p className="text-xs text-slate-ink-900/60">Get a personalized quote for your specific requirements</p>
+                                </div>
+                                <Link
+                                  href="/contact"
+                                  className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-md"
+                                >
+                                  Get Quote
+                                </Link>
+                              </div>
+                            </div>
                           </div>
                         )}
-                    </div>
+                      </div>
                     ) : (
                       <Link
                         href={item.href}
@@ -187,16 +261,16 @@ const Header = () => {
                     >
                       {item.name}
                     </Link>
-                    {item.dropdown && (
+                    {item.megaMenu && (
                       <div className="ml-4 mt-2 space-y-2">
-                        {item.dropdown.map((dropdownItem) => (
+                        {item.megaMenu.map((menuItem) => (
                           <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
+                            key={menuItem.name}
+                            href={menuItem.href}
                             className="block py-1 text-sm text-slate-ink-900 hover:text-crimson-red-800 transition-colors duration-200"
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            {dropdownItem.name}
+                            {menuItem.name}
                           </Link>
                         ))}
                       </div>
