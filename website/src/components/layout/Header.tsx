@@ -156,48 +156,42 @@ const Header = () => {
 
                             {/* Services Grid */}
                             <div className="p-6">
-                              <div className="grid grid-cols-3 gap-6">
-                                {item.megaMenu.slice(0, 3).map((service, index) => (
+                              <div className="flex gap-6">
+                                {/* Featured Popular Service */}
+                                <div className="w-1/2">
                                   <Link
-                                    key={service.name}
-                                    href={service.href}
-                                    className="group relative bg-gradient-to-br from-slate-50 to-white p-5 rounded-xl border border-slate-200 hover:border-crimson-red-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                                    href={item.megaMenu[0].href}
+                                    className="group relative block bg-gradient-to-br from-slate-50 to-white p-6 rounded-xl border border-slate-200 hover:border-crimson-red-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                                   >
-                                    {/* Service Badge */}
-                                    <div className={`absolute -top-2 -right-2 text-white text-xs px-2 py-1 rounded-full font-medium ${
-                                      index === 0 ? 'bg-crimson-red-800' : 
-                                      index === 1 ? 'bg-blue-600' : 
-                                      'bg-green-600'
-                                    }`}>
-                                      {index === 0 ? 'Popular' : 
-                                       index === 1 ? 'Premium' : 
-                                       'Reliable'}
+                                    {/* Popular Badge */}
+                                    <div className="absolute -top-2 -right-2 bg-crimson-red-800 text-white text-xs px-3 py-1 rounded-full font-medium">
+                                      Popular
                                     </div>
                                     
-                                    <div className="relative h-24 mb-4 overflow-hidden rounded-lg">
+                                    <div className="relative h-32 mb-4 overflow-hidden rounded-lg">
                                       <Image
-                                        src={service.image}
-                                        alt={service.name}
+                                        src={item.megaMenu[0].image}
+                                        alt={item.megaMenu[0].name}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                                       />
                                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                                       <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium text-slate-800">
-                                        Premium Service
+                                        Most Requested
                                       </div>
                                     </div>
                                     
-                                    <div className="space-y-2">
-                                      <h4 className="font-bold text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200">
-                                        {service.name}
+                                    <div className="space-y-3">
+                                      <h4 className="font-bold text-lg text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200">
+                                        {item.megaMenu[0].name}
                                       </h4>
                                       <p className="text-sm text-slate-ink-900/70 leading-relaxed">
-                                        {service.description}
+                                        {item.megaMenu[0].description}
                                       </p>
                                     </div>
                                     
                                     {/* Features */}
-                                    <div className="mt-4 flex items-center gap-2 text-xs text-slate-600">
+                                    <div className="mt-4 flex items-center gap-3 text-xs text-slate-600">
                                       <div className="flex items-center gap-1">
                                         <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                                         <span>Available</span>
@@ -206,49 +200,53 @@ const Header = () => {
                                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                                         <span>Instant Quote</span>
                                       </div>
+                                      <div className="flex items-center gap-1">
+                                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                                        <span>24/7 Service</span>
+                                      </div>
                                     </div>
                                     
                                     <div className="mt-4 flex items-center justify-between">
                                       <div className="text-crimson-red-800 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                         Learn More →
                                       </div>
-                                      <div className="text-xs text-slate-500">
+                                      <div className="text-sm font-semibold text-slate-700">
                                         From £50
                                       </div>
                                     </div>
                                   </Link>
-                                ))}
-                              </div>
-                              
-                              {/* Secondary Services Row */}
-                              <div className="grid grid-cols-3 gap-4 mt-6">
-                                {item.megaMenu.slice(3, 6).map((service) => (
-                                  <Link
-                                    key={service.name}
-                                    href={service.href}
-                                    className="group flex items-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 hover:border-crimson-red-200 transition-all duration-300"
-                                  >
-                                    <div className="relative w-12 h-12 overflow-hidden rounded-lg flex-shrink-0">
-                                      <Image
-                                        src={service.image}
-                                        alt={service.name}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                      />
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <h5 className="font-medium text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors text-sm">
-                                        {service.name}
-                                      </h5>
-                                      <p className="text-xs text-slate-600 truncate">
-                                        {service.description}
-                                      </p>
-                                    </div>
-                                    <div className="text-crimson-red-800 opacity-0 group-hover:opacity-100 transition-opacity text-sm">
-                                      →
-                                    </div>
-                                  </Link>
-                                ))}
+                                </div>
+                                
+                                {/* Other Services - Compact Style */}
+                                <div className="w-1/2 space-y-3">
+                                  {item.megaMenu.slice(1, 6).map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      href={service.href}
+                                      className="group flex items-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 hover:border-crimson-red-200 transition-all duration-300"
+                                    >
+                                      <div className="relative w-12 h-12 overflow-hidden rounded-lg flex-shrink-0">
+                                        <Image
+                                          src={service.image}
+                                          alt={service.name}
+                                          fill
+                                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <h5 className="font-medium text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors text-sm">
+                                          {service.name}
+                                        </h5>
+                                        <p className="text-xs text-slate-600 truncate">
+                                          {service.description}
+                                        </p>
+                                      </div>
+                                      <div className="text-crimson-red-800 opacity-0 group-hover:opacity-100 transition-opacity text-sm">
+                                        →
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
                               </div>
                             </div>
 
