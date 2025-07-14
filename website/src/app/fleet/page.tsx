@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, Shield, Award, CheckCircle } from 'lucide-react'
+import { Shield, Award, CheckCircle, Phone } from 'lucide-react'
 
 export default function FleetPage() {
   const coaches = [
@@ -35,31 +35,22 @@ export default function FleetPage() {
     }
   ]
 
-  const features = [
+  const benefits = [
     {
       icon: Shield,
       title: 'Safety First',
       description: 'All our coaches meet the highest safety standards with regular inspections and maintenance.',
-      stats: '100% Safety Record'
-    },
-    {
-      icon: Users,
-      title: 'Professional Drivers',
-      description: 'Experienced, DBS-checked drivers with excellent local knowledge and customer service skills.',
-      stats: '35+ Years Experience'
     },
     {
       icon: Award,
       title: 'Modern Fleet',
       description: 'Well-maintained modern coaches with the latest amenities and comfort features.',
-      stats: '50+ Vehicles'
     },
     {
       icon: CheckCircle,
       title: 'Fully Licensed',
       description: 'Fully licensed and insured with all necessary certifications for peace of mind.',
-      stats: 'Licensed & Insured'
-    }
+    },
   ]
 
   const amenities = [
@@ -80,12 +71,7 @@ export default function FleetPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Our Fleet</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-white">
               Modern Coach Fleet
             </h1>
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
@@ -96,7 +82,7 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* Fleet Overview */}
+      {/* Fleet Benefits */}
       <section className="py-20 bg-[rgb(220,231,245)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -108,23 +94,40 @@ export default function FleetPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-ink-900 mb-4">
-                  {feature.title}
+                  {benefit.title}
                 </h3>
-                <p className="text-slate-ink-900/70 leading-relaxed mb-4">
-                  {feature.description}
+                <p className="text-slate-ink-900/70 leading-relaxed">
+                  {benefit.description}
                 </p>
-                <div className="text-sm font-semibold text-crimson-red-800 bg-crimson-red-50 px-3 py-1 rounded-full inline-block">
-                  {feature.stats}
-                </div>
               </div>
             ))}
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-crimson-red-800 mb-2">35+</div>
+              <div className="text-slate-ink-900/70 text-sm">Years Experience</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-crimson-red-800 mb-2">50+</div>
+              <div className="text-slate-ink-900/70 text-sm">Modern Coaches</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-crimson-red-800 mb-2">100%</div>
+              <div className="text-slate-ink-900/70 text-sm">Safety Record</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold text-crimson-red-800 mb-2">1000+</div>
+              <div className="text-slate-ink-900/70 text-sm">Happy Customers</div>
+            </div>
           </div>
         </div>
       </section>
@@ -250,6 +253,7 @@ export default function FleetPage() {
                 href="tel:01462436125"
                 className="border-2 border-crimson-red-800 text-crimson-red-800 hover:bg-crimson-red-800 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center gap-3"
               >
+                <Phone className="w-5 h-5" />
                 <span>Call: 01462 436125</span>
               </Link>
             </div>
