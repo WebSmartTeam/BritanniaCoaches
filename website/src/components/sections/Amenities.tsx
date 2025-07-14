@@ -26,7 +26,7 @@ const Amenities = () => {
   ]
 
   return (
-    <section className="py-20 bg-ice-grey-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-12">
