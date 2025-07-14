@@ -87,7 +87,7 @@ const Footer = () => {
             <div className="lg:col-span-1">
               <div className="group">
                 <Link href="/" className="flex items-center gap-4 mb-6 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 relative">
+                  <div className="w-24 h-24 relative">
                     <Image
                       src="/images/logos/logo.png"
                       alt="Britannia Coaches"
@@ -180,36 +180,36 @@ const Footer = () => {
               <div className="space-y-4">
                 <Link
                   href="tel:01462436125" 
-                  className="group flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
+                  className="group flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 w-full"
                 >
-                  <div className="w-10 h-10 bg-crimson-red-600/20 rounded-lg flex items-center justify-center group-hover:bg-crimson-red-600/30 transition-colors duration-300">
-                    <Phone className="w-5 h-5 text-crimson-red-400" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-xl flex items-center justify-center group-hover:from-crimson-red-600/30 group-hover:to-crimson-red-800/30 transition-all duration-300 backdrop-blur-sm">
+                    <Phone className="w-6 h-6 text-crimson-red-400" />
                   </div>
-                  <div>
-                    <p className="text-white font-medium text-sm">01462 436125</p>
+                  <div className="flex-1">
+                    <p className="text-white font-semibold text-sm">01462 436125</p>
                     <p className="text-xs text-white/60">Mon-Fri 8AM-6PM</p>
                   </div>
                 </Link>
                 
                 <Link
                   href="mailto:enquiries@britanniacoaches.co.uk"
-                  className="group flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
+                  className="group flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 w-full"
                 >
-                  <div className="w-10 h-10 bg-crimson-red-600/20 rounded-lg flex items-center justify-center group-hover:bg-crimson-red-600/30 transition-colors duration-300">
-                    <Mail className="w-5 h-5 text-crimson-red-400" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-xl flex items-center justify-center group-hover:from-crimson-red-600/30 group-hover:to-crimson-red-800/30 transition-all duration-300 backdrop-blur-sm">
+                    <Mail className="w-6 h-6 text-crimson-red-400" />
                   </div>
-                  <div>
-                    <p className="text-white font-medium text-sm">enquiries@britanniacoaches.co.uk</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-semibold text-sm truncate">enquiries@britanniacoaches.co.uk</p>
                     <p className="text-xs text-white/60">24/7 Email Support</p>
                   </div>
                 </Link>
                 
-                <div className="group flex items-start gap-3 p-3 rounded-lg">
-                  <div className="w-10 h-10 bg-crimson-red-600/20 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-crimson-red-400" />
+                <div className="group flex items-center gap-4 p-4 rounded-xl w-full">
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                    <MapPin className="w-6 h-6 text-crimson-red-400" />
                   </div>
-                  <div>
-                    <p className="text-white font-medium text-sm">North End, Bury Mead Road</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-semibold text-sm">North End, Bury Mead Road</p>
                     <p className="text-xs text-white/60">Hitchin, Hertfordshire SG5 1RT</p>
                   </div>
                 </div>
