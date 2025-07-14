@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, Shield, Wifi, MapPin, Clock, Star, Award, CheckCircle } from 'lucide-react'
+import { Users, Shield, Award, CheckCircle } from 'lucide-react'
 
 export default function FleetPage() {
   const coaches = [

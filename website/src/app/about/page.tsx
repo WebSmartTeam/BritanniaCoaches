@@ -79,7 +79,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               35+ years of excellence in professional coach transportation. 
-              From humble beginnings to becoming one of the UK's most trusted coach operators.
+              From humble beginnings to becoming one of the UK&apos;s most trusted coach operators.
             </p>
           </div>
         </div>
@@ -100,15 +100,15 @@ export default function AboutPage() {
                 <p>
                   Founded in 1988, Britannia Coaches began as a family business with a commitment to providing 
                   safe, reliable transportation services. What started as a local operation has grown into 
-                  one of the UK's most respected coach companies.
+                  one of the UK&apos;s most respected coach companies.
                 </p>
                 <p>
-                  Over more than three decades, we've built our reputation on exceptional service, safety, 
+                  Over more than three decades, we&apos;ve built our reputation on exceptional service, safety, 
                   and reliability. Our team of professional drivers and modern fleet have safely transported 
                   thousands of passengers across the UK and Europe.
                 </p>
                 <p>
-                  Today, we're proud to serve corporations, schools, wedding parties, and private groups. 
+                  Today, we&apos;re proud to serve corporations, schools, wedding parties, and private groups. 
                   Every journey is approached with the same dedication to excellence that has defined us 
                   since day one.
                 </p>
@@ -177,7 +177,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-              From humble beginnings to industry leadership, here's how we've grown while maintaining our commitment to excellence.
+              From humble beginnings to industry leadership, here&apos;s how we&apos;ve grown while maintaining our commitment to excellence.
             </p>
           </div>
 
