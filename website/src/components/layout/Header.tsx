@@ -168,7 +168,7 @@ const Header = () => {
                                       Popular
                                     </div>
                                     
-                                    <div className="relative h-32 mb-4 overflow-hidden rounded-lg">
+                                    <div className="relative h-36 mb-4 overflow-hidden rounded-lg">
                                       <Image
                                         src={item.megaMenu[0].image}
                                         alt={item.megaMenu[0].name}
