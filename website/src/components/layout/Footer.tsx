@@ -250,12 +250,6 @@ const Footer = () => {
                 <Link href="/privacy" className="hover:text-white transition-colors duration-200">
                   Privacy
                 </Link>
-                <Link href="/terms" className="hover:text-white transition-colors duration-200">
-                  Terms
-                </Link>
-                <Link href="/cookies" className="hover:text-white transition-colors duration-200">
-                  Cookies
-                </Link>
               </div>
             </div>
           </div>
