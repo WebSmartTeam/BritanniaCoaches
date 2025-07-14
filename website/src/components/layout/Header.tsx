@@ -134,55 +134,49 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-white rounded-2xl shadow-2xl border border-ice-grey-200 p-8 animate-fade-in-down z-50">
-                            <div className="mb-6">
-                              <h3 className="text-xl font-display font-bold text-slate-ink-900 mb-2">Our Services</h3>
-                              <p className="text-slate-ink-900/60 text-sm">Professional transportation solutions for every need</p>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1000px] bg-white rounded-xl shadow-2xl border border-ice-grey-200 p-6 animate-fade-in-down z-50">
+                            <div className="mb-4">
+                              <h3 className="text-lg font-display font-bold text-slate-ink-900 mb-1">Our Services</h3>
+                              <p className="text-slate-ink-900/60 text-xs">Professional transportation solutions for every need</p>
                             </div>
                             
-                            <div className="grid grid-cols-3 gap-6">
+                            <div className="grid grid-cols-6 gap-4">
                               {item.megaMenu.map((service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
-                                  className="group block bg-gradient-to-br from-slate-50 to-white p-4 rounded-xl border border-ice-grey-100 hover:border-crimson-red-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                                  className="group block bg-gradient-to-br from-slate-50 to-white p-3 rounded-lg border border-ice-grey-100 hover:border-crimson-red-200 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
                                 >
-                                  <div className="relative h-32 mb-4 overflow-hidden rounded-lg">
+                                  <div className="relative h-16 mb-3 overflow-hidden rounded-md">
                                     <Image
                                       src={service.image}
                                       alt={service.name}
                                       fill
                                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                   </div>
                                   
-                                  <div className="space-y-2">
-                                    <h4 className="font-semibold text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200">
+                                  <div className="space-y-1">
+                                    <h4 className="font-medium text-sm text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200 leading-tight">
                                       {service.name}
                                     </h4>
-                                    <p className="text-xs text-slate-ink-900/60 leading-relaxed">
+                                    <p className="text-xs text-slate-ink-900/60 leading-relaxed line-clamp-2">
                                       {service.description}
                                     </p>
-                                  </div>
-                                  
-                                  <div className="mt-3 flex items-center gap-2 text-crimson-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                    <span className="text-xs font-medium">Learn More</span>
-                                    <div className="w-1 h-1 bg-crimson-red-800 rounded-full"></div>
                                   </div>
                                 </Link>
                               ))}
                             </div>
                             
-                            <div className="mt-8 pt-6 border-t border-ice-grey-200">
+                            <div className="mt-4 pt-4 border-t border-ice-grey-200">
                               <div className="flex items-center justify-between">
                                 <div>
                                   <p className="text-sm font-medium text-slate-ink-900">Need a custom solution?</p>
-                                  <p className="text-xs text-slate-ink-900/60">Get a personalized quote for your specific requirements</p>
+                                  <p className="text-xs text-slate-ink-900/60">Get a personalized quote for your requirements</p>
                                 </div>
                                 <Link
                                   href="/contact"
-                                  className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-md"
+                                  className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-md"
                                 >
                                   Get Quote
                                 </Link>
