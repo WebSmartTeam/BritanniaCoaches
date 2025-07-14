@@ -134,66 +134,34 @@ const Header = () => {
                         </button>
                       
                         {isServicesOpen && (
-                          <div className="fixed inset-x-0 mx-auto w-[1000px] max-w-[calc(100vw-3rem)] bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8 z-50" style={{ top: '80px' }}>
-                            {/* Header Section */}
-                            <div className="text-center mb-8">
-                              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-crimson-red-800 to-crimson-red-900 text-white px-4 py-2 rounded-full mb-3">
-                                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                                <span className="text-sm font-semibold">Our Services</span>
-                                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                              </div>
-                              <p className="text-slate-ink-900/60 text-sm">Professional transportation solutions for every need</p>
-                            </div>
-                            
+                          <div className="fixed inset-x-0 mx-auto w-[1200px] max-w-[calc(100vw-3rem)] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-2xl border border-slate-700/50 p-4 z-50" style={{ top: '80px' }}>
                             {/* Services Grid */}
-                            <div className="grid grid-cols-3 gap-6 mb-8">
+                            <div className="grid grid-cols-6 gap-3">
                               {item.megaMenu.map((service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
-                                  className="group block bg-gradient-to-br from-white to-slate-50 p-5 rounded-xl border border-slate-200 hover:border-crimson-red-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                                  className="group block bg-slate-700/50 hover:bg-slate-600/50 p-3 rounded-lg border border-slate-600/30 hover:border-crimson-red-400/50 transition-all duration-300"
                                 >
-                                  <div className="relative h-20 mb-4 overflow-hidden rounded-lg">
+                                  <div className="relative h-12 mb-2 overflow-hidden rounded">
                                     <Image
                                       src={service.image}
                                       alt={service.name}
                                       fill
-                                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                                   </div>
                                   
-                                  <div className="space-y-2">
-                                    <h4 className="font-bold text-slate-ink-900 group-hover:text-crimson-red-800 transition-colors duration-200 leading-tight">
+                                  <div>
+                                    <h4 className="font-medium text-sm text-white group-hover:text-crimson-red-300 transition-colors duration-200 leading-tight mb-1">
                                       {service.name}
                                     </h4>
-                                    <p className="text-sm text-slate-ink-900/70 leading-relaxed">
+                                    <p className="text-xs text-slate-300 line-clamp-2">
                                       {service.description}
                                     </p>
                                   </div>
-                                  
-                                  <div className="mt-4 flex items-center gap-2 text-crimson-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                    <span className="text-sm font-medium">Explore Service</span>
-                                    <div className="w-4 h-0.5 bg-crimson-red-800 rounded-full"></div>
-                                  </div>
                                 </Link>
                               ))}
-                            </div>
-                            
-                            {/* Bottom CTA */}
-                            <div className="bg-gradient-to-r from-slate-50 to-white rounded-xl p-6 border border-slate-200">
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <h5 className="font-bold text-slate-ink-900 mb-1">Need a Custom Solution?</h5>
-                                  <p className="text-sm text-slate-ink-900/60">Get a personalized quote tailored to your specific requirements</p>
-                                </div>
-                                <Link
-                                  href="/contact"
-                                  className="bg-gradient-to-r from-crimson-red-800 to-crimson-red-900 hover:from-crimson-red-900 hover:to-crimson-red-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
-                                >
-                                  Get Quote
-                                </Link>
-                              </div>
                             </div>
                           </div>
                         )}
