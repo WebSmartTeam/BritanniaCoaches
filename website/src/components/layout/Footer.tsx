@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, ChevronUp, Star, Shield, Award, CheckCircle } from 'lucide-react'
 
 const Footer = () => {
@@ -85,9 +86,14 @@ const Footer = () => {
             {/* Company Brand Section */}
             <div className="lg:col-span-1">
               <div className="group">
-                <Link href="/" className="flex items-center gap-3 mb-6 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-gradient-to-br from-crimson-red-600 to-crimson-red-800 rounded-xl flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-xl">BC</span>
+                <Link href="/" className="flex items-center gap-4 mb-6 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 relative">
+                    <Image
+                      src="/images/logos/logo.png"
+                      alt="Britannia Coaches"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-2xl font-display font-bold text-white group-hover:text-crimson-red-400 transition-colors duration-300">
