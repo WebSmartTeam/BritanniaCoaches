@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Shield, Award, CheckCircle, Phone, Users } from 'lucide-react'
+import { Shield, Award, CheckCircle, Users } from 'lucide-react'
 import Testimonials from '@/components/sections/Testimonials'
 
 export default function FleetPage() {
@@ -135,20 +135,13 @@ export default function FleetPage() {
               Discover our comprehensive range of modern, well-maintained coaches designed for every journey. 
               From intimate groups to large parties, we have the perfect vehicle with professional drivers and premium amenities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link
                 href="/contact"
                 className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
               >
                 <span>View Our Fleet</span>
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              </Link>
-              <Link
-                href="tel:01462436125"
-                className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center gap-3"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Call: 01462 436125</span>
               </Link>
             </div>
           </div>
@@ -275,21 +268,13 @@ export default function FleetPage() {
               Professional service, modern fleet, competitive prices.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex justify-center">
               <Link
                 href="/contact"
                 className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
               >
                 <span>Get Your Quote</span>
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              </Link>
-              
-              <Link
-                href="tel:01462436125"
-                className="border-2 border-crimson-red-800 text-crimson-red-800 hover:bg-crimson-red-800 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center gap-3"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Call: 01462 436125</span>
               </Link>
             </div>
           </div>
