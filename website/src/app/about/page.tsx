@@ -91,9 +91,9 @@ export default function AboutPage() {
 
       {/* Company Story */}
       <section className="py-20 bg-[rgb(220,231,245)]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+        <div className="w-full px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="px-6">
               <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-3 py-1 rounded-full mb-6">
                 <span className="text-xs font-semibold uppercase tracking-wide">Heritage</span>
               </div>
@@ -119,14 +119,14 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp"
                   alt="Britannia Coaches - Professional Transportation"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </div>
             </div>
           </div>
