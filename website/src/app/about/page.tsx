@@ -4,33 +4,6 @@ import Link from 'next/link'
 import { Calendar, Users, Award, Shield, MapPin, Clock, Phone, Mail } from 'lucide-react'
 
 export default function AboutPage() {
-  const milestones = [
-    {
-      year: '1988',
-      title: 'Company Founded',
-      description: 'Britannia Coaches was established with a vision to provide professional transportation services across the UK.',
-    },
-    {
-      year: '1995',
-      title: 'Fleet Expansion',
-      description: 'Expanded operations and established ourselves as a trusted name in corporate and educational transportation.',
-    },
-    {
-      year: '2005',
-      title: 'Safety Excellence',
-      description: 'Achieved comprehensive safety certifications and implemented advanced driver training programs.',
-    },
-    {
-      year: '2015',
-      title: 'Modern Technology',
-      description: 'Introduced GPS tracking, online booking systems, and enhanced coach amenities for passenger comfort.',
-    },
-    {
-      year: '2024',
-      title: 'Industry Leader',
-      description: 'Now operating a modern fleet with 35+ years of experience, serving clients across the UK and Europe.',
-    },
-  ]
 
   const values = [
     {
@@ -168,44 +141,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-[rgb(220,231,245)]">
-        <div className="w-full px-4">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Timeline</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
-              Our Journey
-            </h2>
-            <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-              From humble beginnings to industry leadership, here&apos;s how we&apos;ve grown while maintaining our commitment to excellence.
-            </p>
-          </div>
-
-          <div className="relative max-w-4xl mx-auto">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-crimson-red-300"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="relative flex items-start gap-8">
-                  <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center relative z-10 flex-shrink-0">
-                    <div className="w-6 h-6 bg-white rounded-full"></div>
-                  </div>
-                  
-                  <div className="flex-1 bg-white p-8 rounded-xl shadow-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-crimson-red-800 mb-2">{milestone.year}</div>
-                    <h3 className="text-2xl font-bold text-slate-ink-900 mb-4">{milestone.title}</h3>
-                    <p className="text-slate-ink-900/70 leading-relaxed text-lg">{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Values */}
       <section className="py-20 bg-white">
