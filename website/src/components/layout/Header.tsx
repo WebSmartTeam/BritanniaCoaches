@@ -10,6 +10,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -118,9 +119,16 @@ const Header = () => {
                     {item.megaMenu ? (
                       <div 
                         className="relative"
-                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseEnter={() => {
+                          if (hoverTimeout) {
+                            clearTimeout(hoverTimeout)
+                            setHoverTimeout(null)
+                          }
+                          setIsServicesOpen(true)
+                        }}
                         onMouseLeave={() => {
-                          setTimeout(() => setIsServicesOpen(false), 300)
+                          const timeout = setTimeout(() => setIsServicesOpen(false), 150)
+                          setHoverTimeout(timeout)
                         }}
                       >
                         <button
@@ -139,9 +147,16 @@ const Header = () => {
                           <div 
                             className="fixed inset-x-0 mx-auto w-[1100px] max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50" 
                             style={{ top: '80px' }}
-                            onMouseEnter={() => setIsServicesOpen(true)}
+                            onMouseEnter={() => {
+                              if (hoverTimeout) {
+                                clearTimeout(hoverTimeout)
+                                setHoverTimeout(null)
+                              }
+                              setIsServicesOpen(true)
+                            }}
                             onMouseLeave={() => {
-                              setTimeout(() => setIsServicesOpen(false), 300)
+                              const timeout = setTimeout(() => setIsServicesOpen(false), 150)
+                              setHoverTimeout(timeout)
                             }}
                           >
                             {/* Premium Header */}
