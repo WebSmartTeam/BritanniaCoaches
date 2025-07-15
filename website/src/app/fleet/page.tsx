@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Shield, Award, CheckCircle, Phone, Users, Star, Clock, Calendar } from 'lucide-react'
+import { Shield, Award, CheckCircle, Phone, Users, Star } from 'lucide-react'
 
 export default function FleetPage() {
   const coaches = [
@@ -139,19 +139,13 @@ export default function FleetPage() {
     }
   ]
 
-  const fleetStats = [
-    { number: '50+', label: 'Modern Coaches', icon: Users },
-    { number: '35+', label: 'Years Experience', icon: Calendar },
-    { number: '100%', label: 'Safety Record', icon: Shield },
-    { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 text-white py-20 md:py-32">
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative w-full px-4">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-white">
               Professional Coach Fleet
@@ -180,26 +174,10 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* Fleet Stats */}
-      <section className="py-20 bg-[rgb(220,231,245)]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {fleetStats.map((stat, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-slate-ink-900 mb-2">{stat.number}</div>
-                <div className="text-slate-ink-900/70 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Coach Showcase */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
               Our Coach Range
@@ -211,9 +189,9 @@ export default function FleetPage() {
 
           <div className="space-y-20">
             {coaches.map((coach, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl mx-2">
                     <Image
                       src={coach.image}
                       alt={coach.name}
@@ -227,7 +205,7 @@ export default function FleetPage() {
                   </div>
                 </div>
                 
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                <div className={`px-4 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
                     {coach.name}
                   </h3>
@@ -299,28 +277,22 @@ export default function FleetPage() {
 
       {/* Certifications */}
       <section className="py-20 bg-slate-ink-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
               Safety & Certifications
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Our fleet meets the highest industry standards with comprehensive safety certifications and professional qualifications.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <cert.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="w-12 h-12 bg-crimson-red-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <cert.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {cert.title}
                 </h3>
-                <p className="text-white/80 leading-relaxed mb-4">
-                  {cert.description}
-                </p>
                 <div className="text-sm font-semibold text-crimson-red-400 bg-crimson-red-400/10 px-3 py-1 rounded-full inline-block">
                   {cert.credential}
                 </div>
@@ -332,7 +304,7 @@ export default function FleetPage() {
 
       {/* Customer Testimonials */}
       <section className="py-20 bg-[rgb(220,231,245)]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
               What Our Customers Say
@@ -365,7 +337,7 @@ export default function FleetPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-4">
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
               Ready to Book Your Coach?
