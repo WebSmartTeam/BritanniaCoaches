@@ -8,7 +8,6 @@ export default function FleetPage() {
   const coaches = [
     {
       name: 'Executive Coach',
-      capacity: '49-53 seats',
       image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
       features: ['Luxury Reclining Seats', 'Air Conditioning', 'Onboard WC', 'PA System', 'WiFi Available', 'USB Charging', 'Premium Interior', 'Tinted Windows'],
       description: 'Our flagship executive coaches feature premium amenities and spacious interiors, perfect for corporate travel and long-distance journeys.',
@@ -22,7 +21,6 @@ export default function FleetPage() {
     },
     {
       name: 'Standard Coach',
-      capacity: '49-53 seats',
       image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
       features: ['Comfortable Seating', 'Air Conditioning', 'PA System', 'Large Windows', 'Safety Equipment', 'First Aid Kit', 'Storage Space', 'Professional Driver'],
       description: 'Reliable and comfortable coaches perfect for school trips, group excursions, and day trips with excellent safety features.',
@@ -36,7 +34,6 @@ export default function FleetPage() {
     },
     {
       name: 'Luxury Coach',
-      capacity: '33-49 seats',
       image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp',
       features: ['Premium Leather Seats', 'Entertainment System', 'Onboard WC', 'Air Conditioning', 'Mood Lighting', 'Panoramic Windows', 'Champagne Bar', 'Red Carpet Service'],
       description: 'Our luxury coaches provide the ultimate travel experience with premium amenities for special occasions and VIP transportation.',
@@ -50,7 +47,6 @@ export default function FleetPage() {
     },
     {
       name: 'Mini Coach',
-      capacity: '16-25 seats',
       image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp',
       features: ['Comfortable Seating', 'Air Conditioning', 'Easy Access', 'Luggage Space', 'PA System', 'Wheelchair Accessible', 'Safety Equipment', 'Local Knowledge'],
       description: 'Perfect for smaller groups and local transport, our mini coaches offer flexibility and comfort for intimate journeys.',
@@ -64,7 +60,6 @@ export default function FleetPage() {
     },
     {
       name: 'Double Decker',
-      capacity: '70-80 seats',
       image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
       features: ['Two-Level Seating', 'Panoramic Views', 'Air Conditioning', 'Multiple WCs', 'PA System', 'Staircase Access', 'Large Capacity', 'Tour Guide Area'],
       description: 'Our double-decker coaches maximize capacity while providing excellent views, perfect for large groups and sightseeing tours.',
@@ -78,7 +73,6 @@ export default function FleetPage() {
     },
     {
       name: 'Accessible Coach',
-      capacity: '45-49 seats',
       image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
       features: ['Wheelchair Lift', 'Accessible Seating', 'Wide Aisles', 'Accessible WC', 'Safety Equipment', 'Trained Staff', 'Secure Wheelchair Bay', 'Easy Access'],
       description: 'Specially designed coaches with full accessibility features, ensuring comfortable travel for passengers with mobility requirements.',
