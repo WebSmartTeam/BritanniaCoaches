@@ -107,32 +107,27 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-slate-ink-900">
+      <section className="py-16 bg-slate-ink-900">
         <div className="w-full px-4">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">By The Numbers</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Our Achievements
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
               Numbers that reflect our commitment to excellence and customer satisfaction.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-                <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+              <div key={index} className="text-center bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:bg-white/10 hover:border-crimson-red-400 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-crimson-red-800 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-crimson-red-400 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-crimson-red-400 mb-1">
                   {stat.number}
                 </div>
-                <div className="text-lg text-white/80 font-medium">
+                <div className="text-sm text-white/80 font-medium">
                   {stat.label}
                 </div>
               </div>
