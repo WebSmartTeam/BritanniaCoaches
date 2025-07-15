@@ -187,11 +187,11 @@ export default function FleetPage() {
             </p>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-16">
             {coaches.map((coach, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl mx-2">
+                  <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                     <Image
                       src={coach.image}
                       alt={coach.name}
@@ -205,53 +205,30 @@ export default function FleetPage() {
                   </div>
                 </div>
                 
-                <div className={`px-4 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">
+                <div className={`px-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-ink-900 mb-4">
                     {coach.name}
                   </h3>
-                  <p className="text-lg text-slate-ink-900/80 leading-relaxed mb-8">
+                  <p className="text-lg text-slate-ink-900/80 leading-relaxed mb-6">
                     {coach.description}
                   </p>
                   
-                  {/* Specifications */}
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-slate-ink-900 mb-4">Specifications</h4>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div className="flex justify-between bg-slate-50 p-3 rounded-lg">
-                        <span className="text-slate-ink-900/70">Length:</span>
-                        <span className="font-semibold text-slate-ink-900">{coach.specifications.length}</span>
-                      </div>
-                      <div className="flex justify-between bg-slate-50 p-3 rounded-lg">
-                        <span className="text-slate-ink-900/70">Width:</span>
-                        <span className="font-semibold text-slate-ink-900">{coach.specifications.width}</span>
-                      </div>
-                      <div className="flex justify-between bg-slate-50 p-3 rounded-lg">
-                        <span className="text-slate-ink-900/70">Height:</span>
-                        <span className="font-semibold text-slate-ink-900">{coach.specifications.height}</span>
-                      </div>
-                      <div className="flex justify-between bg-slate-50 p-3 rounded-lg">
-                        <span className="text-slate-ink-900/70">Luggage:</span>
-                        <span className="font-semibold text-slate-ink-900">{coach.specifications.luggage}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
                   {/* Features */}
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-slate-ink-900 mb-4">Key Features</h4>
-                    <div className="grid grid-cols-2 gap-3">
+                  <div className="mb-6">
+                    <h4 className="text-lg font-bold text-slate-ink-900 mb-3">Key Features</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {coach.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-600" />
-                          <span className="text-slate-ink-900/80">{feature}</span>
+                          <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                          <span className="text-sm text-slate-ink-900/80">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   
                   {/* Suitable For */}
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-slate-ink-900 mb-4">Perfect For</h4>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-bold text-slate-ink-900 mb-3">Perfect For</h4>
                     <div className="flex flex-wrap gap-2">
                       {coach.suitable.map((use, useIndex) => (
                         <span key={useIndex} className="bg-crimson-red-100 text-crimson-red-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -263,7 +240,7 @@ export default function FleetPage() {
                   
                   <Link
                     href="/contact"
-                    className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
+                    className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
                   >
                     Get Quote for This Coach
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
