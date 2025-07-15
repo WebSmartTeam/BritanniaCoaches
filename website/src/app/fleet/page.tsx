@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Shield, Award, CheckCircle, Phone, Users, Star } from 'lucide-react'
+import { Shield, Award, CheckCircle, Phone, Users } from 'lucide-react'
+import Testimonials from '@/components/sections/Testimonials'
 
 export default function FleetPage() {
   const coaches = [
@@ -118,26 +119,6 @@ export default function FleetPage() {
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'Corporate Events Ltd',
-      text: 'Excellent service with professional drivers. The executive coach was immaculate and perfect for our corporate retreat.',
-      rating: 5
-    },
-    {
-      name: 'Mike Thompson',
-      company: 'St. Mary&apos;s School',
-      text: 'We&apos;ve used Britannia Coaches for our school trips for years. Always reliable, safe, and great value for money.',
-      rating: 5
-    },
-    {
-      name: 'Emma Williams',
-      company: 'Wedding Planner',
-      text: 'The luxury coach made our wedding transport perfect. Beautiful vehicle and exceptional service from start to finish.',
-      rating: 5
-    }
-  ]
 
 
   return (
@@ -176,7 +157,7 @@ export default function FleetPage() {
 
 
       {/* Coach Showcase */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[rgb(220,231,245)]">
         <div className="w-full px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
@@ -279,38 +260,8 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* Customer Testimonials */}
-      <section className="py-20 bg-[rgb(220,231,245)]">
-        <div className="w-full px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-              Don&apos;t just take our word for it - here&apos;s what our customers say about our fleet and service.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center gap-2 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-slate-ink-900/80 leading-relaxed mb-6 italic">
-                  &quot;{testimonial.text}&quot;
-                </p>
-                <div>
-                  <div className="font-semibold text-slate-ink-900">{testimonial.name}</div>
-                  <div className="text-sm text-slate-ink-900/70">{testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Client Testimonials */}
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
