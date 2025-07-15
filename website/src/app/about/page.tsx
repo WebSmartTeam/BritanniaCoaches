@@ -143,7 +143,7 @@ export default function AboutPage() {
 
 
       {/* Values */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[rgb(220,231,245)]">
         <div className="w-full px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
