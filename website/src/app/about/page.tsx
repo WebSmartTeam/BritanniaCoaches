@@ -81,7 +81,7 @@ export default function AboutPage() {
                 href="/contact"
                 className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
               >
-                <span>Our Story</span>
+                <span>Get Quote</span>
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </Link>
             </div>
