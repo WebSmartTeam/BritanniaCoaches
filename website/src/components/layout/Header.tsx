@@ -119,9 +119,12 @@ const Header = () => {
                       <div 
                         className="relative"
                         onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
+                        onMouseLeave={() => {
+                          setTimeout(() => setIsServicesOpen(false), 300)
+                        }}
                       >
                         <button
+                          onClick={() => setIsServicesOpen(!isServicesOpen)}
                           className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-300 ${
                             isActive(item.href) 
                               ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-royal-blue-900' : 'text-royal-blue-800 bg-crimson-red-100'}` 
@@ -137,7 +140,9 @@ const Header = () => {
                             className="fixed inset-x-0 mx-auto w-[1100px] max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50" 
                             style={{ top: '80px' }}
                             onMouseEnter={() => setIsServicesOpen(true)}
-                            onMouseLeave={() => setIsServicesOpen(false)}
+                            onMouseLeave={() => {
+                              setTimeout(() => setIsServicesOpen(false), 300)
+                            }}
                           >
                             {/* Premium Header */}
                             <div className="bg-gradient-to-r from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 px-8 py-4">
