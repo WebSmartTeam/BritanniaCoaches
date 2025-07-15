@@ -1,194 +1,273 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, ChevronUp, Star, Shield, Award, CheckCircle } from 'lucide-react'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const [openSection, setOpenSection] = useState<string | null>(null)
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  const footerLinks = {
+    services: [
+      { name: 'Corporate Transport', href: '/services/corporate' },
+      { name: 'School Trips', href: '/services/school-trips' },
+      { name: 'Wedding Transport', href: '/services/wedding' },
+      { name: 'Airport Transfers', href: '/services/airport' },
+      { name: 'Day Trips', href: '/services/day-trips' },
+      { name: 'Long Distance Travel', href: '/services/long-distance' },
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Fleet', href: '/fleet' },
+      { name: 'All Services', href: '/services' },
+      { name: 'Contact Us', href: '/contact' },
+      { name: 'Terms & Conditions', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' },
+    ],
+  }
+
+  const certifications = [
+    { 
+      icon: Shield, 
+      title: 'FENSA Certified',
+      subtitle: 'Quality Assured'
+    },
+    { 
+      icon: Star, 
+      title: 'Which? Trusted Trader',
+      subtitle: 'Customer Approved'
+    },
+    { 
+      icon: Award, 
+      title: '35+ Years Experience',
+      subtitle: 'Industry Leader'
+    },
+    { 
+      icon: CheckCircle, 
+      title: 'Fully Insured',
+      subtitle: 'Complete Protection'
+    },
+  ]
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section)
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <footer className="bg-slate-ink-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-16 h-16 relative">
-                <Image
-                  src="/images/logos/logo.png"
-                  alt="Britannia Coaches"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Britannia Coaches</h3>
-                <p className="text-white/70 text-sm">Premium Transportation Services</p>
+    <footer className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-900 to-slate-800 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%), 
+                           radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%)`
+        }} />
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="relative">
+        {/* Top Section */}
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+            
+            {/* Company Brand Section */}
+            <div className="lg:col-span-1">
+              <div className="group">
+                <Link href="/" className="flex items-center gap-4 mb-6 hover:scale-105 transition-transform duration-300">
+                  <div className="w-24 h-24 relative">
+                    <Image
+                      src="/images/logos/logo.png"
+                      alt="Britannia Coaches"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display font-bold text-white group-hover:text-crimson-red-400 transition-colors duration-300">
+                      Britannia Coaches
+                    </h3>
+                    <p className="text-sm text-white/60">Professional Transportation</p>
+                  </div>
+                </Link>
+                
+                <p className="text-white/80 mb-8 leading-relaxed text-sm">
+                  Professional coach transportation across the UK. With 35+ years of experience, 
+                  we deliver reliable, safe, and comfortable travel solutions for every journey.
+                </p>
+                
+                {/* Quick Stats */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm">
+                    <div className="text-xl font-bold text-crimson-red-400">1000+</div>
+                    <div className="text-xs text-white/60">Happy Clients</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm">
+                    <div className="text-xl font-bold text-crimson-red-400">35+</div>
+                    <div className="text-xs text-white/60">Years Experience</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <p className="text-white/80 leading-relaxed mb-6 max-w-md">
-              Professional coach transportation across the UK and Europe. With over 35 years of experience, 
-              we provide safe, comfortable, and reliable transport solutions for every occasion.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-crimson-red-400" />
-                <span className="text-white/80 text-sm">
-                  North End, Bury Mead Road, Hitchin, Hertfordshire SG5 1RT
-                </span>
+
+            {/* Services Links */}
+            <div className="lg:block">
+              <div className="flex items-center justify-between lg:justify-start mb-6 lg:mb-6">
+                <h4 className="text-lg font-semibold text-white">Our Services</h4>
+                <button 
+                  className="lg:hidden text-white/60"
+                  onClick={() => toggleSection('services')}
+                >
+                  <ChevronUp className={`w-5 h-5 transition-transform duration-300 ${openSection === 'services' ? 'rotate-180' : ''}`} />
+                </button>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-crimson-red-400" />
-                <a href="tel:01462436125" className="text-white/80 hover:text-white transition-colors text-sm">
-                  01462 436125
-                </a>
+              <div className={`space-y-3 ${openSection === 'services' ? 'block' : 'hidden'} lg:block`}>
+                {footerLinks.services.map((link, index) => (
+                  <div key={link.name} style={{ animationDelay: `${index * 0.1}s` }}>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-2 text-white/70 hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
+                      <div className="w-1 h-1 bg-crimson-red-400 rounded-full group-hover:w-2 transition-all duration-300" />
+                      <span className="text-sm">{link.name}</span>
+                    </Link>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-crimson-red-400" />
-                <a href="mailto:enquiries@britanniacoaches.co.uk" className="text-white/80 hover:text-white transition-colors text-sm break-all">
-                  enquiries@britanniacoaches.co.uk
-                </a>
+            </div>
+
+            {/* Company Links */}
+            <div className="lg:block">
+              <div className="flex items-center justify-between lg:justify-start mb-6">
+                <h4 className="text-lg font-semibold text-white">Company</h4>
+                <button 
+                  className="lg:hidden text-white/60"
+                  onClick={() => toggleSection('company')}
+                >
+                  <ChevronUp className={`w-5 h-5 transition-transform duration-300 ${openSection === 'company' ? 'rotate-180' : ''}`} />
+                </button>
               </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-crimson-red-400" />
-                <span className="text-white/80 text-sm">
-                  Mon-Fri: 8AM-6PM | Weekend: By appointment
-                </span>
+              <div className={`space-y-3 ${openSection === 'company' ? 'block' : 'hidden'} lg:block`}>
+                {footerLinks.company.map((link, index) => (
+                  <div key={link.name} style={{ animationDelay: `${index * 0.1}s` }}>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-2 text-white/70 hover:text-white transition-all duration-300 hover:translate-x-1"
+                    >
+                      <div className="w-1 h-1 bg-crimson-red-400 rounded-full group-hover:w-2 transition-all duration-300" />
+                      <span className="text-sm">{link.name}</span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-6">Get In Touch</h4>
+              <div className="space-y-4">
+                <Link
+                  href="tel:01462436125" 
+                  className="group flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 w-full"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-xl flex items-center justify-center group-hover:from-crimson-red-600/30 group-hover:to-crimson-red-800/30 transition-all duration-300 backdrop-blur-sm">
+                    <Phone className="w-6 h-6 text-crimson-red-400" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-semibold text-sm">01462 436125</p>
+                    <p className="text-xs text-white/60">Mon-Fri 8AM-6PM</p>
+                  </div>
+                </Link>
+                
+                <Link
+                  href="mailto:enquiries@britanniacoaches.co.uk"
+                  className="group flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 w-full"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-xl flex items-center justify-center group-hover:from-crimson-red-600/30 group-hover:to-crimson-red-800/30 transition-all duration-300 backdrop-blur-sm">
+                    <Mail className="w-6 h-6 text-crimson-red-400" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-semibold text-sm truncate">enquiries@britanniacoaches.co.uk</p>
+                    <p className="text-xs text-white/60">24/7 Email Support</p>
+                  </div>
+                </Link>
+                
+                <div className="group flex items-center gap-4 p-4 rounded-xl w-full">
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                    <MapPin className="w-6 h-6 text-crimson-red-400" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-semibold text-sm">North End, Bury Mead Road</p>
+                    <p className="text-xs text-white/60">Hitchin, Hertfordshire SG5 1RT</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Main Pages */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Main Pages</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-white/70 hover:text-white transition-colors text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white/70 hover:text-white transition-colors text-sm">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/fleet" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Our Fleet
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Transport Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Transport Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/services/corporate" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Corporate Transport
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/school-trips" className="text-white/70 hover:text-white transition-colors text-sm">
-                  School Trips
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/wedding" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Wedding Transport
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/airport" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Airport Transfers
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/day-trips" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Day Trips
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/long-distance" className="text-white/70 hover:text-white transition-colors text-sm">
-                  Long Distance Travel
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Information */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company Info</h4>
-            <ul className="space-y-2">
-              <li>
-                <div className="text-white/70 text-sm">
-                  <div className="font-medium text-white mb-1">Experience</div>
-                  35+ Years in Business
+        {/* Certifications Section */}
+        <div className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {certifications.map((cert, index) => (
+                <div 
+                  key={cert.title}
+                  className="group flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/5 transition-all duration-300"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-crimson-red-600/20 to-crimson-red-800/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <cert.icon className="w-6 h-6 text-crimson-red-400" />
+                  </div>
+                  <h5 className="text-sm font-semibold text-white mb-1">{cert.title}</h5>
+                  <p className="text-xs text-white/60">{cert.subtitle}</p>
                 </div>
-              </li>
-              <li>
-                <div className="text-white/70 text-sm">
-                  <div className="font-medium text-white mb-1">Fleet Size</div>
-                  50+ Modern Coaches
-                </div>
-              </li>
-              <li>
-                <div className="text-white/70 text-sm">
-                  <div className="font-medium text-white mb-1">Coverage</div>
-                  UK & European Travel
-                </div>
-              </li>
-              <li>
-                <div className="text-white/70 text-sm">
-                  <div className="font-medium text-white mb-1">Safety Record</div>
-                  100% Professional Standards
-                </div>
-              </li>
-              <li>
-                <div className="text-white/70 text-sm">
-                  <div className="font-medium text-white mb-1">Available</div>
-                  24/7 Booking Support
-                </div>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/70 text-sm">
-              © {currentYear} Britannia Coaches. All rights reserved. | Professional Coach Transport Services UK
-            </p>
-            <div className="flex items-center gap-6">
-              <Link href="/privacy" className="text-white/70 hover:text-white transition-colors text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-white/70 hover:text-white transition-colors text-sm">
-                Terms & Conditions
-              </Link>
-              <span className="text-white/50 text-xs">
-                Est. 1988
-              </span>
+        <div className="border-t border-white/10 bg-black/20">
+          <div className="max-w-7xl mx-auto px-6 py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-white/60">
+                © {currentYear} Britannia Coaches Ltd. All rights reserved. | Licensed & Insured UK Coach Operator
+              </p>
+              <div className="flex items-center gap-6 text-sm text-white/60">
+                <Link href="/privacy" className="hover:text-white transition-colors duration-200">
+                  Privacy
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-crimson-red-600 hover:bg-crimson-red-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40 animate-fade-in"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="w-6 h-6 text-white" />
+        </button>
+      )}
     </footer>
   )
-}
 
 export default Footer
