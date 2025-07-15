@@ -40,54 +40,54 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
-              <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Phone className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-200 hover:border-crimson-red-300 transition-all duration-300 hover:-translate-y-1 text-center">
+              <div className="w-12 h-12 bg-crimson-red-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-ink-900 mb-4">Call Us</h3>
-              <p className="text-slate-ink-900/70 mb-4">Speak directly to our team</p>
+              <h3 className="text-lg font-bold text-slate-ink-900 mb-3">Call Us</h3>
+              <p className="text-slate-ink-900/70 mb-3 text-sm">Speak directly to our team</p>
               <a 
                 href="tel:01462436125"
-                className="text-crimson-red-800 font-semibold hover:text-crimson-red-900 transition-colors text-lg"
+                className="text-crimson-red-800 font-semibold hover:text-crimson-red-900 transition-colors text-base"
               >
                 01462 436125
               </a>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
-              <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Mail className="w-8 h-8 text-white" />
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-200 hover:border-crimson-red-300 transition-all duration-300 hover:-translate-y-1 text-center">
+              <div className="w-12 h-12 bg-crimson-red-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-ink-900 mb-4">Email Us</h3>
-              <p className="text-slate-ink-900/70 mb-4">Send us your requirements</p>
+              <h3 className="text-lg font-bold text-slate-ink-900 mb-3">Email Us</h3>
+              <p className="text-slate-ink-900/70 mb-3 text-sm">Send us your requirements</p>
               <a 
                 href="mailto:enquiries@britanniacoaches.co.uk"
-                className="text-crimson-red-800 font-semibold hover:text-crimson-red-900 transition-colors text-sm"
+                className="text-crimson-red-800 font-semibold hover:text-crimson-red-900 transition-colors text-xs break-all"
               >
                 enquiries@britanniacoaches.co.uk
               </a>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
-              <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <MapPin className="w-8 h-8 text-white" />
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-200 hover:border-crimson-red-300 transition-all duration-300 hover:-translate-y-1 text-center">
+              <div className="w-12 h-12 bg-crimson-red-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-ink-900 mb-4">Visit Us</h3>
-              <p className="text-slate-ink-900/70 mb-4">Our location</p>
-              <p className="text-slate-ink-900/80 text-sm">
+              <h3 className="text-lg font-bold text-slate-ink-900 mb-3">Visit Us</h3>
+              <p className="text-slate-ink-900/70 mb-3 text-sm">Our location</p>
+              <p className="text-slate-ink-900/80 text-xs">
                 North End, Bury Mead Road<br />
                 Hitchin, Hertfordshire SG5 1RT
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
-              <div className="w-16 h-16 bg-crimson-red-800 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-8 h-8 text-white" />
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-200 hover:border-crimson-red-300 transition-all duration-300 hover:-translate-y-1 text-center">
+              <div className="w-12 h-12 bg-crimson-red-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-ink-900 mb-4">Office Hours</h3>
-              <p className="text-slate-ink-900/70 mb-4">When we&apos;re available</p>
-              <p className="text-slate-ink-900/80 text-sm">
+              <h3 className="text-lg font-bold text-slate-ink-900 mb-3">Office Hours</h3>
+              <p className="text-slate-ink-900/70 mb-3 text-sm">When we&apos;re available</p>
+              <p className="text-slate-ink-900/80 text-xs">
                 Mon - Fri: 8:00 AM - 6:00 PM<br />
                 Sat: 9:00 AM - 4:00 PM<br />
                 Sun: By appointment
