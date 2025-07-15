@@ -65,22 +65,26 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative max-w-7xl mx-auto px-6">
+      <section className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 text-white py-20 md:py-32">
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative w-full px-4">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold">Our Story</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-white">
               About Britannia Coaches
             </h1>
-            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8">
               35+ years of excellence in professional coach transportation. 
               From humble beginnings to becoming one of the UK&apos;s most trusted coach operators.
             </p>
+            <div className="flex justify-center">
+              <Link
+                href="/contact"
+                className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
+              >
+                <span>Our Story</span>
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
