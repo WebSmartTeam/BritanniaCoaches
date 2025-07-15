@@ -153,11 +153,16 @@ export default function FleetPage() {
       <section className="py-20 bg-[rgb(220,231,245)]">
         <div className="w-full px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
-              Our Coach Range
+            <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold">Premium Fleet</span>
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-ink-900 mb-6 leading-tight">
+              Professional Coach Solutions
             </h2>
-            <p className="text-xl text-slate-ink-900/70 max-w-3xl mx-auto leading-relaxed">
-              From executive coaches to accessible vehicles, we have the perfect solution for every journey and group size.
+            <p className="text-lg text-slate-ink-900/80 max-w-2xl mx-auto leading-relaxed">
+              From executive coaches to accessible vehicles, we provide the perfect transportation solution for every journey and group size.
             </p>
           </div>
 
