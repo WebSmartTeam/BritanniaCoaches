@@ -138,7 +138,7 @@ export default function ServicesPage() {
                     href={service.href}
                     className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2 group"
                   >
-                    <span>Learn More</span>
+                    <span>View Details</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
