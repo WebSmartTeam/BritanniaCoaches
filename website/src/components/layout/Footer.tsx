@@ -24,6 +24,7 @@ const Footer = () => {
       { name: 'Our Fleet', href: '/fleet' },
       { name: 'All Services', href: '/services' },
       { name: 'Contact Us', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
     ],
   }
 
@@ -150,7 +151,7 @@ const Footer = () => {
             {/* Company Links */}
             <div className="lg:block">
               <div className="flex items-center justify-between lg:justify-start mb-6">
-                <h4 className="text-lg font-semibold text-white">Company</h4>
+                <h4 className="text-lg font-semibold text-white">Quick Links</h4>
                 <button 
                   className="lg:hidden text-white/60"
                   onClick={() => toggleSection('company')}
