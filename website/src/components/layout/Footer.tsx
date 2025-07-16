@@ -248,8 +248,8 @@ const Footer = () => {
                 © {currentYear} Britannia Coaches Ltd. All rights reserved. | Licensed & Insured UK Coach Operator
               </p>
               <div className="flex items-center gap-6 text-sm text-white/60">
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200">
-                  Privacy
+                <Link href="/privacy-policy" className="hover:text-white transition-colors duration-200">
+                  Privacy Policy
                 </Link>
               </div>
             </div>
