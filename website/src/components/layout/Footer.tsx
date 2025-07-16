@@ -24,8 +24,6 @@ const Footer = () => {
       { name: 'Our Fleet', href: '/fleet' },
       { name: 'All Services', href: '/services' },
       { name: 'Contact Us', href: '/contact' },
-      { name: 'Terms & Conditions', href: '/terms' },
-      { name: 'Privacy Policy', href: '/privacy' },
     ],
   }
 
