@@ -390,7 +390,7 @@ const Header = () => {
       </header>
 
       {/* Mobile/Tablet Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm lg:hidden">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-ink-900 shadow-lg lg:hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
             
@@ -407,11 +407,11 @@ const Header = () => {
                 </div>
                 <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-crimson-red-800 rounded-full animate-pulse"></div>
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-lg font-display font-bold text-slate-ink-900">
+              <div>
+                <h1 className="text-lg font-display font-bold text-white">
                   Britannia Coaches
                 </h1>
-                <p className="text-xs font-medium text-slate-ink-900/70">
+                <p className="text-xs font-medium text-white/70">
                   Premium Transportation
                 </p>
               </div>
@@ -421,7 +421,7 @@ const Header = () => {
             <div className="flex items-center gap-4">
               <a
                 href="tel:01462436125"
-                className="hidden md:flex items-center gap-2 text-slate-ink-900 hover:text-crimson-red-800 transition-colors duration-200"
+                className="hidden md:flex items-center gap-2 text-white hover:text-crimson-red-400 transition-colors duration-200"
               >
                 <Phone className="w-4 h-4" />
                 <span className="text-sm font-medium">01462 436125</span>
@@ -438,7 +438,7 @@ const Header = () => {
               <button
                 id="menu-button"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-slate-ink-900 hover:text-crimson-red-800 transition-colors duration-200"
+                className="p-2 text-white hover:text-crimson-red-400 transition-colors duration-200"
               >
                 <Menu className="w-6 h-6" />
               </button>
