@@ -1,7 +1,7 @@
 'use client'
 
-import React from 'react'
-import { Star } from 'lucide-react'
+import React, { useState } from 'react'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Testimonials = () => {
   const testimonials = [
@@ -61,6 +61,94 @@ const Testimonials = () => {
     }
   ]
 
+  // Testimonial Card Component
+  const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+    <div className={`bg-gradient-to-br ${testimonial.color} p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-80 flex-shrink-0`}>
+      <div className="flex items-center justify-between mb-5">
+        <div className="flex items-center relative">
+          <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+            <Star className="w-5 h-5 text-white fill-current" />
+          </div>
+          <div className="w-10 h-10 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center absolute left-6 border-2 border-white/50">
+            <span className="text-white font-bold text-sm">{testimonial.avatar}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div className="flex gap-1 mb-4">
+        {Array.from({ length: testimonial.rating }).map((_, i) => (
+          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+        ))}
+      </div>
+      
+      <p className="text-white/90 text-sm leading-relaxed mb-5 italic">
+        {testimonial.text}
+      </p>
+      
+      <div className="border-t border-white/20 pt-4">
+        <div className="font-bold text-white text-sm">{testimonial.name}</div>
+        <div className="text-white/80 text-xs">{testimonial.role}</div>
+        <div className="text-white/70 text-xs">{testimonial.company}</div>
+      </div>
+    </div>
+  )
+
+  // Mobile Carousel Component
+  const MobileTestimonialCarousel = ({ testimonials: testimonialList }: { testimonials: Array<typeof testimonials[0]> }) => {
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const nextTestimonial = () => {
+      setCurrentIndex((prev) => (prev + 1) % testimonialList.length)
+    }
+
+    const prevTestimonial = () => {
+      setCurrentIndex((prev) => (prev - 1 + testimonialList.length) % testimonialList.length)
+    }
+
+    return (
+      <div className="md:hidden relative">
+        <div className="px-6 max-w-sm mx-auto">
+          <TestimonialCard testimonial={testimonialList[currentIndex]} />
+        </div>
+        
+        {/* Navigation Arrows */}
+        <div className="flex justify-center items-center gap-4 mt-6">
+          <button
+            onClick={prevTestimonial}
+            className="w-12 h-12 bg-slate-ink-900 hover:bg-slate-ink-800 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          {/* Dots Indicator */}
+          <div className="flex gap-2">
+            {testimonialList.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-crimson-red-800 scale-110' 
+                    : 'bg-slate-ink-900/30 hover:bg-slate-ink-900/50'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+          
+          <button
+            onClick={nextTestimonial}
+            className="w-12 h-12 bg-slate-ink-900 hover:bg-slate-ink-800 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <section className="relative py-20 bg-[rgb(220,231,245)]">
       <div className="absolute top-4 left-4 z-10">
@@ -83,41 +171,17 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonial Cards - Scrolling Animation */}
-        <div className="relative overflow-hidden">
+        {/* Desktop: Scrolling Animation */}
+        <div className="relative overflow-hidden hidden md:block">
           <div className="animate-scroll-left flex gap-8 w-max">
             {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <div key={index} className={`bg-gradient-to-br ${testimonial.color} p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-80 flex-shrink-0`}>
-              <div className="flex items-center justify-between mb-5">
-                <div className="flex items-center relative">
-                  <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <Star className="w-5 h-5 text-white fill-current" />
-                  </div>
-                  <div className="w-10 h-10 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center absolute left-6 border-2 border-white/50">
-                    <span className="text-white font-bold text-sm">{testimonial.avatar}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              
-              <p className="text-white/90 text-sm leading-relaxed mb-5 italic">
-                {testimonial.text}
-              </p>
-              
-              <div className="border-t border-white/20 pt-4">
-                <div className="font-bold text-white text-sm">{testimonial.name}</div>
-                <div className="text-white/80 text-xs">{testimonial.role}</div>
-                <div className="text-white/70 text-xs">{testimonial.company}</div>
-              </div>
-            </div>
-          ))}
+              <TestimonialCard key={index} testimonial={testimonial} />
+            ))}
           </div>
         </div>
+
+        {/* Mobile: Manual Carousel */}
+        <MobileTestimonialCarousel testimonials={testimonials} />
         
       </div>
       
