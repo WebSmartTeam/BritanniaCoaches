@@ -41,34 +41,11 @@ const Hero = () => {
               </h1>
             </div>
             
-            {/* Enhanced Subheading with Visual Hierarchy */}
-            <div className="relative">
-              <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-br from-royal-blue-600/10 to-sky-indigo-400/10 rounded-full blur-lg"></div>
-              <p className="relative text-xl sm:text-2xl text-white/95 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                <span className="font-semibold text-white border-l-4 border-sky-indigo-400 pl-4 block mb-2">
-                  Smart, clean, and comfortable coaches
-                </span>
-                <span className="text-white/85">
-                  for clubs, societies, and groups. Professional service, modern fleet, punctual and reliable.
-                </span>
-              </p>
-            </div>
-
-            {/* Professional Stats Bar */}
-            <div className="grid grid-cols-3 gap-4 mt-8 max-w-md mx-auto lg:mx-0">
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                <div className="text-2xl font-bold text-sky-indigo-400">35+</div>
-                <div className="text-xs text-white/80 uppercase tracking-wide">Years</div>
-              </div>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                <div className="text-2xl font-bold text-sky-indigo-400">50+</div>
-                <div className="text-xs text-white/80 uppercase tracking-wide">Coaches</div>
-              </div>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                <div className="text-2xl font-bold text-sky-indigo-400">24/7</div>
-                <div className="text-xs text-white/80 uppercase tracking-wide">Support</div>
-              </div>
-            </div>
+            {/* Subheading */}
+            <p className="text-xl sm:text-2xl text-white/95 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <span className="font-semibold">Smart, clean, and comfortable coaches</span> for clubs, societies, and groups. 
+              <span className="font-semibold"> Professional service, modern fleet, punctual and reliable.</span>
+            </p>
 
           </div>
 
