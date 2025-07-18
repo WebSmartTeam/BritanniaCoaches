@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Building2, GraduationCap, Heart, Plane, Sun, Globe, ArrowRight, Shield, Clock, Star, Users, Phone, CheckCircle } from 'lucide-react'
+import { Building2, GraduationCap, Heart, Plane, Sun, Globe, ArrowRight, Shield, Clock, Star, Users, Phone } from 'lucide-react'
 
 export default function ServicesPage() {
   const services = [

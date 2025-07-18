@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Heart, Sparkles, Users, Clock, CheckCircle, Phone } from 'lucide-react'
+import { Heart, Sparkles, Users, Clock, Phone } from 'lucide-react'
 
 export default function WeddingTransportPage() {
   const features = [

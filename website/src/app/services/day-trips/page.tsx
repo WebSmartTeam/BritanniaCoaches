@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Sun, Camera, Users, MapPin, CheckCircle, Phone } from 'lucide-react'
+import { Sun, Camera, Users, MapPin, Phone } from 'lucide-react'
 
 export default function DayTripsPage() {
   const features = [

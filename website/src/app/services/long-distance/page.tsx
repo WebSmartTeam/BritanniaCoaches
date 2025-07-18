@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Globe, Bed, Wifi, Route, CheckCircle, Phone } from 'lucide-react'
+import { Globe, Bed, Wifi, Route, Phone } from 'lucide-react'
 
 export default function LongDistancePage() {
   const features = [

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { GraduationCap, Shield, Users, Clock, CheckCircle, Phone } from 'lucide-react'
+import { GraduationCap, Shield, Users, Clock, Phone } from 'lucide-react'
 
 export default function SchoolTripsPage() {
   const features = [

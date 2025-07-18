@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Building2, Users, Clock, Shield, CheckCircle, Phone } from 'lucide-react'
+import { Building2, Users, Clock, Shield, Phone } from 'lucide-react'
 
 export default function CorporateTransportPage() {
   const features = [

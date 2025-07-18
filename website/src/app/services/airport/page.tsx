@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Plane, Clock, Shield, MapPin, CheckCircle, Phone } from 'lucide-react'
+import { Plane, Clock, Shield, MapPin, Phone } from 'lucide-react'
 
 export default function AirportTransfersPage() {
   const features = [
