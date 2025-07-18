@@ -16,7 +16,7 @@ const Services = () => {
       features: ['Air Conditioning', 'Onboard Restrooms', 'Entertainment Systems'],
       href: '/services/corporate',
       image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
-      gradient: 'from-royal-blue-800/90 to-royal-blue-900/90',
+      gradient: 'from-warm-gold-800/90 to-warm-gold-900/90',
     },
     {
       icon: Heart,
@@ -36,7 +36,7 @@ const Services = () => {
       features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports'],
       href: '/services/airport',
       image: '/images/services/airport/assets_task_01jztp22ebe4jrxcxjh8je438b_1752168577_img_0.webp',
-      gradient: 'from-sky-indigo-800/90 to-royal-blue-900/90',
+      gradient: 'from-warm-gold-800/90 to-warm-gold-900/90',
     }
   ]
 

@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="lg:col-span-2 text-center lg:text-left">
             {/* Main Heading with Enhanced Typography */}
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-sky-indigo-400/20 to-royal-blue-600/20 rounded-full blur-xl"></div>
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-warm-gold-300/20 to-warm-gold-500/20 rounded-full blur-xl"></div>
               <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
                 <span className="text-white">Britain&apos;s </span>
                 <span className="text-crimson-red-800">Premier</span>
