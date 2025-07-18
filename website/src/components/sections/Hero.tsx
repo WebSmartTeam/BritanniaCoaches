@@ -23,27 +23,56 @@ const Hero = () => {
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           
           {/* Left Column - Hero Content */}
-          <div className="text-center lg:text-left">
-            {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
-              <span className="text-white">Britain&apos;s </span>
-              <span className="text-crimson-red-800">Premier</span>
-              <br />
-              <span className="text-white">Coach Transportation</span>
-            </h1>
+          <div className="lg:col-span-2 text-center lg:text-left">
+            {/* Main Heading with Enhanced Typography */}
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-sky-indigo-400/20 to-royal-blue-600/20 rounded-full blur-xl"></div>
+              <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+                <span className="text-white">Britain&apos;s </span>
+                <span className="text-crimson-red-800 relative">
+                  Premier
+                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-crimson-red-800 to-sky-indigo-400 rounded-full opacity-60"></div>
+                </span>
+                <br />
+                <span className="text-white">Coach Transportation</span>
+              </h1>
+            </div>
             
-            {/* Subheading */}
-            <p className="text-xl sm:text-2xl text-white/95 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              <span className="font-semibold">Smart, clean, and comfortable coaches</span> for clubs, societies, and groups. 
-              <span className="font-semibold"> Professional service, modern fleet, punctual and reliable.</span>
-            </p>
+            {/* Enhanced Subheading with Visual Hierarchy */}
+            <div className="relative">
+              <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-br from-royal-blue-600/10 to-sky-indigo-400/10 rounded-full blur-lg"></div>
+              <p className="relative text-xl sm:text-2xl text-white/95 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                <span className="font-semibold text-white border-l-4 border-sky-indigo-400 pl-4 block mb-2">
+                  Smart, clean, and comfortable coaches
+                </span>
+                <span className="text-white/85">
+                  for clubs, societies, and groups. Professional service, modern fleet, punctual and reliable.
+                </span>
+              </p>
+            </div>
+
+            {/* Professional Stats Bar */}
+            <div className="grid grid-cols-3 gap-4 mt-8 max-w-md mx-auto lg:mx-0">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-sky-indigo-400">35+</div>
+                <div className="text-xs text-white/80 uppercase tracking-wide">Years</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-sky-indigo-400">50+</div>
+                <div className="text-xs text-white/80 uppercase tracking-wide">Coaches</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-sky-indigo-400">24/7</div>
+                <div className="text-xs text-white/80 uppercase tracking-wide">Support</div>
+              </div>
+            </div>
 
           </div>
 
-          {/* Right Column - Quote Calculator */}
+          {/* Right Column - Enhanced Quote Calculator */}
           <div className="flex justify-center lg:justify-end">
             <div className="bg-white/30 backdrop-blur-md rounded-2xl border border-white/40 p-6 shadow-2xl w-full max-w-md">
               <div className="flex items-center gap-3 mb-6">
