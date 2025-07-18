@@ -181,7 +181,7 @@ const Header = () => {
                       
                         {isServicesOpen && (
                           <div 
-                            className="fixed inset-x-0 mx-auto w-[1100px] max-w-[calc(100vw-3rem)] bg-gradient-to-br from-white to-amber-50/50 rounded-2xl shadow-2xl border border-amber-100/50 overflow-hidden z-50" 
+                            className="fixed inset-x-0 mx-auto w-[1100px] max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50" 
                             style={{ top: '80px' }}
                             onMouseEnter={() => {
                               if (hoverTimeout) {
