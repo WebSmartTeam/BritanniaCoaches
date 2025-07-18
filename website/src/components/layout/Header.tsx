@@ -369,7 +369,6 @@ const Header = () => {
                     ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' 
                     : 'text-royal-blue-800 hover:text-crimson-red-800 hover:bg-crimson-red-50'
                 }`}>
-                  <div className="w-1.5 h-1.5 bg-crimson-red-800 rounded-full animate-pulse"></div>
                   <Phone className="w-3.5 h-3.5" />
                   <span className="text-sm">01462 436125</span>
                 </a>
