@@ -186,20 +186,6 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
 
-                  {/* Features */}
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <span 
-                          key={featureIndex}
-                          className="bg-slate-50 text-slate-ink-900/80 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-200/50 hover:bg-slate-100 transition-colors duration-200"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* CTA */}
                   <Link
                     href={service.href}
