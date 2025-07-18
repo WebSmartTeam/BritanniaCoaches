@@ -13,7 +13,7 @@ export default function ServicesPage() {
       icon: Building2,
       features: ['Executive Seating', 'WiFi & Charging', 'Professional Drivers', 'Flexible Scheduling'],
       category: 'Business',
-      color: 'from-blue-600 to-blue-700'
+      color: 'from-slate-800 to-slate-900'
     },
     {
       title: 'School Trips',
@@ -23,7 +23,7 @@ export default function ServicesPage() {
       icon: GraduationCap,
       features: ['DBS Checked Drivers', 'Safety Equipment', 'Educational Planning', 'Group Discounts'],
       category: 'Education',
-      color: 'from-green-600 to-green-700'
+      color: 'from-slate-800 to-slate-900'
     },
     {
       title: 'Wedding Transport',
@@ -33,7 +33,7 @@ export default function ServicesPage() {
       icon: Heart,
       features: ['Luxury Interior', 'Wedding Coordination', 'Champagne Service', 'Red Carpet'],
       category: 'Special Events',
-      color: 'from-rose-600 to-rose-700'
+      color: 'from-slate-800 to-slate-900'
     },
     {
       title: 'Airport Transfers',
@@ -43,7 +43,7 @@ export default function ServicesPage() {
       icon: Plane,
       features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports', 'Fixed Pricing'],
       category: 'Travel',
-      color: 'from-sky-600 to-sky-700'
+      color: 'from-slate-800 to-slate-900'
     },
     {
       title: 'Day Trips',
@@ -53,7 +53,7 @@ export default function ServicesPage() {
       icon: Sun,
       features: ['Historic Sites', 'Theme Parks', 'Coastal Trips', 'Group Outings'],
       category: 'Leisure',
-      color: 'from-amber-600 to-amber-700'
+      color: 'from-slate-800 to-slate-900'
     },
     {
       title: 'Long Distance',
@@ -63,7 +63,7 @@ export default function ServicesPage() {
       icon: Globe,
       features: ['European Tours', 'Multi-Day Trips', 'Luxury Amenities', 'Custom Itineraries'],
       category: 'Extended Travel',
-      color: 'from-purple-600 to-purple-700'
+      color: 'from-slate-800 to-slate-900'
     }
   ]
 
