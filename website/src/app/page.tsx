@@ -15,7 +15,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-4">
             <div className="h-px bg-white/20 flex-1"></div>
-            <span className="text-white font-bold text-lg">Making Group Travel <span className="text-warm-gold-300">Simple</span>, No Matter the Distance</span>
+            <span className="text-white font-bold text-lg">Making Group Travel <span className="text-sky-indigo-400">Simple</span>, No Matter the Distance</span>
             <div className="h-px bg-white/20 flex-1"></div>
           </div>
         </div>

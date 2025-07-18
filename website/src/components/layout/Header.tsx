@@ -117,7 +117,7 @@ const Header = () => {
         <div className="mx-6 mt-2">
           <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
-              ? 'bg-warm-gold-700 rounded-xl shadow-luxury-xl px-6 py-2' 
+              ? 'bg-royal-blue-800 rounded-xl shadow-luxury-xl px-6 py-2' 
               : 'bg-white rounded-2xl border border-ice-grey-200 px-8 py-3'
           }`}>
             <div className="flex justify-between items-center h-14">
@@ -136,7 +136,7 @@ const Header = () => {
                 </div>
                 <div>
                   <h1 className={`text-lg font-display font-bold transition-colors duration-300 ${
-                    isScrolled ? 'text-white' : 'text-warm-gold-800'
+                    isScrolled ? 'text-white' : 'text-royal-blue-800'
                   }`}>
                     Britannia Coaches
                   </h1>
@@ -171,8 +171,8 @@ const Header = () => {
                           onClick={() => setIsServicesOpen(!isServicesOpen)}
                           className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-300 ${
                             isActive(item.href) 
-                              ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-warm-gold-900' : 'text-warm-gold-800 bg-crimson-red-100'}` 
-                              : `font-medium ${isScrolled ? 'text-white hover:text-crimson-red-300 hover:bg-warm-gold-900' : 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50'}`
+                              ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-royal-blue-900' : 'text-royal-blue-800 bg-crimson-red-100'}` 
+                              : `font-medium ${isScrolled ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' : 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50'}`
                           }`}
                         >
                           {item.name}
@@ -351,8 +351,8 @@ const Header = () => {
                         href={item.href}
                         className={`px-3 py-1.5 rounded-lg transition-all duration-300 ${
                           isActive(item.href) 
-                            ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-warm-gold-900' : 'text-warm-gold-800 bg-crimson-red-100'}` 
-                            : `font-medium ${isScrolled ? 'text-white hover:text-crimson-red-300 hover:bg-warm-gold-900' : 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50'}`
+                            ? `font-semibold ${isScrolled ? 'text-crimson-red-300 bg-royal-blue-900' : 'text-royal-blue-800 bg-crimson-red-100'}` 
+                            : `font-medium ${isScrolled ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' : 'text-slate-ink-900 hover:text-crimson-red-800 hover:bg-crimson-red-50'}`
                         }`}
                       >
                         {item.name}
@@ -366,8 +366,8 @@ const Header = () => {
               <div className="flex items-center gap-3">
                 <a href="tel:01234567890" className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-300 font-bold ${
                   isScrolled 
-                    ? 'text-white hover:text-crimson-red-300 hover:bg-warm-gold-900' 
-                    : 'text-warm-gold-800 hover:text-crimson-red-800 hover:bg-crimson-red-50'
+                    ? 'text-white hover:text-crimson-red-300 hover:bg-royal-blue-900' 
+                    : 'text-royal-blue-800 hover:text-crimson-red-800 hover:bg-crimson-red-50'
                 }`}>
                   <Phone className="w-3.5 h-3.5" />
                   <span className="text-sm">01462 436125</span>
@@ -377,7 +377,7 @@ const Header = () => {
                   className={`px-5 py-2 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 ${
                     isScrolled 
                       ? 'bg-crimson-red-800 hover:bg-crimson-red-900 text-white shadow-md hover:shadow-lg' 
-                      : 'bg-warm-gold-800 hover:bg-warm-gold-900 text-white shadow-md hover:shadow-lg'
+                      : 'bg-royal-blue-800 hover:bg-sky-indigo-800 text-white shadow-md hover:shadow-lg'
                   }`}
                 >
                   Get Quote

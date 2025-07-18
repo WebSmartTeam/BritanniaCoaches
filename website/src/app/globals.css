@@ -15,7 +15,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-warm-gold-800;
+    @apply font-display text-royal-blue-800;
   }
   
   h1 {
@@ -81,7 +81,7 @@
   }
   
   .btn-primary {
-    @apply bg-warm-gold-800 hover:bg-warm-gold-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-warm-gold-500;
+    @apply bg-royal-blue-800 hover:bg-royal-blue-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-royal-blue-500;
   }
   
   .btn-secondary {
@@ -89,11 +89,11 @@
   }
   
   .btn-accent {
-    @apply bg-warm-gold-800 hover:bg-warm-gold-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-warm-gold-500;
+    @apply bg-sky-indigo-800 hover:bg-sky-indigo-900 text-white shadow-luxury hover:shadow-luxury-md focus:ring-sky-indigo-500;
   }
   
   .btn-outline-primary {
-    @apply border-2 border-warm-gold-800 text-warm-gold-800 hover:bg-warm-gold-800 hover:text-white focus:ring-warm-gold-500;
+    @apply border-2 border-royal-blue-800 text-royal-blue-800 hover:bg-royal-blue-800 hover:text-white focus:ring-royal-blue-500;
   }
   
   .btn-outline-secondary {
@@ -101,7 +101,7 @@
   }
   
   .btn-ghost {
-    @apply text-slate-ink-900 hover:bg-ice-grey-100 focus:ring-warm-gold-300;
+    @apply text-slate-ink-900 hover:bg-ice-grey-100 focus:ring-royal-blue-300;
   }
   
   .card {
@@ -113,7 +113,7 @@
   }
   
   .input-field {
-    @apply w-full px-4 py-3 border border-ice-grey-300 rounded-lg focus:ring-2 focus:ring-warm-gold-500 focus:border-warm-gold-500 placeholder-ice-grey-400 bg-white;
+    @apply w-full px-4 py-3 border border-ice-grey-300 rounded-lg focus:ring-2 focus:ring-royal-blue-500 focus:border-royal-blue-500 placeholder-ice-grey-400 bg-white;
   }
   
   .input-error {
@@ -148,7 +148,7 @@
   }
   
   .service-icon {
-    @apply w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 text-warm-gold-600;
+    @apply w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 text-royal-blue-600;
   }
   
   .nav-link {
@@ -156,7 +156,7 @@
   }
   
   .nav-link-active {
-    @apply text-warm-gold-800 font-semibold;
+    @apply text-royal-blue-800 font-semibold;
   }
   
   .hero-overlay {
