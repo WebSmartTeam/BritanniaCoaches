@@ -62,7 +62,7 @@ const Hero = () => {
 
           {/* Right Column - Quote Calculator */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl w-full max-w-md">
+            <div className="bg-white/30 backdrop-blur-md rounded-2xl border border-white/40 p-6 shadow-2xl w-full max-w-md">
               <div className="flex items-center gap-3 mb-6">
                 <Calculator className="w-6 h-6 text-crimson-red-400" />
                 <h3 className="text-black font-semibold text-lg">Get Your Quote</h3>
