@@ -29,7 +29,7 @@ const Hero = () => {
             
             {/* Authority Headlines */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
-              Britain&apos;s <span className="text-crimson-red-800">Premier</span>
+              <span className="block">Britain&apos;s <span className="text-crimson-red-800">Premier</span></span>
               <span className="block text-white">Coach Transportation</span>
             </h1>
             
