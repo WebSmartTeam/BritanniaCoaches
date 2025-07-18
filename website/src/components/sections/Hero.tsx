@@ -32,10 +32,7 @@ const Hero = () => {
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-sky-indigo-400/20 to-royal-blue-600/20 rounded-full blur-xl"></div>
               <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
                 <span className="text-white">Britain&apos;s </span>
-                <span className="text-crimson-red-800 relative">
-                  Premier
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-crimson-red-800 to-sky-indigo-400 rounded-full opacity-60"></div>
-                </span>
+                <span className="text-crimson-red-800">Premier</span>
                 <br />
                 <span className="text-white">Coach Transportation</span>
               </h1>
