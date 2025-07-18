@@ -42,13 +42,6 @@ const Services = () => {
 
   return (
     <section className="relative py-12 bg-[rgb(220,231,245)]">
-      <div className="absolute top-4 left-4 z-10">
-        <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white font-bold px-4 py-2 rounded-full shadow-lg">
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-          <span className="text-xs uppercase tracking-wide">We Don&apos;t Do Average. We Do Excellence.</span>
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-        </div>
-      </div>
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <div className="text-center">
