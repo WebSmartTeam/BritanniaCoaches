@@ -112,7 +112,7 @@ export default function ServicesPage() {
               <div className="w-2 h-2 bg-crimson-red-400 rounded-full animate-pulse" />
               <span className="text-sm font-medium">Professional Transport Solutions</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-white">
               Our Transport Services
             </h1>
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12">
