@@ -223,10 +223,6 @@ const Header = () => {
                                     href={item.megaMenu[0].href}
                                     className="group relative block bg-gradient-to-br from-slate-50 to-white p-6 rounded-xl border border-slate-200 hover:border-crimson-red-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                                   >
-                                    {/* Popular Badge */}
-                                    <div className="absolute -top-2 -right-2 bg-crimson-red-800 text-white text-xs px-3 py-1 rounded-full font-medium">
-                                      Popular
-                                    </div>
                                     
                                     <div className="relative h-36 mb-4 overflow-hidden rounded-lg">
                                       <Image
@@ -236,9 +232,6 @@ const Header = () => {
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                                       />
                                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                                      <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium text-slate-800">
-                                        Most Requested
-                                      </div>
                                     </div>
                                     
                                     <div className="space-y-3">
