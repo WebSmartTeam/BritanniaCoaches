@@ -25,11 +25,11 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Left Column - Main Content */}
-          <div className="max-w-4xl hero-content flex flex-col justify-center">
+          <div className="max-w-4xl hero-content flex flex-col justify-center text-center lg:text-left">
             
             {/* Authority Headlines */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
-              Britain&apos;s <span className="text-crimson-red-400">Premier</span>
+              Britain&apos;s <span className="text-crimson-red-800">Premier</span>
               <span className="block text-white">Coach Transportation</span>
             </h1>
             
@@ -40,7 +40,7 @@ const Hero = () => {
             </p>
 
             {/* Primary CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center lg:items-start">
               <Link
                 href="/fleet"
                 className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-3 group"
