@@ -15,11 +15,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-4">
             <div className="h-px bg-white/20 flex-1"></div>
-            <div className="flex items-center gap-2 bg-crimson-red-800 rounded-full px-6 py-3">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-white font-bold text-sm uppercase tracking-wide">They Said It Was Impossible... Until We Did It</span>
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            </div>
+            <span className="text-white font-medium text-lg">Making Group Travel Simple, No Matter the Distance.</span>
             <div className="h-px bg-white/20 flex-1"></div>
           </div>
         </div>
