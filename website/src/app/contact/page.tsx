@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Compact Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 text-white py-16">
+      <section className="relative bg-gradient-to-br from-slate-ink-900 via-slate-ink-800 to-slate-ink-900 text-white pt-24 pb-16">
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative w-full px-4">
           <div className="text-center">
