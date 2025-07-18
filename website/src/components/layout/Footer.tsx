@@ -108,17 +108,6 @@ const Footer = () => {
                   we deliver reliable, safe, and comfortable travel solutions for every journey.
                 </p>
                 
-                {/* Quick Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm">
-                    <div className="text-xl font-bold text-crimson-red-400">1000+</div>
-                    <div className="text-xs text-white/60">Happy Clients</div>
-                  </div>
-                  <div className="text-center p-3 bg-white/5 rounded-lg backdrop-blur-sm">
-                    <div className="text-xl font-bold text-crimson-red-400">35+</div>
-                    <div className="text-xs text-white/60">Years Experience</div>
-                  </div>
-                </div>
               </div>
             </div>
 
