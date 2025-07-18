@@ -83,7 +83,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-[rgb(220,231,245)]">
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="w-full px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-ink-900 mb-6">

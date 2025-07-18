@@ -150,7 +150,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="relative py-20 bg-[rgb(220,231,245)]">
+    <section className="relative py-20 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="w-full">
         {/* Header with Left Bar - Full Width */}
         <div className="max-w-7xl mx-auto px-6 mb-16">

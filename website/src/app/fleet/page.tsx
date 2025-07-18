@@ -144,7 +144,7 @@ export default function FleetPage() {
 
 
       {/* Coach Showcase */}
-      <section className="py-20 bg-[rgb(220,231,245)]">
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="w-full px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-crimson-red-800 text-white px-4 py-2 rounded-full mb-6">

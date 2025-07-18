@@ -66,7 +66,7 @@ export default function CorporateTransportPage() {
       </section>
 
       {/* Service Details */}
-      <section className="py-20 bg-[rgb(220,231,245)]">
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="w-full px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="px-6">

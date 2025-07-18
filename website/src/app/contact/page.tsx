@@ -20,7 +20,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-16 bg-[rgb(220,231,245)]">
+      <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
