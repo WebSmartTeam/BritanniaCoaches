@@ -86,7 +86,7 @@ const Footer = () => {
             {/* Company Brand Section */}
             <div className="lg:col-span-1">
               <div className="group">
-                <Link href="/" className="flex items-center gap-4 mb-6 hover:scale-105 transition-transform duration-300">
+                <Link href="/" className="flex items-center gap-4 mb-6">
                   <div className="w-24 h-24 relative">
                     <Image
                       src="/images/logos/logo.png"
@@ -96,7 +96,7 @@ const Footer = () => {
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-display font-bold text-white group-hover:text-crimson-red-400 transition-colors duration-300">
+                    <h3 className="text-2xl font-display font-bold text-white">
                       Britannia Coaches
                     </h3>
                     <p className="text-sm text-white/60">Professional Transportation</p>
