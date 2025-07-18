@@ -41,23 +41,6 @@ const Hero = () => {
               <span className="font-semibold"> Professional service, modern fleet, punctual and reliable.</span>
             </p>
 
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                href="/fleet"
-                className="bg-crimson-red-800 hover:bg-crimson-red-900 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-3 group"
-              >
-                View Our Fleet
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              
-              <Link
-                href="/services"
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-3"
-              >
-                Our Services
-              </Link>
-            </div>
           </div>
 
           {/* Right Column - Quote Calculator */}
