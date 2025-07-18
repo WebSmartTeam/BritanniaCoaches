@@ -80,12 +80,14 @@ export default function LongDistancePage() {
               
               <div className="mb-6">
                 <h4 className="text-lg font-bold text-slate-ink-900 mb-3">Premium Features</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="flex flex-wrap gap-2">
                   {features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span className="text-sm text-slate-ink-900/80">{feature}</span>
-                    </div>
+                    <span 
+                      key={index}
+                      className="bg-slate-50 text-slate-ink-900/80 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-200/50 hover:bg-slate-100 transition-colors duration-200"
+                    >
+                      {feature}
+                    </span>
                   ))}
                 </div>
               </div>

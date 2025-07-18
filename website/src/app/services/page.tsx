@@ -188,12 +188,14 @@ export default function ServicesPage() {
 
                   {/* Features */}
                   <div className="mb-6">
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="flex flex-wrap gap-2">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-crimson-red-800" />
-                          <span className="text-sm text-slate-ink-900/70 font-medium">{feature}</span>
-                        </div>
+                        <span 
+                          key={featureIndex}
+                          className="bg-slate-50 text-slate-ink-900/80 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-200/50 hover:bg-slate-100 transition-colors duration-200"
+                        >
+                          {feature}
+                        </span>
                       ))}
                     </div>
                   </div>
