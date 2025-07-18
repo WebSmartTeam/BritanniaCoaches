@@ -118,7 +118,7 @@ const Header = () => {
           <div className={`max-w-7xl mx-auto transition-all duration-500 ${
             isScrolled 
               ? 'bg-royal-blue-800 rounded-xl shadow-luxury-xl px-6 py-2' 
-              : 'bg-white rounded-2xl border border-ice-grey-200 px-8 py-3'
+              : 'bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 px-8 py-3'
           }`}>
             <div className="flex justify-between items-center h-14">
               {/* Sleek Logo */}
