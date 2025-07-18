@@ -221,7 +221,7 @@ export default function ServicesPage() {
               Why Choose Britannia Coaches
             </h2>
             <p className="text-lg text-slate-ink-900/70 max-w-3xl mx-auto">
-              With over 35 years of experience, we have established ourselves as the UK's leading professional 
+              With over 35 years of experience, we have established ourselves as the UK&apos;s leading professional 
               coach transport provider, trusted by thousands of satisfied customers.
             </p>
           </div>
