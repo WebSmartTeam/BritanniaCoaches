@@ -103,7 +103,7 @@ export default function AirportTransfersPage() {
             <div className="relative">
               <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/services/airport/assets_task_01jztp22ebe4jrxcxjh8je438b_1752168577_img_0.webp"
+                  src="/images/services/airport/NEW.webp"
                   alt="Airport Transfers - Professional Service"
                   fill
                   className="object-cover"

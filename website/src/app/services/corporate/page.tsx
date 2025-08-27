@@ -103,7 +103,7 @@ export default function CorporateTransportPage() {
             <div className="relative">
               <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp"
+                  src="/images/services/corporate/NEW.webp"
                   alt="Corporate Transport - Executive Coach"
                   fill
                   className="object-cover"

@@ -103,7 +103,7 @@ export default function SchoolTripsPage() {
             <div className="relative">
               <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp"
+                  src="/images/services/school-trips/NEW.webp"
                   alt="School Trips - Safe Educational Transport"
                   fill
                   className="object-cover"

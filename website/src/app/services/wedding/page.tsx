@@ -103,7 +103,7 @@ export default function WeddingTransportPage() {
             <div className="relative">
               <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp"
+                  src="/images/services/wedding/NEW.webp"
                   alt="Wedding Transport - Luxury Coach"
                   fill
                   className="object-cover"

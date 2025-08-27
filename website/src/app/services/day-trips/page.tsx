@@ -103,7 +103,7 @@ export default function DayTripsPage() {
             <div className="relative">
               <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp"
+                  src="/images/services/day-trips/NEW.webp"
                   alt="Day Trips - Comfortable Excursions"
                   fill
                   className="object-cover"

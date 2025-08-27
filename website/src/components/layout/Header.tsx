@@ -31,31 +31,31 @@ const Header = () => {
           name: 'Corporate Transport', 
           href: '/services/corporate',
           description: 'Professional business transportation solutions',
-          image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp'
+          image: '/images/services/corporate/NEW.webp'
         },
         { 
           name: 'School Trips', 
           href: '/services/school-trips',
           description: 'Safe and reliable educational travel',
-          image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp'
+          image: '/images/services/school-trips/NEW.webp'
         },
         { 
           name: 'Wedding Transport', 
           href: '/services/wedding',
           description: 'Elegant transportation for special occasions',
-          image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp'
+          image: '/images/services/wedding/NEW.webp'
         },
         { 
           name: 'Airport Transfers', 
           href: '/services/airport',
           description: 'Reliable transfers to all UK airports',
-          image: '/images/services/airport/assets_task_01jztp22ebe4jrxcxjh8je438b_1752168577_img_0.webp'
+          image: '/images/services/airport/NEW.webp'
         },
         { 
           name: 'Day Trips', 
           href: '/services/day-trips',
           description: 'Comfortable day excursions and tours',
-          image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp'
+          image: '/images/services/day-trips/NEW.webp'
         },
         { 
           name: 'Long Distance', 

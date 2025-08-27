@@ -8,7 +8,7 @@ export default function ServicesPage() {
     {
       title: 'Corporate Transport',
       description: 'Professional business transportation with executive comfort and reliability for corporate events, meetings, and VIP travel. Our experienced drivers ensure punctual, discreet service with modern amenities.',
-      image: '/images/services/corporate/assets_task_01jztkbqygfp8rcvfs4ez2t15y_1752165762_img_2.webp',
+      image: '/images/services/corporate/NEW.webp',
       href: '/services/corporate',
       icon: Building2,
       features: ['Executive Seating', 'WiFi & Charging', 'Professional Drivers', 'Flexible Scheduling'],
@@ -18,7 +18,7 @@ export default function ServicesPage() {
     {
       title: 'School Trips',
       description: 'Safe and reliable educational transport with DBS-checked drivers and comprehensive safety equipment. We specialize in school excursions, sports events, and educational visits with full risk assessment.',
-      image: '/images/services/school-trips/assets_task_01jztkd5vyf0trmn8qgw271f9c_1752165789_img_2.webp',
+      image: '/images/services/school-trips/NEW.webp',
       href: '/services/school-trips',
       icon: GraduationCap,
       features: ['DBS Checked Drivers', 'Safety Equipment', 'Educational Planning', 'Group Discounts'],
@@ -28,7 +28,7 @@ export default function ServicesPage() {
     {
       title: 'Wedding Transport',
       description: 'Elegant luxury transportation for your special day with premium amenities and professional coordination. From bridal parties to guest transport, we ensure your wedding day runs smoothly.',
-      image: '/images/services/wedding/assets_task_01jztnpaegfdrtgwwk7v9h9rpd_1752168189_img_3.webp',
+      image: '/images/services/wedding/NEW.webp',
       href: '/services/wedding',
       icon: Heart,
       features: ['Luxury Interior', 'Wedding Coordination', 'Champagne Service', 'Red Carpet'],
@@ -38,7 +38,7 @@ export default function ServicesPage() {
     {
       title: 'Airport Transfers',
       description: 'Reliable transfers to all major UK airports with flight monitoring and meet & greet service. We track your flight and adjust pickup times accordingly, ensuring stress-free travel.',
-      image: '/images/services/airport/assets_task_01jztp22ebe4jrxcxjh8je438b_1752168577_img_0.webp',
+      image: '/images/services/airport/NEW.webp',
       href: '/services/airport',
       icon: Plane,
       features: ['Flight Monitoring', 'Meet & Greet', 'All UK Airports', 'Fixed Pricing'],
@@ -48,7 +48,7 @@ export default function ServicesPage() {
     {
       title: 'Day Trips',
       description: 'Comfortable day excursions to historic sites, theme parks, and scenic destinations. Our experienced local drivers provide commentary and ensure you make the most of your journey.',
-      image: '/images/services/day-trips/assets_task_01jztp9f7xftvbyh0vj3544368_1752168825_img_0.webp',
+      image: '/images/services/day-trips/NEW.webp',
       href: '/services/day-trips',
       icon: Sun,
       features: ['Historic Sites', 'Theme Parks', 'Coastal Trips', 'Group Outings'],
